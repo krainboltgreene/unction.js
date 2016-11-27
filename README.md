@@ -57,6 +57,29 @@ hammer("data", attributes)
 // }
 ```
 
+
+### aside
+
+> ...Function -> Anything/a -> Anything/a
+
+Use this function to do thing aside of a main pipeline.
+
+``` javascript
+import {aside} from "ramda-extra"
+import startLoading from "./startLoading"
+import finishLoading from "./finishLoading"
+
+export default function listAccounts () {
+  return function future (dispatch, {sdk}) {
+    return sdk
+      .then(aside(startLoading, dispatch))
+      .then((client) => client("v1/accounts").list())
+      .then(aside(finishLoading, dispatch))
+  }
+}
+```
+
+
 [BADGE_TRAVIS]: https://img.shields.io/travis/krainboltgreene/ramda-extra.js.svg?maxAge=2592000&style=flat-square
 [BADGE_VERSION]: https://img.shields.io/npm/v/ramda-extra.svg?maxAge=2592000&style=flat-square
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
