@@ -50,18 +50,20 @@ Use this to de-nest a nested object.
 ``` javascript
 import {hammer} from "ramda-extra"
 
-const attributes = {
+const payload = {
   id: 1
   attributes: {
-    name: "Kurtis Rainbolt-Greene"
+    name: "Kurtis Rainbolt-Greene",
+    age: 26
   }
 }
 
-hammer("data", attributes)
+hammer("attributes", payload)
 
 // {
 //   id: 1,
-//   name: "Kurtis Rainbolt-Greene"
+//   name: "Kurtis Rainbolt-Greene",
+//   age: 26
 // }
 ```
 
