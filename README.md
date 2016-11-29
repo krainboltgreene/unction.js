@@ -19,7 +19,7 @@ import {hammer} from "ramda-extras"
 
 ### mapKeys()
 
-> Function -> Pairs -> Pairs
+> Function -> Object -> Object
 
 Like ramda's map, but instead of the value it maps over keys.
 
@@ -43,7 +43,7 @@ mapKeys(kebab, attributes)
 
 ### hammer()
 
-> Anything -> Pairs -> Pairs
+> String -> Object -> Object
 
 Use this to de-nest a nested object.
 
