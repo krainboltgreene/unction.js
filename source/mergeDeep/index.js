@@ -1,8 +1,11 @@
 import {mergeWith} from "ramda"
 import {type} from "ramda"
 import {concat} from "ramda"
+import {curryN} from "ramda"
 
-export default function mergeDeep (left, right) {
+const ARGUMENTS = 2
+
+export default curryN(ARGUMENTS, function mergeDeep (left, right) {
   if (type(left) !== type(right)) {
     return right
   }
@@ -16,4 +19,4 @@ export default function mergeDeep (left, right) {
   }
 
   return right
-}
+})

@@ -5,7 +5,9 @@ import {adjust} from "ramda"
 import {toPairs} from "ramda"
 import {type} from "ramda"
 
-export default curryN(2, function mapKeys (ƒunction, pairs) {
+const ARGUMENTS = 2
+
+export default curryN(ARGUMENTS, function mapKeys (ƒunction, pairs) {
   if (type(ƒunction) !== "Function") {
     throw new Error(`mapKeys only works with an Function, but the first argument was a ${type(ƒunction)}`)
   }
