@@ -17,9 +17,7 @@ import {hammer} from "ramda-extras"
 ```
 
 
-### mapKeys()
-
-> Function -> Object -> Object
+### mapKeys() ? Function -> Object:a -> Object:b
 
 See also: `map()`, `mapObjIndexed()`
 
@@ -41,9 +39,7 @@ mapKeys(kebab, attributes)
 // }
 ```
 
-### hammer()
-
-> String -> Object -> Object
+### hammer() ? String -> Object:a -> Object:ab
 
 Use this to de-nest a nested object.
 
@@ -68,9 +64,7 @@ hammer("attributes", payload)
 ```
 
 
-### aside()
-
-> ...Function -> Anything:a -> Anything:a
+### aside() ? ...Function -> Anything:a -> Anything:a
 
 See also: `pipe()`, `compose()`, `asideP()`
 
@@ -92,9 +86,7 @@ export default function generateGraph () {
 ```
 
 
-### isPresent()
-
-> Anything -> Boolean
+### isPresent() ? Anything -> Boolean
 
 See also: `isNil()`
 
@@ -128,9 +120,7 @@ isPopulated([]) // false
 ```
 
 
-### computedProp()
-
-> Function -> String | Array of Strings -> Object -> Object
+### computedProp() ? Function -> (String | Array of Strings) -> Object:a -> Object:ab
 
 See also: `prop()`
 
@@ -170,9 +160,7 @@ computedProp(computer, key, payload)
 ```
 
 
-### nestedObjOf()
-
-> Array of Strings -> Anything -> Object
+### nestedObjOf() ? Array of Strings -> Anything -> Object
 
 See also: `objOf()`
 
@@ -193,9 +181,7 @@ nestedObjOf(path, value)
 ```
 
 
-### mergeDeep()
-
-> Object | Array -> Object | Array
+### mergeDeep() ? (Object of Anything | Array of Anything):a -> (Object of Anything | Array of Anything):b
 
 Recursively merges two objects/arrays. THAT IS ALL.
 
@@ -265,45 +251,37 @@ mergeDeep(left, right)
 ```
 
 
-### resolveP()
-
-> Anything -> Promise(Anything)
+### resolveP() ? Anything:a -> Promise(Anything:a)
 
 See also: `allP()`
 
 A port of the `Promise.resolve()` function.
 
 
-### allP()
+### allP() ? Array of Anything -> Promise(Array of Anything)
 
-> Array of Anything -> Promise(Array of Anything)
+>
 
 See also: `resolveP()`
 
 A port of the `Promise.all()` function.
 
 
-### thenP()
-
-> Function -> Promise -> Promise(Function)
+### thenP() ? Function -> Promise(Anything):a -> Promise(Function):b
 
 See also: `catchP()`
 
 A port of the `Promise.prototype.then()` function.
 
 
-### catchP()
-
-> Function -> Promise -> Promise(Function)
+### catchP() ? Function -> Promise(Anything):a -> Promise(Function):b
 
 See also: `thenP()`
 
 A port of the `Promise.prototype.catch()` function.
 
 
-### tapP()
-
-> Function -> Promise -> Promise
+### tapP() ? Function -> Promise(Anything):a -> Promise(Anything):a
 
 See also: `tap()`
 
@@ -364,9 +342,7 @@ finishLoading
 ```
 
 
-### asideP()
-
-> ...Function -> Promise(Anything:a) -> Promise(Anything:a)
+### asideP() ? ...Function -> Promise(Anything:a) -> Promise(Anything:a)
 
 See also: `pipe()`, `compose()`, `aside()`
 
@@ -390,16 +366,16 @@ export default function listAccounts () {
 ```
 
 
-## compact()
-
-> Collection -> Collection
+### compact() ? (Object of Anything|Array of Anything):ab -> (Object of Anything|Array of Anything):b
 
 Takes a collection (Array or Object) and returns a copy of that value without `null` or `undefined` values.
+
+See also: `reject()`
 
 
 ``` javascript
 import {prop} from "ramda"
-import {first} from "ramda"
+import {head} from "ramda"
 import {compact} from "ramda-extra"
 import {users} from "./users"
 
@@ -407,9 +383,54 @@ const avatarUrls = map(prop("avatar"), users())
 console.log(avatarUrls) // => [null, "/1.jpg", null, "/3.jpg"]
 console.log(compact(avatarUrls))
 
-const attributes = first(users)
+const attributes = head(users)
 console.log(attributes) // {"avatar": null, "name": "Kurtis Rainbolt-Greene"}
 console.log(compact(attributes)) // {"name": "Kurtis Rainbolt-Greene"}
+```
+
+
+### sample() ? Integer:size -> Array of Anything:ab -> Array of Anything:b
+
+Takes an Array and randomly picks *Integer:size* elements to return.
+
+See also: `shuffle()`, `take()`
+
+
+``` javascript
+import {sample} from "ramda-extra"
+import {users} from "./users"
+
+console.log(users()) // => [{"id": 1, "name": "Kurtis Rainbolt-Greene"}, {"id": 2, "name": "Angela Englund"}]
+
+const game1Winner = sample(1, users())
+console.log(game1Winner) // => {"id": 2, "name": "Angela Englund"}
+
+const game2Winner = sample(1, users())
+console.log(game2Winner) // => {"id": 2, "name": "Angela Englund"}
+
+const game3Winner = sample(1, users())
+console.log(game3Winner) // => {"id": 1, "name": "Kurtis Rainbolt-Greene"}
+```
+
+
+### shuffle() ? Array of Anything:ab -> Array of Anything:ba
+
+Takes an Array and returns an Array with the same content, but in a random order.
+
+See also: `sample()`
+
+
+``` javascript
+import {shuffle} from "ramda-extra"
+import {users} from "./users"
+
+console.log(users()) // => [{"id": 1, "name": "Kurtis Rainbolt-Greene"}, {"id": 2, "name": "Angela Englund"}, {"id": 3", "name": "Joshua Benitez"}]
+
+console.log(shuffle(users())) // => [{"id": 1, "name": "Kurtis Rainbolt-Greene"}, {"id": 3", "name": "Joshua Benitez"}, {"id": 2, "name": "Angela Englund"}]
+
+console.log(shuffle(users())) // => [{"id": 3", "name": "Joshua Benitez"}, {"id": 1, "name": "Kurtis Rainbolt-Greene"}, {"id": 2, "name": "Angela Englund"}]
+
+console.log(shuffle(users())) // => [{"id": 2, "name": "Angela Englund"}, {"id": 3", "name": "Joshua Benitez"}, {"id": 1, "name": "Kurtis Rainbolt-Greene"}]
 ```
 
 
