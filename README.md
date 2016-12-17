@@ -17,7 +17,9 @@ import {hammer} from "ramda-extras"
 ```
 
 
-### mapKeys() ? Function -> Object:a -> Object:b
+### mapKeys()
+
+> ? Function -> Object:a -> Object:b
 
 See also: `map()`, `mapObjIndexed()`
 
@@ -39,7 +41,9 @@ mapKeys(kebab, attributes)
 // }
 ```
 
-### hammer() ? String -> Object:a -> Object:ab
+### hammer()
+
+> ? String -> Object:a -> Object:ab
 
 Use this to de-nest a nested object.
 
@@ -64,7 +68,9 @@ hammer("attributes", payload)
 ```
 
 
-### aside() ? ...Function -> Anything:a -> Anything:a
+### aside()
+
+> ? ...Function -> Anything:a -> Anything:a
 
 See also: `pipe()`, `compose()`, `asideP()`
 
@@ -86,7 +92,9 @@ export default function generateGraph () {
 ```
 
 
-### isPresent() ? Anything -> Boolean
+### isPresent()
+
+> ? Anything -> Boolean
 
 See also: `isNil()`
 
@@ -120,7 +128,9 @@ isPopulated([]) // false
 ```
 
 
-### computedProp() ? Function -> (String | Array of Strings) -> Object:a -> Object:ab
+### computedProp()
+
+> ? Function -> (String | Array of Strings) -> Object:a -> Object:ab
 
 See also: `prop()`
 
@@ -160,7 +170,9 @@ computedProp(computer, key, payload)
 ```
 
 
-### nestedObjOf() ? Array of Strings -> Anything -> Object
+### nestedObjOf()
+
+> ? Array of Strings -> Anything -> Object
 
 See also: `objOf()`
 
@@ -181,7 +193,9 @@ nestedObjOf(path, value)
 ```
 
 
-### mergeDeep() ? (Object of Anything | Array of Anything):a -> (Object of Anything | Array of Anything):b
+### mergeDeep()
+
+> ? (Object of Anything | Array of Anything):a -> (Object of Anything | Array of Anything):b
 
 Recursively merges two objects/arrays. THAT IS ALL.
 
@@ -251,37 +265,45 @@ mergeDeep(left, right)
 ```
 
 
-### resolveP() ? Anything:a -> Promise(Anything:a)
+### resolveP()
+
+> ? Anything:a -> Promise(Anything:a)
 
 See also: `allP()`
 
 A port of the `Promise.resolve()` function.
 
 
-### allP() ? Array of Anything -> Promise(Array of Anything)
+### allP()
 
->
+> ? Array of Promise(Anything):a -> Promise(Array of Promise(Anything):a)
 
 See also: `resolveP()`
 
 A port of the `Promise.all()` function.
 
 
-### thenP() ? Function -> Promise(Anything):a -> Promise(Function):b
+### thenP()
+
+> ? Function -> Promise(Anything):a -> Promise(Function):b
 
 See also: `catchP()`
 
 A port of the `Promise.prototype.then()` function.
 
 
-### catchP() ? Function -> Promise(Anything):a -> Promise(Function):b
+### catchP()
+
+> ? Function -> Promise(Anything):a -> Promise(Function):b
 
 See also: `thenP()`
 
 A port of the `Promise.prototype.catch()` function.
 
 
-### tapP() ? Function -> Promise(Anything):a -> Promise(Anything):a
+### tapP()
+
+> ? Function -> Promise(Anything):a -> Promise(Anything):a
 
 See also: `tap()`
 
@@ -342,7 +364,9 @@ finishLoading
 ```
 
 
-### asideP() ? ...Function -> Promise(Anything:a) -> Promise(Anything:a)
+### asideP()
+
+> ? ...Function -> Promise(Anything:a) -> Promise(Anything:a)
 
 See also: `pipe()`, `compose()`, `aside()`
 
@@ -366,11 +390,13 @@ export default function listAccounts () {
 ```
 
 
-### compact() ? (Object of Anything|Array of Anything):ab -> (Object of Anything|Array of Anything):b
+### compact()
 
-Takes a collection (Array or Object) and returns a copy of that value without `null` or `undefined` values.
+> ? (Object of Anything|Array of Anything):ab -> (Object of Anything|Array of Anything):b
 
 See also: `reject()`
+
+Takes a collection (Array or Object) and returns a copy of that value without `null` or `undefined` values.
 
 
 ``` javascript
@@ -389,11 +415,13 @@ console.log(compact(attributes)) // {"name": "Kurtis Rainbolt-Greene"}
 ```
 
 
-### sample() ? Integer:size -> Array of Anything:ab -> Array of Anything:b
+### sample()
 
-Takes an Array and randomly picks *Integer:size* elements to return.
+> ? Integer:size -> Array of Anything:ab -> Array of Anything:b
 
 See also: `shuffle()`, `take()`
+
+Takes an Array and randomly picks *Integer:size* elements to return.
 
 
 ``` javascript
@@ -413,11 +441,13 @@ console.log(game3Winner) // => {"id": 1, "name": "Kurtis Rainbolt-Greene"}
 ```
 
 
-### shuffle() ? Array of Anything:ab -> Array of Anything:ba
+### shuffle()
 
-Takes an Array and returns an Array with the same content, but in a random order.
+> ? Array of Anything:ab -> Array of Anything:ba
 
 See also: `sample()`
+
+Takes an Array and returns an Array with the same content, but in a random order.
 
 
 ``` javascript
