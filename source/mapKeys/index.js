@@ -1,3 +1,23 @@
+// > ? Function -> Object:a -> Object:b
+//
+// Like ramda's map, but instead of the value it maps over keys.
+//
+// ``` javascript
+// import {kebab} from "case"
+// import {mapKeys} from "ramda-extra"
+//
+// const attributes = {
+//   name: "Kurtis Rainbolt-Greene",
+//   createdAt: new Date()
+// }
+//
+// mapKeys(kebab, attributes)
+// // {
+// //   name: "Kurtis Rainbolt-Greene",
+// //   "created-at": new Date()
+// // }
+// ```
+
 import {curryN} from "ramda"
 import {fromPairs} from "ramda"
 import {map} from "ramda"
