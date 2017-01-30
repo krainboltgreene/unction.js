@@ -1,3 +1,72 @@
+// > ? (Object of Anything | Array of Anything):a -> (Object of Anything | Array of Anything):b
+//
+// Recursively merges two objects/arrays. THAT IS ALL.
+//
+// ``` javascript
+// import {mergeDeep} from "ramda-extra"
+//
+// const left = {
+//   alpha: "1"
+// }
+// const right = {
+//   beta: "2"
+// }
+//
+// mergeDeep(left, right)
+// // {
+// //   alpha: "1",
+// //   beta: "2"
+// // }
+// ```
+//
+// ``` javascript
+// import {mergeDeep} from "ramda-extra"
+//
+// const left = {
+//   alpha: {
+//     alpha1: "1"
+//   }
+// }
+// const right = {
+//   beta: {
+//     beta1: "1"
+//   }
+// }
+//
+// mergeDeep(left, right)
+// // {
+// //   alpha: {
+// //     alpha1: "1"
+// //   },
+// //   beta: {
+// //     beta1: "1"
+// //   }
+// // }
+// ```
+//
+// ``` javascript
+// import {mergeDeep} from "ramda-extra"
+//
+// const left = {
+//   alpha: [
+//     "1"
+//   ]
+// }
+// const right = {
+//   alpha: [
+//     "1"
+//   ]
+// }
+//
+// mergeDeep(left, right)
+// // {
+// //   alpha: [
+// //     "1",
+// //     "1"
+// //   ]
+// // }
+// ```
+
 import {mergeWith} from "ramda"
 import {type} from "ramda"
 import {concat} from "ramda"
