@@ -170,7 +170,7 @@ module.exports = {
     "operator-assignment": "error",
     "operator-linebreak": "error",
     "padded-blocks": ["error", "never"],
-    "prefer-arrow-callback": "error",
+    "prefer-arrow-callback": "warn",
     "prefer-const": "error",
     "prefer-reflect": "error",
     "prefer-spread": "error",
