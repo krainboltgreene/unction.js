@@ -1,6 +1,6 @@
 // ? Array of Promise(pending) -> Array of Promise(resolved)
 //
-// Will take an array of promises and only return a promise of the resolved promises.
+// Will take an array of promises and returns a promise of only the resolved promises.
 
 import {map} from "ramda"
 import {pipe} from "ramda"
