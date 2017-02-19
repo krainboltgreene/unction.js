@@ -44,7 +44,7 @@ describe("mergeDeep()", () => {
     })
   })
 
-  context("two levels, simplistic type, same key, object value", () => {
+  context("two levels, simplistic type, same root key, different sub key", () => {
     const left = {
       alpha: {
         alpha1: "1"
@@ -61,6 +61,27 @@ describe("mergeDeep()", () => {
         alpha: {
           alpha1: "1",
           beta1: "1"
+        }
+      })
+    })
+  })
+
+  context("two levels, simplistic type, same root key, same subkey, conflicting value", () => {
+    const left = {
+      alpha: {
+        alpha1: "1"
+      }
+    }
+    const right = {
+      alpha: {
+        alpha1: "2"
+      }
+    }
+
+    it("merges", () => {
+      expect(mergeDeep(left, right)).to.deep.equal({
+        alpha: {
+          alpha1: "2"
         }
       })
     })
