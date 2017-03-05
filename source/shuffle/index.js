@@ -19,9 +19,9 @@
 import {length} from "ramda"
 
 // While this raises eslint issues, they should be ignored. This is the best possible shuffle implementation I could find.
-export default function shuffle (array) {
+export default function shuffle (array: Array<*>): Array<*> {
   let counter = length(array)
-  let clone = array.slice()
+  const clone = array.slice()
 
   // While there are elements in the array
   while (counter > 0) {

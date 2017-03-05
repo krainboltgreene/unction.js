@@ -1,19 +1,17 @@
-import {describe, it} from "mocha"
-import {expect} from "chai"
+import {same} from "tap"
 
 import mapKeys from "./"
 
-describe("mapKeys()", () => {
-  const payload = {
-    a1: "1",
-    a2: "2"
+same(
+  mapKeys(
+    (key: string): string => key.replace(/a/, ""),
+    {
+      aa: "1",
+      ab: "2"
+    }
+  ),
+  {
+    a: "1",
+    b: "2"
   }
-  const computer = (key) => key.replace(/a/, "")
-
-  it("changes the keys", () => {
-    expect(mapKeys(computer, payload)).to.deep.equal({
-      1: "1",
-      2: "2"
-    })
-  })
-})
+)

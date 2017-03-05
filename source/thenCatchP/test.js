@@ -1,22 +1,19 @@
-import {describe, it} from "mocha"
-import {expect} from "chai"
+import {test} from "tap"
 
-import thenCatchP from "./"
+import thenCatchP from "../thenCatchP"
 
-describe("thenCatchP()", () => {
-  context("when given a resolving promise", () => {
-    const promise = Promise.resolve(1)
+test(({equal, notEqual}) => {
+  return thenCatchP(
+    (value) => equal(value, "a"),
+    (value) => notEqual(value, "a"),
+    Promise.resolve("a")
+  )
+})
 
-    it("triggers a then, but not the catch", () => {
-      return thenCatchP((value) => expect(value).to.equal(1), (value) => expect(value).to.not.equal(1), promise)
-    })
-  })
-
-  context("when given a rejecting promise", () => {
-    const promise = Promise.reject(1)
-
-    it("triggers a catch, but not the then", () => {
-      return thenCatchP((value) => expect(value).to.not.equal(1), (value) => expect(value).to.equal(1), promise)
-    })
-  })
+test(({equal, notEqual}) => {
+  return thenCatchP(
+    (value) => notEqual(value, "a"),
+    (value) => equal(value, "a"),
+    Promise.reject("a")
+  )
 })

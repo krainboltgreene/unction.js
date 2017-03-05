@@ -23,8 +23,6 @@ import {take} from "ramda"
 import {curryN} from "ramda"
 import shuffle from "../shuffle"
 
-const ARGUMENTS = 2
-
-export default curryN(ARGUMENTS, function sample (size, list) {
+export default curryN(2, function sample (size: number, list: Array<*>): Array<*> {
   return take(size, shuffle(list))
 })

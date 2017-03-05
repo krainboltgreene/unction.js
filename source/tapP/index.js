@@ -56,12 +56,10 @@
 // finishLoading
 // ```
 
-import {always} from "ramda"
-import resolveP from "../resolveP"
-import thenP from "../thenP"
+import {curryN} from "ramda"
 
-export default function tapP (ƒunction) {
-  return function tapPWithFunction (value) {
-    return thenP(always(value), resolveP(ƒunction(value)))
-  }
-}
+export default curryN(2, function tapP (unction: Function, value: any): Promise<*> {
+  unction(value)
+
+  return value
+})

@@ -27,19 +27,19 @@ import {type} from "ramda"
 
 const ARGUMENTS = 2
 
-export default curryN(ARGUMENTS, function mapKeys (ƒunction, pairs) {
-  if (type(ƒunction) !== "Function") {
-    throw new Error(`mapKeys only works with an Function, but the first argument was a ${type(ƒunction)}`)
+export default curryN(ARGUMENTS, function mapKeys (unction: Function, structure: Object): Object {
+  if (type(unction) !== "Function") {
+    throw new Error(`mapKeys only works with an Function, but the first argument was a ${type(unction)}`)
   }
 
-  if (type(pairs) !== "Object") {
-    throw new Error(`mapKeys only works on an Object, but the second argument was a ${type(pairs)}`)
+  if (type(structure) !== "Object") {
+    throw new Error(`mapKeys only works on an Object, but the second argument was a ${type(structure)}`)
   }
 
   return fromPairs(
     map(
-      adjust(ƒunction, 0),
-      toPairs(pairs)
+      adjust(unction, 0),
+      toPairs(structure)
     )
   )
 })

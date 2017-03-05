@@ -28,13 +28,13 @@ import {prop} from "ramda"
 import {omit} from "ramda"
 import {type} from "ramda"
 
-export default curryN(2, function hammer (key, pairs) {
-  if (type(pairs) !== "Object") {
-    throw new Error(`hammer only works on an Object, but the second argument was a ${type(pairs)}`)
+export default curryN(2, function hammer (key: string | number, structure: Object): Object {
+  if (type(structure) !== "Object") {
+    throw new Error(`hammer only works on an Object, but the second argument was a ${type(structure)}`)
   }
 
-  const onlyKey = prop(key, pairs)
-  const withoutKey = omit(key, pairs)
+  const onlyKey = prop(key, structure)
+  const withoutKey = omit(key, structure)
 
   if (type(onlyKey) !== "Object") {
     throw new Error(`The hammered property ${key} was not an Object it was a ${type(onlyKey)}`)

@@ -1,30 +1,12 @@
-import {describe, it} from "mocha"
-import {expect} from "chai"
+import {equal} from "tap"
 
 import isPresent from "./"
 
-describe("isPresent()", () => {
-  context("when value is null", () => {
-    const value = null
-
-    it("returns false", () => {
-      expect(isPresent(value)).to.be.notOk
-    })
-  })
-
-  context("when value is undefined", () => {
-    const value = undefined
-
-    it("returns false", () => {
-      expect(isPresent(value)).to.be.notOk
-    })
-  })
-
-  context("when value is anything else", () => {
-    const value = 1
-
-    it("returns true", () => {
-      expect(isPresent(value)).to.be.ok
-    })
-  })
-})
+equal(isPresent(true), true)
+equal(isPresent([]), true)
+equal(isPresent({}), true)
+equal(isPresent(""), true)
+equal(isPresent(0), true)
+equal(isPresent(false), true)
+equal(isPresent(null), false)
+equal(isPresent(undefined), false)

@@ -74,7 +74,7 @@ import {curryN} from "ramda"
 
 const ARGUMENTS = 2
 
-export default curryN(ARGUMENTS, function mergeDeep (left, right) {
+export default curryN(ARGUMENTS, function mergeDeep (left: Object, right: Object): Object {
   if (type(left) !== type(right)) {
     return right
   }

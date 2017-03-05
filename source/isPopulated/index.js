@@ -12,7 +12,8 @@
 // ```
 
 import {isEmpty} from "ramda"
+import compact from "../compact"
 
-export default function isPopulated (list) {
-  return !isEmpty(list)
+export default function isPopulated (list: Array<*>): boolean {
+  return !isEmpty(compact(list))
 }

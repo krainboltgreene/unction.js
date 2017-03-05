@@ -11,7 +11,7 @@ import thenCatchP from "../thenCatchP"
 import thenP from "../thenP"
 import allP from "../allP"
 
-export default function optimisticP (list) {
+export default function optimisticP (list: Array<Promise<*>>): Promise<Array<Promise<*>>> {
   return pipe(
     map(thenCatchP(objOf("resolved"), objOf("rejected"))),
     allP,

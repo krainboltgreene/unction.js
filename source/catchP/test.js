@@ -1,14 +1,10 @@
-import {describe, it} from "mocha"
-import {expect} from "chai"
+import {test} from "tap"
 
-import catchP from "./"
+import catchP from "../catchP"
 
-describe("catchP()", () => {
-  context("when given a rejecting promise", () => {
-    const promise = Promise.reject(1)
-
-    it("triggers the catch", () => {
-      return catchP((value) => expect(value).to.equal(1), promise)
-    })
-  })
+test(({same}) => {
+  return catchP(
+    (value) => same(value, new Error("a")),
+    Promise.reject(new Error("a"))
+  )
 })

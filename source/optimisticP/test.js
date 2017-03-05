@@ -1,36 +1,43 @@
-import {describe, it} from "mocha"
-import {expect} from "chai"
+import {test} from "tap"
 
-import optimisticP from "./"
+import optimisticP from "../optimisticP"
 
-describe("optimisticP()", () => {
-  context("when given two resolving promises", () => {
-    const promiseA = Promise.resolve(1)
-    const promiseB = Promise.resolve(2)
+test(({includes}) => {
+  return optimisticP(
+    [
+      Promise.resolve("a")
+    ]
+  )
+    .then((values) => includes(values, ["a"]))
+})
 
-    it("returns both values", () => {
-      return optimisticP([promiseA, promiseB])
-        .then((value) => expect(value).to.deep.equal([1, 2]))
-    })
-  })
+test(({includes}) => {
+  return optimisticP(
+    [
+      Promise.resolve("a"),
+      Promise.reject(new Error("b"))
+    ]
+  )
+    .then((values) => includes(values, ["a"]))
+})
 
-  context("when given one resolving promise and one rejecting promise", () => {
-    const promiseA = Promise.resolve(1)
-    const promiseB = Promise.reject(2)
+test(({includes}) => {
+  return optimisticP(
+    [
+      Promise.resolve("a"),
+      Promise.resolve("c")
+    ]
+  )
+    .then((values) => includes(values, ["a", "c"]))
+})
 
-    it("returns both values", () => {
-      return optimisticP([promiseA, promiseB])
-        .then((value) => expect(value).to.deep.equal([1]))
-    })
-  })
-
-  context("when given two rejecting promises", () => {
-    const promiseA = Promise.reject(1)
-    const promiseB = Promise.reject(2)
-
-    it("returns both values", () => {
-      return optimisticP([promiseA, promiseB])
-        .then((value) => expect(value).to.deep.equal([]))
-    })
-  })
+test(({includes}) => {
+  return optimisticP(
+    [
+      Promise.resolve("a"),
+      Promise.reject(new Error("b")),
+      Promise.resolve("c")
+    ]
+  )
+    .then((values) => includes(values, ["a", "c"]))
 })

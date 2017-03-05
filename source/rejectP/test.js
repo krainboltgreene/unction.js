@@ -1,11 +1,8 @@
-import {describe, it} from "mocha"
-import {expect} from "chai"
+import {test} from "tap"
 
-import rejectP from "./"
+import rejectP from "../rejectP"
 
-describe("rejectP()", () => {
-  it("triggeres a catch", () => {
-    return rejectP(1)
-      .catch((value) => expect(value).to.equal(1))
-  })
+test(({equal}) => {
+  return rejectP("a")
+    .catch((value) => equal(value, "a"))
 })

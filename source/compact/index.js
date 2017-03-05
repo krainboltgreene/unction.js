@@ -21,6 +21,6 @@
 import {reject} from "ramda"
 import {isNil} from "ramda"
 
-export default function compact (collection) {
+export default function compact (collection: Array<*>): Array<*> {
   return reject(isNil, collection)
 }

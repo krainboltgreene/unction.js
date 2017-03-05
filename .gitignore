@@ -6,10 +6,11 @@
 
 # Regenerable files
 /node_modules/
+/flow-typed/
+/transpiled/
 
 # Temporary files
 /tmp/
-/transpiled/
 
 # Log files
 /*.log

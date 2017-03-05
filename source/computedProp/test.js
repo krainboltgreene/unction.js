@@ -1,36 +1,35 @@
-import {describe, it} from "mocha"
-import {expect} from "chai"
-
+import {same} from "tap"
 import computedProp from "./"
 
-describe("computedProp()", () => {
-  context("when given a computer, single part key, and structure", () => {
-    const payload = {
+same(
+  computedProp(
+    ({id, attributes: {username}}) => `${username}#${id}`,
+    "tag",
+    {
       id: "1",
-      attributes: {
-        username: "krainboltgreene"
-      }
+      attributes: {username: "krainboltgreene"},
     }
-    const key = "tag"
-    const computer = ({id, attributes: {username}}) => `${username}#${id}`
-
-    it("returns the computed value", () => {
-      expect(computedProp(computer, key, payload)).to.have.deep.property("tag", "krainboltgreene#1")
-    })
-  })
-
-  context("when given a computer, multi-part key, and structure", () => {
-    const payload = {
+  ),
+  {
+    id: "1",
+    tag: "krainboltgreene#1",
+    attributes: {username: "krainboltgreene"},
+  }
+)
+same(
+  computedProp(
+    ({id, attributes: {username}}) => `${username}#${id}`,
+    ["attributes", "tag"],
+    {
       id: "1",
-      attributes: {
-        username: "krainboltgreene"
-      }
+      attributes: {username: "krainboltgreene"},
     }
-    const key = ["attributes", "tag"]
-    const computer = ({id, attributes: {username}}) => `${username}#${id}`
-
-    it("returns the computed value", () => {
-      expect(computedProp(computer, key, payload)).to.have.deep.property("attributes.tag", "krainboltgreene#1")
-    })
-  })
-})
+  ),
+  {
+    id: "1",
+    attributes: {
+      username: "krainboltgreene",
+      tag: "krainboltgreene#1",
+    },
+  }
+)

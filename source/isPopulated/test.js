@@ -1,23 +1,11 @@
-import {describe, it} from "mocha"
-import {expect} from "chai"
+import {equal} from "tap"
 
 import isPopulated from "./"
 
-describe("isPopulated()", () => {
-  context("when value is empty", () => {
-    const value = []
-
-    it("returns false", () => {
-      expect(isPopulated(value)).to.be.notOk
-    })
-  })
-
-
-  context("when value has a item", () => {
-    const value = [1]
-
-    it("returns true", () => {
-      expect(isPopulated(value)).to.be.ok
-    })
-  })
-})
+equal(isPopulated(["a"]), true)
+equal(isPopulated([[]]), true)
+equal(isPopulated([{}]), true)
+equal(isPopulated([]), false)
+equal(isPopulated([undefined]), false)
+equal(isPopulated([undefined]), false)
+equal(isPopulated([null]), false)

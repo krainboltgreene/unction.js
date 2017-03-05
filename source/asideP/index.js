@@ -22,6 +22,6 @@
 import {pipe} from "ramda"
 import tapP from "../tapP"
 
-export default function asideP (...ƒunctions) {
-  return tapP(pipe(...ƒunctions))
+export default function asideP (...unctions: Array<Function>): Function {
+  return tapP(pipe(...unctions))
 }

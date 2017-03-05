@@ -36,17 +36,9 @@
 // ```
 
 import {curryN} from "ramda"
-import {merge} from "ramda"
-import {objOf} from "ramda"
-import {isArrayLike} from "ramda"
+import mergeDeep from "../mergeDeep"
 import nestedObjOf from "../nestedObjOf"
 
-const ARGUMENTS = 3
-
-export default curryN(ARGUMENTS, function computedProp (computer, keyOrPath, structure) {
-  if (isArrayLike(keyOrPath)) {
-    return merge(structure, nestedObjOf(keyOrPath, computer(structure)))
-  }
-
-  return merge(structure, objOf(keyOrPath, computer(structure)))
+export default curryN(3, function computedProp (computer: Function, propOrPath: string | number | Array<string | number>, structure: Object): Object {
+  return mergeDeep(structure, nestedObjOf(propOrPath, computer(structure)))
 })

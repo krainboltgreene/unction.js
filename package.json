@@ -5,8 +5,9 @@
   "main": "transpiled/source/index.js",
   "scripts": {
     "prepublish": "npm run build",
+    "postinstall": "npm run build",
     "build": "rm -rf './transpiled/' && mkdir './transpiled/' && babel './source/**/index.js' -d './transpiled/'",
-    "test": "mocha --compilers js:babel-register './source/**/test.js'",
+    "test": "babel-tap --jobs=10 './source/**/test.js'",
     "start": "npm-run-all --parallel watch:build watch:test",
     "lint": "eslint './source/'",
     "watch": "npm-run-all --parallel watch:test watch:lint watch:build",
@@ -29,35 +30,31 @@
   "bugs": {
     "url": "https://github.com/krainboltgreene/ramda-extra.js/issues"
   },
-  "engines": {
-    "node": "^6",
-    "npm": "^3"
-  },
   "homepage": "https://github.com/krainboltgreene/ramda-extra.js#readme",
   "devDependencies": {
-    "babel": "^6",
-    "babel-cli": "^6",
-    "babel-core": "^6",
-    "babel-eslint": "^6",
-    "babel-plugin-closure-elimination": "^1",
-    "babel-plugin-relative-import": "^1",
-    "babel-plugin-transform-object-rest-spread": "^6",
-    "babel-preset-latest": "^6",
-    "chai": "^3",
-    "chokidar-cli": "^1",
-    "eslint": "^3",
-    "eslint-plugin-babel": "^3",
-    "eslint-plugin-immutable": "^1",
-    "eslint-plugin-import": "^1",
-    "eslint-plugin-mocha": "^4",
-    "eslint-plugin-node": "^2",
-    "greenkeeper": "^4",
-    "mocha": "^3",
-    "npm-run-all": "^3",
-    "sinon": "1.17.6",
-    "sinon-chai": "2.8.0"
+    "babel-cli": "6.23.0",
+    "babel-core": "6.23.1",
+    "babel-eslint": "7.1.1",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-preset-env": "1.2.0",
+    "babel-preset-flow": "6.23.0",
+    "babel-tap": "5.0.0",
+    "chokidar-cli": "1.2.0",
+    "eslint": "3.17.0",
+    "eslint-plugin-babel": "4.1.0",
+    "eslint-plugin-flowtype": "2.30.0",
+    "eslint-plugin-immutable": "1.0.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-promise": "3.5.0",
+    "flow": "0.2.3",
+    "flow-bin": "0.40.0",
+    "flow-typed": "2.0.0",
+    "greenkeeper": "4.2.1",
+    "npm-run-all": "4.0.2",
+    "sinon": "1.17.7",
+    "tap": "10.3.0"
   },
   "dependencies": {
-    "ramda": "0.22.1"
+    "ramda": "0.23.0"
   }
 }

@@ -1,133 +1,54 @@
-import {describe, describe as context, it} from "mocha"
-import {expect} from "chai"
+import {same} from "tap"
 
-import mergeDeep from "./"
+import mergeDeep from "../mergeDeep"
 
-describe("mergeDeep()", () => {
-  context("one level, simplistic type, different key", () => {
-    const left = {
-      alpha: "1"
+same(
+  mergeDeep({alpha: "1"}, {beta: "2"}),
+  {
+    alpha: "1",
+    beta: "2",
+  }
+)
+same(
+  mergeDeep({alpha: {alpha: "1"}}, {alpha: {beta: "2"}}),
+  {
+    alpha: {
+      alpha: "1",
+      beta: "2",
     }
-    const right = {
-      beta: "2"
-    }
-
-    it("merges", () => {
-      expect(mergeDeep(left, right)).to.deep.equal({
-        alpha: "1",
-        beta: "2"
-      })
-    })
-  })
-
-  context("two levels, simplistic type, different key, object value", () => {
-    const left = {
-      alpha: {
-        alpha1: "1"
-      }
-    }
-    const right = {
-      beta: {
-        beta1: "1"
-      }
-    }
-
-    it("merges", () => {
-      expect(mergeDeep(left, right)).to.deep.equal({
-        alpha: {
-          alpha1: "1"
-        },
-        beta: {
-          beta1: "1"
-        }
-      })
-    })
-  })
-
-  context("two levels, simplistic type, same root key, different sub key", () => {
-    const left = {
-      alpha: {
-        alpha1: "1"
-      }
-    }
-    const right = {
-      alpha: {
-        beta1: "1"
-      }
-    }
-
-    it("merges", () => {
-      expect(mergeDeep(left, right)).to.deep.equal({
-        alpha: {
-          alpha1: "1",
-          beta1: "1"
-        }
-      })
-    })
-  })
-
-  context("two levels, simplistic type, same root key, same subkey, conflicting value", () => {
-    const left = {
-      alpha: {
-        alpha1: "1"
-      }
-    }
-    const right = {
-      alpha: {
-        alpha1: "2"
-      }
-    }
-
-    it("merges", () => {
-      expect(mergeDeep(left, right)).to.deep.equal({
-        alpha: {
-          alpha1: "2"
-        }
-      })
-    })
-  })
-
-  context("two levels, simplistic type, same key, array value different value", () => {
-    const left = {
-      alpha: [
-        "1"
-      ]
-    }
-    const right = {
-      alpha: [
-        "2"
-      ]
-    }
-
-    it("merges", () => {
-      expect(mergeDeep(left, right)).to.deep.equal({
-        alpha: [
-          "1",
-          "2"
-        ]
-      })
-    })
-  })
-
-  context("two levels, simplistic type, same key, array value same value", () => {
-    const left = {
-      alpha: [
-        "1"
-      ]
-    }
-    const right = {
-      alpha: [
-        "1"
-      ]
-    }
-
-    it("merges", () => {
-      expect(mergeDeep(left, right)).to.deep.equal({
-        alpha: [
-          "1",
-          "1"
-        ]
-      })
-    })
-  })
-})
+  }
+)
+same(
+  mergeDeep({alpha: {alpha: "1"}}, {beta: {beta: "2"}}),
+  {
+    alpha: {alpha: "1"},
+    beta: {beta: "2"}
+  }
+)
+same(
+  mergeDeep({alpha: {alpha: "1"}}, {alpha: {alpha: "2"}}),
+  {alpha: {alpha: "2"}}
+)
+same(
+  mergeDeep(["a"], ["b"]),
+  [
+    "a",
+    "b",
+  ]
+)
+same(
+  mergeDeep(["a"], ["a"]),
+  [
+    "a",
+    "a",
+  ]
+)
+same(
+  mergeDeep({alpha: ["a"]}, {alpha: ["a"]}),
+  {
+    alpha: [
+      "a",
+      "a",
+    ]
+  }
+)
