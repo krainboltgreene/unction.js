@@ -12,6 +12,6 @@ test(({equal}) => {
 test(({equal}) => {
   return Promise
     .resolve("a")
-    .then(tapP((value) => "b"))
+    .then(tapP(() => "b"))
     .then((value) => equal(value, "a"))
 })

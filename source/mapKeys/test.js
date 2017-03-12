@@ -1,18 +1,19 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {same} from "tap"
+import {replace} from "ramda"
 
 import mapKeys from "./"
 
 same(
   mapKeys(
-    (key: string): string => key.replace(/a/, ""),
+    replace(/new/, ""),
     {
-      aa: "1",
-      ab: "2"
-    }
+      newLabel: "1",
+      newValue: "2",
+    },
   ),
   {
-    a: "1",
-    b: "2"
+    Label: "1",
+    Value: "2",
   }
 )
