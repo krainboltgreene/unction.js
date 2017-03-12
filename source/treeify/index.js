@@ -1,46 +1,124 @@
-// const ƒunctions = {
-//   groupBy,
-//   indexBy
-// }
+// > ? (Array or Object):a -> (Array of Functions):b -> Object:c
 //
-// export default function invoke (path) {
-//   const [invokation, property] = toPairs(path)
-//   const getter = prop(property)
+// This takes an array of objects or an object of objects (the collection) and
+// uses the list of functions (the folders) to create a tree. Each function in
+// the list of folders will in some way return a new object. All of the objects
+// produced are then turned into a final tree.
 //
-//   return ƒunctions[invokation](getter)
-// }
-// export default function incantations (paths) {
-//   return map(invoke)
-// }
+// ``` javascript
+// import {treeify} from "ramda-extra"
 //
-// export default function treeify (paths, structures) {
-//   return map(
-//     reverse(incantations(paths))
-//   )
-// }
+// const collection = [
+//   {
+//     id: "a1",
+//     type: "resources",
+//     attributes: {
+//       version: "v1",
+//       namespace: "accounts",
+//     }
+//   },
+//   {
+//     id: "a2",
+//     type: "resources",
+//     attributes: {
+//       version: "v1",
+//       namespace: "accounts",
+//     }
+//   },
+//   {
+//     id: "b1",
+//     type: "resources",
+//     attributes: {
+//       version: "v1",
+//       namespace: "profiles",
+//     }
+//   },
+//   {
+//     id: "b1",
+//     type: "resources",
+//     attributes: {
+//       version: "v2",
+//       namespace: "profiles",
+//     }
+//   }
+// ]
 //
-// treeify(
-//   [
-//     {groupBy: ["type"]},
-//     {indexBy: ["id"]},
-//   ],
-//   [
-//     {id: 1, type: "accounts"},
-//     {id: 5, type: "polishes"},
-//     {id: 2, type: "accounts"},
-//     {id: 1, type: "polishes"},
-//     {id: 3, type: "accounts"},
-//   ],
-// )
-// // returns
+// // The order goes from outer layer to deeper layer, so in this case the outer
+// // level properties will be based on `prop("type")`, and the deepest layer
+// // properties will be based on `prop("id")`.
+// const functions = [
+//   groupBy(prop("type")),
+//   groupBy(path(["attributes", "namespace"])),
+//   groupBy(path(["attributes", "version"])),
+//   indexBy(prop("id")),
+// ]
+//
+// treeify(collection)(functions)
+// ```
+//
+// The resulting object looks like this:
+//
+// ``` javascript
 // {
-//   "accounts": {
-//     1: {id: 1, type: "accounts"},
-//     2: {id: 2, type: "accounts"},
-//     3: {id: 3, type: "accounts"},
-//   },
-//   "accounts": {
-//     1: {id: 1, type: "polishes"},
-//     5: {id: 5, type: "polishes"},
-//   },
+//   resources: {
+//     accounts: {
+//       v1: {
+//         a1: {
+//           id: "a1",
+//           type: "resources",
+//           attributes: {
+//             version: "v1",
+//             namespace: "accounts",
+//           }
+//         },
+//         a2: {
+//           id: "a2",
+//           type: "resources",
+//           attributes: {
+//             version: "v1",
+//             namespace: "accounts",
+//           }
+//         }
+//       }
+//     },
+//     profiles: {
+//       v1: {
+//         b1: {
+//           id: "b1",
+//           type: "resources",
+//           attributes: {
+//             version: "v1",
+//             namespace: "profiles",
+//           }
+//         }
+//       },
+//       v2: {
+//         b1: {
+//           id: "b1",
+//           type: "resources",
+//           attributes: {
+//             version: "v2",
+//             namespace: "profiles",
+//           }
+//         }
+//       }
+//     }
+//   }
 // }
+// ```
+import {map} from "ramda"
+import {unary} from "ramda"
+import {reduce} from "ramda"
+
+import mapWithIndex from "../mapWithIndex"
+import nestedApply from "../nestedApply"
+
+export default function treeify (collection: Array<Object>): Function {
+  return function treeifyWithCollection (folders: Array<Function>): Object {
+    return reduce(
+      (tree: any, migration: Function): any => migration(tree),
+      collection,
+      mapWithIndex((unction: Function, index: number): Function => nestedApply(unary(map))(unction)(index), folders)
+    )
+  }
+}
