@@ -1,3 +1,4 @@
+/* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {same} from "tap"
 
 import mapKeys from "./"
