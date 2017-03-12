@@ -96,7 +96,7 @@ test(({similar, end}) => {
     }
   }
 
-  similar(treeify(collection)(functions), expected)
+  similar(treeify(functions)(collection), expected)
 
   end()
 })

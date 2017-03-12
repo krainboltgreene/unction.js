@@ -1,7 +1,7 @@
-// > ? (Array or Object):a -> (Array of Functions):b -> Object:c
+// > ?  (Array of Functions):a -> (Array or Object):b -> Object:c
 //
-// This takes an array of objects or an object of objects (the collection) and
-// uses the list of functions (the folders) to create a tree. Each function in
+// This takes a list of functions (the folders) and an array of objects or an
+// object of objects (the collection) to create a tree. Each function in
 // the list of folders will in some way return a new object. All of the objects
 // produced are then turned into a final tree.
 //
@@ -53,7 +53,7 @@
 //   indexBy(prop("id")),
 // ]
 //
-// treeify(collection)(functions)
+// treeify(functions)(collection)
 // ```
 //
 // The resulting object looks like this:
@@ -113,8 +113,8 @@ import {reduce} from "ramda"
 import mapWithIndex from "../mapWithIndex"
 import nestedApply from "../nestedApply"
 
-export default function treeify (collection: Array<Object>): Function {
-  return function treeifyWithCollection (folders: Array<Function>): Object {
+export default function treeify (folders: Array<Function>): Function {
+  return function treeifyWithCollection (collection: Array<Object>): Object {
     return reduce(
       (tree: any, migration: Function): any => migration(tree),
       collection,
