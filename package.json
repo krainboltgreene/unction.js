@@ -7,7 +7,7 @@
     "prepublish": "npm run build",
     "postinstall": "npm run build",
     "build": "rm -rf './transpiled/' && mkdir './transpiled/' && babel './source/**/index.js' -d './transpiled/'",
-    "test": "babel-tap --jobs=10 './source/**/test.js'",
+    "test": "babel-tap --jobs=2 './source/**/test.js'",
     "start": "npm-run-all --parallel watch:build watch:test",
     "lint": "eslint './source/'",
     "watch": "npm-run-all --parallel watch:test watch:lint watch:build",
