@@ -1,11 +1,45 @@
-import {equal} from "tap"
+import {test} from "tap"
 
 import isPopulated from "./"
 
-equal(isPopulated(["a"]), true)
-equal(isPopulated([[]]), true)
-equal(isPopulated([{}]), true)
-equal(isPopulated([]), false)
-equal(isPopulated([undefined]), false)
-equal(isPopulated([undefined]), false)
-equal(isPopulated([null]), false)
+test(({equal, end}) => {
+  equal(isPopulated(["a"]), true)
+
+  end()
+})
+
+test(({equal, end}) => {
+  equal(isPopulated([[]]), true)
+
+  end()
+})
+
+test(({equal, end}) => {
+  equal(isPopulated([{}]), true)
+
+  end()
+})
+
+test(({equal, end}) => {
+  equal(isPopulated([]), false)
+
+  end()
+})
+
+test(({equal, end}) => {
+  equal(isPopulated([undefined]), false)
+
+  end()
+})
+
+test(({equal, end}) => {
+  equal(isPopulated([undefined]), false)
+
+  end()
+})
+
+test(({equal, end}) => {
+  equal(isPopulated([null]), false)
+
+  end()
+})

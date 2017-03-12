@@ -1,12 +1,40 @@
-import {equal} from "tap"
-import {ok} from "tap"
+import {test} from "tap"
 import {spy} from "sinon"
 
 import aside from "./"
 
-const unctions = spy((): string => "b")
+test(({equal, end}) => {
+  const unctions = spy((): string => "b")
 
-equal(aside(unctions)("a"), "a")
-ok(unctions.calledWith("a"))
-equal(aside(unctions, unctions)("a"), "a")
-ok(unctions.calledWith("b"))
+  equal(aside(unctions)("a"), "a")
+
+  end()
+})
+
+test(({ok, end}) => {
+  const unctions = spy((): string => "b")
+
+  aside(unctions)("a")
+
+  ok(unctions.calledWith("a"))
+
+  end()
+})
+
+test(({equal, end}) => {
+  const unctions = spy((): string => "b")
+
+  equal(aside(unctions, unctions)("a"), "a")
+
+  end()
+})
+
+test(({ok, end}) => {
+  const unctions = spy((): string => "b")
+
+  aside(unctions, unctions)("a")
+
+  ok(unctions.calledWith("b"))
+
+  end()
+})

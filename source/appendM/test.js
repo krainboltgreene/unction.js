@@ -1,5 +1,9 @@
-import {same} from "tap"
+import {test} from "tap"
 
 import appendM from "./"
 
-same(appendM("a", []), ["a"])
+test(({same, end}) => {
+  same(appendM("a", []), ["a"])
+
+  end()
+})

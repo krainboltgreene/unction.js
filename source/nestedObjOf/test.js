@@ -1,8 +1,12 @@
-import {same} from "tap"
+import {test} from "tap"
 
 import nestedObjOf from "./"
 
-same(
-  nestedObjOf(["key", "subkey"], "value"),
-  {key: {subkey: "value"}}
-)
+test(({same, end}) => {
+  same(
+    nestedObjOf(["key", "subkey"], "value"),
+    {key: {subkey: "value"}}
+  )
+
+  end()
+})

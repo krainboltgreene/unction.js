@@ -1,12 +1,52 @@
-import {equal} from "tap"
+import {test} from "tap"
 
 import isPresent from "./"
 
-equal(isPresent(true), true)
-equal(isPresent([]), true)
-equal(isPresent({}), true)
-equal(isPresent(""), true)
-equal(isPresent(0), true)
-equal(isPresent(false), true)
-equal(isPresent(null), false)
-equal(isPresent(undefined), false)
+test(({equal, end}) => {
+  equal(isPresent(true), true)
+
+  end()
+})
+
+test(({equal, end}) => {
+  equal(isPresent([]), true)
+
+  end()
+})
+
+test(({equal, end}) => {
+  equal(isPresent({}), true)
+
+  end()
+})
+
+test(({equal, end}) => {
+  equal(isPresent(""), true)
+
+  end()
+})
+
+test(({equal, end}) => {
+  equal(isPresent(0), true)
+
+  end()
+})
+
+test(({equal, end}) => {
+  equal(isPresent(null), false)
+
+  end()
+})
+
+test(({equal, end}) => {
+  equal(isPresent(false), true)
+
+  end()
+})
+
+
+test(({equal, end}) => {
+  equal(isPresent(undefined), false)
+
+  end()
+})
