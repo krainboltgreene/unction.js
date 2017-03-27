@@ -1,7 +1,5 @@
 # ramda-extra
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/krainboltgreene/ramda-extra.js.svg)](https://greenkeeper.io/)
-
 A set of useful functions that ramda won't implement that uses ramda.
 
 ![Version][BADGE_VERSION]
