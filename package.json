@@ -5,7 +5,6 @@
   "main": "transpiled/source/index.js",
   "scripts": {
     "prepublish": "npm run build",
-    "postinstall": "npm run build",
     "build": "rm -rf './transpiled/' && mkdir './transpiled/' && babel './source/**/index.js' -d './transpiled/'",
     "test": "babel-tap --jobs=2 './source/**/test.js'",
     "start": "npm-run-all --parallel watch:build watch:test",
