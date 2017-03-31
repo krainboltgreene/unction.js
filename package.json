@@ -39,7 +39,7 @@
     "babel-preset-flow": "6.23.0",
     "babel-tap": "5.0.0",
     "chokidar-cli": "1.2.0",
-    "eslint": "3.18.0",
+    "eslint": "3.19.0",
     "eslint-plugin-babel": "4.1.1",
     "eslint-plugin-flowtype": "2.30.4",
     "eslint-plugin-immutable": "1.0.0",
