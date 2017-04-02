@@ -2,7 +2,7 @@
 import {test} from "tap"
 import {spy} from "sinon"
 
-import aside from "./"
+import {aside} from "../index"
 
 test(({equal, end}) => {
   const unctions = spy((): string => "b")

@@ -1,7 +1,7 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import hammer from "./"
+import {hammer} from "../index"
 
 test(({same, end}) => {
   same(

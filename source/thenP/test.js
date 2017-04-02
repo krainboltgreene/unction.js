@@ -1,7 +1,7 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import thenP from "../thenP"
+import {thenP} from "../index"
 
 test(({equal}) => {
   return thenP(

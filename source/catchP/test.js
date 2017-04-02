@@ -1,7 +1,7 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import catchP from "../catchP"
+import {catchP} from "../index"
 
 test(({same}) => {
   return catchP(

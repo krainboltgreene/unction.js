@@ -1,7 +1,7 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import thenCatchP from "../thenCatchP"
+import {thenCatchP} from "../index"
 
 test(({equal, notEqual}) => {
   return thenCatchP(

@@ -1,7 +1,7 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import isPopulated from "./"
+import {isPopulated} from "../index"
 
 test(({equal, end}) => {
   equal(isPopulated(["a"]), true)

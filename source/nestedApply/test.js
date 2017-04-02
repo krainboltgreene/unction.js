@@ -4,7 +4,7 @@ import {map} from "ramda"
 import {toUpper} from "ramda"
 import {unary} from "ramda"
 
-import nestedApply from "./"
+import {nestedApply} from "../index"
 
 test(({similar, end}) => {
   similar(nestedApply(unary(map))(toUpper)(2)([["a"]]), [["A"]])
