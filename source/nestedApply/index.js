@@ -69,8 +69,8 @@ import {inc} from "ramda"
 import upTo from "../upTo"
 
 export default function nestedApply (applicator: Function): Function {
-  return function nestedApplyWithApplication (inner: Function): Function {
-    return function nestedApplyWithInitial (depth: number): Function {
+  return function nestedApplyApplication (inner: Function): Function {
+    return function nestedApplyApplicationInitial (depth: number): Function {
       return reduce((state: Function): Function => applicator(state), inner, upTo(inc(depth)))
     }
   }

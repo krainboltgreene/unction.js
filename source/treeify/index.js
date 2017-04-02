@@ -114,7 +114,7 @@ import mapWithIndex from "../mapWithIndex"
 import nestedApply from "../nestedApply"
 
 export default function treeify (folders: Array<Function>): Function {
-  return function treeifyWithCollection (collection: Array<Object>): Object {
+  return function treeifyCollection (collection: Array<Object>): Object {
     return reduce(
       (tree: any, migration: Function): any => migration(tree),
       collection,
