@@ -6,7 +6,6 @@
   "scripts": {
     "prepublish": "npm run build",
     "test": "babel-tap --jobs=2 './source/**/test.js'",
-    "start": "npm-run-all --parallel watch:build watch:test",
     "build": "babel './source/**/index.js' -d './transpiled/'",
     "lint": "eslint './source/'",
     "watch": "npm-run-all --parallel watch:test watch:lint watch:build",
