@@ -1,3 +1,4 @@
+export {default as allObjectP} from "./allObjectP"
 export {default as allP} from "./allP"
 export {default as anyP} from "./anyP"
 export {default as appendM} from "./appendM"
