@@ -1,10 +1,10 @@
 // ? ({[key: mixed]: Promise<mixed> | mixed}) => Promise<{[key: mixed]: mixed}>
-
+// 
 // This takes an object where the values are probably promises and returns a promise that has that 
 // same object but with the resolved values.
-
+//
 // Here's a good example of this function in use:
-
+//
 // ``` javascript
 // function signUp (attributes, slug) {
 //   return function thunk (dispatch, getState, {client}) {
@@ -31,7 +31,7 @@
 //   }
 // }
 // ```
-
+//
 // If we use `allP` or `Promise.all` we're getting an array back, but that's annoying to 
 // destructure. The `allObjectP` function gives us the concurrency we want with a named
 // interface for the returned resolutions.
