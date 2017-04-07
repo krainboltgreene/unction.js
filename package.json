@@ -2,10 +2,6 @@
   "name": "ramda-extra",
   "version": "4.2.0",
   "description": "A set of functions built on top of ramda that ramda doesn't want",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/krainboltgreene/ramda-extra.js.git"
-  },
   "keywords": [
     "ramda",
     "extras",
@@ -14,6 +10,11 @@
   ],
   "author": "Kurtis Rainbolt-Greene (@krainboltgreene) <kurtis@rainbolt-greene.online>",
   "license": "ISC",
+  "homepage": "https://github.com/krainboltgreene/ramda-extra.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krainboltgreene/ramda-extra.js.git"
+  },
   "bugs": {
     "url": "https://github.com/krainboltgreene/ramda-extra.js/issues"
   },
@@ -28,7 +29,6 @@
     "watch:test": "chokidar './source/' --initial --command 'npm run test --silent'",
     "watch:lint": "chokidar './source/' --initial --command 'npm run lint --silent'"
   },
-  "homepage": "https://github.com/krainboltgreene/ramda-extra.js#readme",
   "devDependencies": {
     "babel-cli": "6.24.1",
     "babel-core": "6.24.1",
