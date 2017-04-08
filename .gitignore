@@ -5,7 +5,7 @@
 #   git config --global core.excludesfile ~/.gitignore
 
 # Regenerable files
-/node_modules/
+**/node_modules/**
 /flow-typed/
 /transpiled/
 
