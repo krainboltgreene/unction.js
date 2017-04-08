@@ -2,6 +2,6 @@
   "version": "independent",
   "lerna": "2.0.0-rc.1",
   "packages": [
-    "packages/*"
+    "source/**/*"
   ]
 }

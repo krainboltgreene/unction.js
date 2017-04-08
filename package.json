@@ -21,9 +21,9 @@
   "main": "transpiled/source/index.js",
   "scripts": {
     "prepublish": "npm run build",
-    "test": "babel-tap --jobs=2 './source/**/test.js'",
-    "build": "babel './source/**/index.js' -d './transpiled/'",
-    "lint": "eslint './source/'",
+    "test": "lerna run test",
+    "build": "lerna run build",
+    "lint": "lerna run lint",
     "watch": "npm-run-all --parallel watch:test watch:lint watch:build",
     "watch:build": "chokidar './source/' --initial --command 'npm run build --silent'",
     "watch:test": "chokidar './source/' --initial --command 'npm run test --silent'",
@@ -36,7 +36,6 @@
     "babel-plugin-transform-object-rest-spread": "6.23.0",
     "babel-preset-env": "1.3.0",
     "babel-preset-flow": "6.23.0",
-    "babel-tap": "5.0.0",
     "chokidar-cli": "1.2.0",
     "eslint": "3.18.0",
     "eslint-plugin-babel": "4.1.1",
@@ -48,13 +47,8 @@
     "flow-bin": "0.43.1",
     "flow-typed": "2.0.0",
     "greenkeeper": "4.2.1",
-    "lerna": "^2.0.0-rc.1",
+    "lerna": "2.0.0-rc.1",
     "npm-run-all": "4.0.2",
-    "sinon": "2.1.0",
-    "tap": "10.3.0"
-  },
-  "dependencies": {
-    "escape-string-regexp": "1.0.5",
-    "ramda": "0.23.0"
+    "sinon": "2.1.0"
   }
 }

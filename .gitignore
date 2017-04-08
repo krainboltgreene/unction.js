@@ -13,7 +13,7 @@
 /tmp/
 
 # Log files
-/*.log
+*.log
 
 # Sensitive files
 /.env
