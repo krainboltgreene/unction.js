@@ -7,7 +7,7 @@
 # Regenerable files
 **/node_modules/**
 /flow-typed/
-/transpiled/
+**/transpiled/**
 
 # Temporary files
 /tmp/
