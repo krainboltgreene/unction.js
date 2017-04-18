@@ -41,8 +41,8 @@
   },
   "dependencies": {
     "ramda": "0.23.0",
-    "allP": "1.0.0",
-    "pairsKeys": "1.0.0",
-    "pairsValues": "1.0.0"
+    "ramda-allP": "1.0.0",
+    "ramda-pairsKeys": "1.0.0",
+    "ramda-pairsValues": "1.0.0"
   }
 }

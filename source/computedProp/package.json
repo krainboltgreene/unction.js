@@ -40,7 +40,7 @@
     "tap": "10.3.0"
   },
   "dependencies": {
-    "mergeDeep": "1.0.0",
-    "nestedObjOf": "1.0.0"
+    "ramda-mergeDeepRight": "1.0.0",
+    "ramda-nestedObjOf": "1.0.0"
   }
 }

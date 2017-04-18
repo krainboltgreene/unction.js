@@ -1,7 +1,7 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import {pairsKeys} from "../index"
+import pairsKeys from "./"
 
 test(({same, end}) => {
   same(

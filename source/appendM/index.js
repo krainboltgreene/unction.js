@@ -1,8 +1,7 @@
-// ? Anything:a -> Array:b -> Array:ab
-import {curryN} from "ramda"
+export default function appendM (value: any): Function {
+  return function appendMValue (list: Array<any>): Array<any> {
+    list.push(value)
 
-export default curryN(2, function appendM (value: any, list: Array<*>): Array<*> {
-  list.push(value)
-
-  return list
-})
+    return list
+  }
+}

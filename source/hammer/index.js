@@ -1,44 +1,24 @@
-// > ? String -> Object:a -> Object:ab
-//
-// Use this to de-nest a nested object.
-//
-// ``` javascript
-// import {hammer} from "ramda-extra"
-//
-// const payload = {
-//   id: 1
-//   attributes: {
-//     name: "Kurtis Rainbolt-Greene",
-//     age: 26
-//   }
-// }
-//
-// hammer("attributes", payload)
-//
-// // {
-// //   id: 1,
-// //   name: "Kurtis Rainbolt-Greene",
-// //   age: 26
-// // }
-// ```
-
-import {curryN} from "ramda"
 import {merge} from "ramda"
 import {prop} from "ramda"
 import {omit} from "ramda"
 import {type} from "ramda"
 
-export default curryN(2, function hammer (key: string | number, structure: Object): Object {
-  if (type(structure) !== "Object") {
-    throw new Error(`hammer only works on an Object, but the second argument was a ${type(structure)}`)
+export default function hammer (key: KeyType): Function {
+  const propKey = prop(key)
+  const omitKey = omit(key)
+
+  return function hammerKey (iterable: IterableType): IterableType {
+    if (type(iterable) !== "Object" && type(iterable) !== "Array") {
+      throw new Error(`hammer only works on an Object or Array, but the set was a ${type(iterable)}`)
+    }
+
+    const only = propKey(iterable)
+    const without = omitKey(iterable)
+
+    if (type(only) !== "Object" && type(only) !== "Array") {
+      throw new Error(`hammer only works on an Object or Array, but the subset was a ${type(iterable)}`)
+    }
+
+    return merge(without, only)
   }
-
-  const onlyKey = prop(key, structure)
-  const withoutKey = omit(key, structure)
-
-  if (type(onlyKey) !== "Object") {
-    throw new Error(`The hammered property ${key} was not an Object it was a ${type(onlyKey)}`)
-  }
-
-  return merge(withoutKey, onlyKey)
-})
+}

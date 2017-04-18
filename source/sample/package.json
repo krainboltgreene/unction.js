@@ -1,7 +1,7 @@
 {
   "name": "ramda-sample",
   "version": "1.0.0",
-  "description": "Returns a random number of items from a array or string",
+  "description": "Returns a random member from a array or string",
   "keywords": [
     "ramda",
     "extras"
@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "ramda": "0.23.0",
-    "shuffle": "1.0.0"
+    "ramda-shuffle": "1.0.0"
   }
 }

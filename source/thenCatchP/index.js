@@ -1,8 +1,7 @@
-// > ? Function -> Promise(Anything):a ->  Promise(Anything):b -> Promise(Function):c
-//
-// A port of the `Promise.prototype.then()` function, but with the extra catch argument.
-// Credit: @keithamus
-
-import {invoker} from "ramda"
-
-export default invoker(2, "then")
+export default function thenCatchP (resolution: any => any): Function {
+  return function thenCatchPResolution (rejection: any => any): Function {
+    return function thenCatchPResolutionRejection (promise: Promise<any>): Promise<any> {
+      return promise.then(resolution, rejection)
+    }
+  }
+}

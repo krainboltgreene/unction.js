@@ -5,5 +5,7 @@ export default function endsWith (subset: string): Function {
   const escaped = escapeStringRegexp(subset)
   const ending = `${escaped}$`
 
-  return test(new RegExp(ending))
+  return function endsWithSubset (set: string): boolean {
+    return test(new RegExp(ending))(set)
+  }
 }

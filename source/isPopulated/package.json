@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "ramda": "0.23.0",
-    "compact": "1.0.0"
+    "ramda-compact": "1.0.0"
   }
 }

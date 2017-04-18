@@ -3,7 +3,9 @@ import escapeStringRegexp from "escape-string-regexp"
 
 export default function startsWith (subset: string): Function {
   const escaped = escapeStringRegexp(subset)
-  const beginning = `^${escaped}`
+  const ending = `^${escaped}`
 
-  return test(new RegExp(beginning))
+  return function startsWithSubset (set: string): boolean {
+    return test(new RegExp(ending))(set)
+  }
 }

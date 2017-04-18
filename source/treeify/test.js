@@ -5,7 +5,7 @@ import {prop} from "ramda"
 import {indexBy} from "ramda"
 import {groupBy} from "ramda"
 
-import {treeify} from "../index"
+import treeify from "./"
 
 const collection = [
   {

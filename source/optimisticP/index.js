@@ -1,20 +1,29 @@
-// ? Array of Promise(pending) -> Array of Promise(resolved)
-//
-// Will take an array of promises and returns a promise of only the resolved promises.
-
 import {map} from "ramda"
-import {pipe} from "ramda"
 import {objOf} from "ramda"
+import {pipe} from "ramda"
 import {prop} from "ramda"
-import {filter} from "ramda"
-import thenCatchP from "../thenCatchP"
-import thenP from "../thenP"
-import allP from "../allP"
+import {has} from "ramda"
+import {reject} from "ramda"
+import thenCatchP from "ramda-thenCatchP"
+import thenP from "ramda-thenP"
+import allP from "ramda-allP"
 
-export default function optimisticP (list: Array<Promise<*>>): Promise<Array<Promise<*>>> {
-  return pipe(
-    map(thenCatchP(objOf("resolved"), objOf("rejected"))),
-    allP,
-    thenP(pipe(filter(prop("resolved")), map(prop("resolved")))),
-  )(list)
+const asResolved = objOf("resolved")
+const asRejected = objOf("rejected")
+const onlyResolved = reject(has("rejected"))
+const resolvedValues = map(prop("resolved"))
+const onlyResolvedValues = pipe(onlyResolved, resolvedValues)
+
+export default function optimisticP (promises: Array<any | Promise<any>>): Promise<Array<any>> {
+  return thenP(
+    onlyResolvedValues
+  )(
+    allP(
+      map(
+        thenCatchP(asResolved)(asRejected)
+      )(
+        promises
+      )
+    )
+  )
 }

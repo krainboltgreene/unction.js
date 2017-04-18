@@ -1,7 +1,7 @@
 {
-  "name": "ramda-mergeDeep",
+  "name": "ramda-mergeWithKey",
   "version": "1.0.0",
-  "description": "Takes a left and right collection and recuresively combines them, merge for Object, concat for Array",
+  "description": "Takes a function that determines how to merge two conflicting values in a merge and gives you a the conflicting key",
   "keywords": [
     "ramda",
     "extras"
@@ -19,8 +19,8 @@
   "main": "transpiled/index.js",
   "scripts": {
     "prepublish": "npm run build",
-    "test": "babel-tap './test.js'",
-    "build": "babel './index.js' -d './transpiled/'",
+    "test": "tap './transpiled/test.js'",
+    "build": "babel './index.js' './test.js' -d './transpiled/'",
     "lint": "eslint './index.js'"
   },
   "devDependencies": {
@@ -40,6 +40,7 @@
     "tap": "10.3.0"
   },
   "dependencies": {
-    "ramda": "0.23.0"
+    "ramda": "0.23.0",
+    "ramda-pairsKeys": "1.0.0"
   }
 }

@@ -1,6 +1,3 @@
-// > ? Anything:a -> Promise(Anything:a)
-//
-// A port of the `Promise.reject()` function.
-// Credit: @keithamus
-
-export default Promise.reject.bind(Promise)
+export default function rejectP (value: any): Promise<any> {
+  return Promise.reject(value)
+}

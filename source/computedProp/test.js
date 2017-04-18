@@ -1,12 +1,14 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
-import {computedProp} from "../index"
+import computedProp from "./"
 
 test(({same, end}) => {
   same(
     computedProp(
-      ({id, attributes: {username}}) => `${username}#${id}`,
-      "tag",
+      ({id, attributes: {username}}) => `${username}#${id}`
+    )(
+      "tag"
+    )(
       {
         id: "1",
         attributes: {username: "krainboltgreene"},
@@ -25,8 +27,10 @@ test(({same, end}) => {
 test(({same, end}) => {
   same(
     computedProp(
-      ({id, attributes: {username}}) => `${username}#${id}`,
-      ["attributes", "tag"],
+      ({id, attributes: {username}}) => `${username}#${id}`
+    )(
+      ["attributes", "tag"]
+    )(
       {
         id: "1",
         attributes: {username: "krainboltgreene"},

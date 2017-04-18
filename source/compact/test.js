@@ -1,7 +1,7 @@
-/* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
+/* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type, object-property-newline, no-undefined, no-magic-numbers */
 import {test} from "tap"
 
-import {compact} from "../index"
+import compact from "./"
 
 test(({same, end}) => {
   same(compact({valueA: 1, valueB: undefined, valueC: null, valueD: []}), {valueA: 1, valueD: []})

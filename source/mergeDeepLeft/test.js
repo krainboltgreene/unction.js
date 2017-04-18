@@ -1,11 +1,11 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import {mergeDeep} from "../index"
+import mergeDeepLeft from "./"
 
 test(({same, end}) => {
   same(
-    mergeDeep({alpha: "1"}, {beta: "2"}),
+    mergeDeepLeft({alpha: "1"})({beta: "2"}),
     {
       alpha: "1",
       beta: "2",
@@ -17,9 +17,9 @@ test(({same, end}) => {
 
 test(({same, end}) => {
   same(
-    mergeDeep({alpha: {alpha: "1"}}, {alpha: {beta: "2"}}),
+    mergeDeepLeft({gamma: {alpha: "1"}})({gamma: {beta: "2"}}),
     {
-      alpha: {
+      gamma: {
         alpha: "1",
         beta: "2",
       }
@@ -31,7 +31,7 @@ test(({same, end}) => {
 
 test(({same, end}) => {
   same(
-    mergeDeep({alpha: {alpha: "1"}}, {beta: {beta: "2"}}),
+    mergeDeepLeft({alpha: {alpha: "1"}})({beta: {beta: "2"}}),
     {
       alpha: {alpha: "1"},
       beta: {beta: "2"}
@@ -43,8 +43,8 @@ test(({same, end}) => {
 
 test(({same, end}) => {
   same(
-    mergeDeep({alpha: {alpha: "1"}}, {alpha: {alpha: "2"}}),
-    {alpha: {alpha: "2"}}
+    mergeDeepLeft({alpha: {alpha: "1"}})({alpha: {alpha: "2"}}),
+    {alpha: {alpha: "1"}}
   )
 
   end()
@@ -52,10 +52,10 @@ test(({same, end}) => {
 
 test(({same, end}) => {
   same(
-    mergeDeep(["a"], ["b"]),
+    mergeDeepLeft(["a"])(["b"]),
     [
-      "a",
       "b",
+      "a",
     ]
   )
 
@@ -64,7 +64,7 @@ test(({same, end}) => {
 
 test(({same, end}) => {
   same(
-    mergeDeep(["a"], ["a"]),
+    mergeDeepLeft(["a"])(["a"]),
     [
       "a",
       "a",
@@ -76,7 +76,7 @@ test(({same, end}) => {
 
 test(({same, end}) => {
   same(
-    mergeDeep({alpha: ["a"]}, {alpha: ["a"]}),
+    mergeDeepLeft({alpha: ["a"]})({alpha: ["a"]}),
     {
       alpha: [
         "a",
@@ -84,7 +84,6 @@ test(({same, end}) => {
       ]
     }
   )
-
 
   end()
 })

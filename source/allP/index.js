@@ -1,6 +1,3 @@
-// > ? Array of Promise(Anything):a -> Promise(Array of Promise(Anything):a)
-//
-// A port of the `Promise.all()` function.
-// Credit: @keithamus
-
-export default Promise.all.bind(Promise)
+export default function allP (values: Array<any | Promise<any>>): Promise<Array<any>> {
+  return Promise.all(values)
+}

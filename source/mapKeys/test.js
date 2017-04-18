@@ -2,16 +2,13 @@
 import {same} from "tap"
 import {replace} from "ramda"
 
-import {mapKeys} from "../index"
+import mapKeys from "./"
 
 same(
-  mapKeys(
-    replace(/new/, ""),
-    {
-      newLabel: "1",
-      newValue: "2",
-    },
-  ),
+  mapKeys(replace(/new/, ""))({
+    newLabel: "1",
+    newValue: "2",
+  }),
   {
     Label: "1",
     Value: "2",

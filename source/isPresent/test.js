@@ -1,7 +1,7 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import {isPresent} from "../index"
+import isPresent from "./"
 
 test(({equal, end}) => {
   equal(isPresent(true), true)
