@@ -25,6 +25,7 @@
     "test": "lerna run test",
     "build": "lerna run build",
     "lint": "lerna run lint",
+    "bootstrap": "lerna bootstrap",
     "watch": "npm-run-all --parallel watch:test watch:lint watch:build",
     "watch:build": "chokidar './source/' --initial --command 'npm run build --silent'",
     "watch:test": "chokidar './source/' --initial --command 'npm run test --silent'",
