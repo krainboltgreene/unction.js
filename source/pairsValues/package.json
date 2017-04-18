@@ -19,8 +19,8 @@
   "main": "transpiled/index.js",
   "scripts": {
     "prepublish": "npm run build",
-    "test": "babel-tap './test.js'",
-    "build": "babel './index.js' -d './transpiled/'",
+    "test": "tap './transpiled/test.js'",
+    "build": "babel './index.js' './test.js' -d './transpiled/'",
     "lint": "eslint './index.js'"
   },
   "devDependencies": {
