@@ -1,6 +1,6 @@
 {
   "name": "@unction/all",
-  "version": "1.0.0",
+  "version": "4.2.0",
   "description": "A set of type annotated FP functions that enforce currying and composability",
   "keywords": [
     "unction",
