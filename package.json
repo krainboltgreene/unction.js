@@ -19,7 +19,7 @@
   },
   "main": "transpiled/source/index.js",
   "scripts": {
-    "postinstall": "lerna exec npm install",
+    "postinstall": "lerna bootstrap",
     "prepublish": "npm run build",
     "test": "lerna run test",
     "build": "lerna run build",
