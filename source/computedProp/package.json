@@ -1,5 +1,5 @@
 {
-  "name": "@unction/computedProp",
+  "name": "@unction/computedprop",
   "version": "1.0.0",
   "description": "Creates a record from a record where a (nested or root) prop is computed from a function",
   "keywords": [

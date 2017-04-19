@@ -1,5 +1,5 @@
 {
-  "name": "@unction/mergeWithKey",
+  "name": "@unction/mergewithkey",
   "version": "1.0.0",
   "description": "Takes a function that determines how to merge two conflicting values in a merge and gives you a the conflicting key",
   "keywords": [

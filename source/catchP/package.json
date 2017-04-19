@@ -1,5 +1,5 @@
 {
-  "name": "@unction/catchP",
+  "name": "@unction/catchp",
   "version": "1.0.0",
   "description": "A currable version of Promise.prototype.catch",
   "keywords": [

@@ -1,5 +1,5 @@
 {
-  "name": "@unction/lacksText",
+  "name": "@unction/lackstext",
   "version": "1.0.0",
   "description": "Determines if a string does not have another string",
   "keywords": [

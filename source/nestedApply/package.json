@@ -1,5 +1,5 @@
 {
-  "name": "@unction/nestedApply",
+  "name": "@unction/nestedapply",
   "version": "1.0.0",
   "description": "Applies a function or functions to a nested iteratorable",
   "keywords": [

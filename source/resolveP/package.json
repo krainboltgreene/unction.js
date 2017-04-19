@@ -1,5 +1,5 @@
 {
-  "name": "@unction/resolveP",
+  "name": "@unction/resolvep",
   "version": "1.0.0",
   "description": "A currable version of the Promise.resolve() function",
   "keywords": [

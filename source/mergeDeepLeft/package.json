@@ -1,5 +1,5 @@
 {
-  "name": "@unction/mergeDeepLeft",
+  "name": "@unction/mergedeepleft",
   "version": "1.0.0",
   "description": "Takes a left and right collection and recuresively combines them prefering right: merge for Object and concat for Array",
   "keywords": [

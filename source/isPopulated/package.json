@@ -1,5 +1,5 @@
 {
-  "name": "@unction/isPopulated",
+  "name": "@unction/ispopulated",
   "version": "1.0.0",
   "description": "Determines if a list has any non-nil values",
   "keywords": [

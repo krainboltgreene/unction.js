@@ -1,5 +1,5 @@
 {
-  "name": "@unction/rejectP",
+  "name": "@unction/rejectp",
   "version": "1.0.0",
   "description": "A currable version of the Promise.reject() function",
   "keywords": [

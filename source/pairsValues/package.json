@@ -1,5 +1,5 @@
 {
-  "name": "@unction/pairsValues",
+  "name": "@unction/pairsvalues",
   "version": "1.0.0",
   "description": "Takes an array of arrays (pairs) and returns the values",
   "keywords": [

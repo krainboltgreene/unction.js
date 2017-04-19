@@ -1,5 +1,5 @@
 {
-  "name": "@unction/optimisticP",
+  "name": "@unction/optimisticp",
   "version": "1.0.0",
   "description": "Given a set of promises only return the resolved promises",
   "keywords": [

@@ -1,5 +1,5 @@
 {
-  "name": "@unction/allP",
+  "name": "@unction/allp",
   "version": "1.0.0",
   "description": "A curryable version of Promise.all",
   "keywords": [
