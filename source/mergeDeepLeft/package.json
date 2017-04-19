@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "ramda": "0.23.0",
-    "@unction/mergeWith": "1.0.0"
+    "@unction/mergewith": "1.0.0"
   }
 }

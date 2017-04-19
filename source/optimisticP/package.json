@@ -41,8 +41,8 @@
   },
   "dependencies": {
     "ramda": "0.23.0",
-    "@unction/thenCatchP": "1.0.0",
-    "@unction/thenP": "1.0.0",
-    "@unction/allP": "1.0.0"
+    "@unction/thencatchp": "1.0.0",
+    "@unction/thenp": "1.0.0",
+    "@unction/allp": "1.0.0"
   }
 }

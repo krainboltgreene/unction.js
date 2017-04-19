@@ -41,8 +41,8 @@
   },
   "dependencies": {
     "ramda": "0.23.0",
-    "@unction/allP": "1.0.0",
-    "@unction/pairsKeys": "1.0.0",
-    "@unction/pairsValues": "1.0.0"
+    "@unction/allp": "1.0.0",
+    "@unction/pairskeys": "1.0.0",
+    "@unction/pairsvalues": "1.0.0"
   }
 }
