@@ -1,8 +1,8 @@
 import {toPairs} from "ramda"
 import {zipObj} from "ramda"
-import allP from "ramda-allP"
-import pairsKeys from "ramda-pairsKeys"
-import pairsValues from "ramda-pairsValues"
+import allP from "@unction/allP"
+import pairsKeys from "@unction/pairsKeys"
+import pairsValues from "@unction/pairsValues"
 
 
 export default function allObjectP (object: {[key: KeyType]: any | Promise<any>}): Promise<{[key: KeyType]: any}> {

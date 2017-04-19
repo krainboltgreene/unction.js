@@ -1,6 +1,6 @@
 import {type} from "ramda"
 import {concat} from "ramda"
-import mergeWith from "ramda-mergeWith"
+import mergeWith from "@unction/mergeWith"
 
 export default function mergeDeepRight (left: IterableType): Function {
   return function mergeDeepRightLeft (right: IterableType): IterableType {

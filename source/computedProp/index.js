@@ -1,5 +1,5 @@
-import mergeDeepRight from "ramda-mergeDeepRight"
-import nestedObjOf from "ramda-nestedObjOf"
+import mergeDeepRight from "@unction/mergeDeepRight"
+import nestedObjOf from "@unction/nestedObjOf"
 
 export default function computedProp (computer: IterableType => any): Function {
   return function computedPropComputer (propOrPath: KeyType | Array<KeyType>): Function {

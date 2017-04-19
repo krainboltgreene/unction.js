@@ -1,7 +1,7 @@
 import {map} from "ramda"
 import {reduce} from "ramda"
-import mapWithIndex from "ramda-mapWithIndex"
-import nestedApply from "ramda-nestedApply"
+import mapWithIndex from "@unction/mapWithIndex"
+import nestedApply from "@unction/nestedApply"
 
 export default function treeify (folders: Array<Function>): Function {
   return function treeifyCollection (collection: Array<IterableType>): IterableType {
