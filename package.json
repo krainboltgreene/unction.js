@@ -1,22 +1,21 @@
 {
-  "name": "ramda-extra",
-  "version": "4.2.0",
-  "description": "A set of functions built on top of ramda that ramda doesn't want",
+  "name": "@unction/all",
+  "version": "1.0.0",
+  "description": "A set of type annotated FP functions that enforce currying and composability",
   "keywords": [
-    "ramda",
-    "extras",
-    "plus",
-    "extension"
+    "unction",
+    "functional",
+    "collection"
   ],
   "author": "Kurtis Rainbolt-Greene (@krainboltgreene) <kurtis@rainbolt-greene.online>",
   "license": "ISC",
-  "homepage": "https://github.com/krainboltgreene/ramda-extra.js#readme",
+  "homepage": "https://github.com/krainboltgreene/unction.js#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krainboltgreene/ramda-extra.js.git"
+    "url": "git+https://github.com/krainboltgreene/unction.js.git"
   },
   "bugs": {
-    "url": "https://github.com/krainboltgreene/ramda-extra.js/issues"
+    "url": "https://github.com/krainboltgreene/unction/issues"
   },
   "main": "transpiled/source/index.js",
   "scripts": {
@@ -26,6 +25,7 @@
     "build": "lerna run build",
     "lint": "lerna run lint",
     "bootstrap": "lerna bootstrap",
+    "check": "flow check",
     "watch": "npm-run-all --parallel watch:test watch:lint watch:build",
     "watch:build": "chokidar './source/' --initial --command 'npm run build --silent'",
     "watch:test": "chokidar './source/' --initial --command 'npm run test --silent'",

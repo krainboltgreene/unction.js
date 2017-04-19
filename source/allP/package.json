@@ -1,20 +1,20 @@
 {
-  "name": "ramda-allP",
+  "name": "@unction/allP",
   "version": "1.0.0",
   "description": "A curryable version of Promise.all",
   "keywords": [
-    "ramda",
-    "extras"
+    "unction",
+    "functional"
   ],
   "author": "Kurtis Rainbolt-Greene (@krainboltgreene) <kurtis@rainbolt-greene.online>",
   "license": "ISC",
-  "homepage": "https://github.com/krainboltgreene/ramda-extra.js#readme",
+  "homepage": "https://github.com/krainboltgreene/unction.js#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krainboltgreene/ramda-extra.js.git"
+    "url": "git+https://github.com/krainboltgreene/unction.js.git"
   },
   "bugs": {
-    "url": "https://github.com/krainboltgreene/ramda-extra.js/issues"
+    "url": "https://github.com/krainboltgreene/unction/issues"
   },
   "main": "transpiled/index.js",
   "scripts": {

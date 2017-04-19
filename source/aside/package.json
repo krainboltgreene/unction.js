@@ -1,20 +1,20 @@
 {
-  "name": "ramda-aside",
+  "name": "@unction/aside",
   "version": "1.0.0",
   "description": "Like pipe but the return value is the argument",
   "keywords": [
-    "ramda",
-    "extras"
+    "unction",
+    "functional"
   ],
   "author": "Kurtis Rainbolt-Greene (@krainboltgreene) <kurtis@rainbolt-greene.online>",
   "license": "ISC",
-  "homepage": "https://github.com/krainboltgreene/ramda-extra.js#readme",
+  "homepage": "https://github.com/krainboltgreene/unction.js#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krainboltgreene/ramda-extra.js.git"
+    "url": "git+https://github.com/krainboltgreene/unction.js.git"
   },
   "bugs": {
-    "url": "https://github.com/krainboltgreene/ramda-extra.js/issues"
+    "url": "https://github.com/krainboltgreene/unction/issues"
   },
   "main": "transpiled/index.js",
   "scripts": {
@@ -37,7 +37,8 @@
     "eslint-plugin-immutable": "1.0.0",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-promise": "3.5.0",
-    "tap": "10.3.0"
+    "tap": "10.3.0",
+    "sinon": "1.17.7"
   },
   "dependencies": {
     "ramda": "0.23.0"

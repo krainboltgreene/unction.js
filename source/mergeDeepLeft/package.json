@@ -1,20 +1,20 @@
 {
-  "name": "ramda-mergeDeepLeft",
+  "name": "@unction/mergeDeepLeft",
   "version": "1.0.0",
   "description": "Takes a left and right collection and recuresively combines them prefering right: merge for Object and concat for Array",
   "keywords": [
-    "ramda",
-    "extras"
+    "unction",
+    "functional"
   ],
   "author": "Kurtis Rainbolt-Greene (@krainboltgreene) <kurtis@rainbolt-greene.online>",
   "license": "ISC",
-  "homepage": "https://github.com/krainboltgreene/ramda-extra.js#readme",
+  "homepage": "https://github.com/krainboltgreene/unction.js#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krainboltgreene/ramda-extra.js.git"
+    "url": "git+https://github.com/krainboltgreene/unction.js.git"
   },
   "bugs": {
-    "url": "https://github.com/krainboltgreene/ramda-extra.js/issues"
+    "url": "https://github.com/krainboltgreene/unction/issues"
   },
   "main": "transpiled/index.js",
   "scripts": {
@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "ramda": "0.23.0",
-    "ramda-mergeWith": "1.0.0"
+    "@unction/mergeWith": "1.0.0"
   }
 }
