@@ -4,9 +4,9 @@ import {pipe} from "ramda"
 import {prop} from "ramda"
 import {has} from "ramda"
 import {reject} from "ramda"
-import thenCatchP from "@unction/thenCatchP"
-import thenP from "@unction/thenP"
-import allP from "@unction/allP"
+import thenCatchP from "@unction/thencatchp"
+import thenP from "@unction/thenp"
+import allP from "@unction/allp"
 
 const asResolved = objOf("resolved")
 const asRejected = objOf("rejected")

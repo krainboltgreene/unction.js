@@ -42,6 +42,6 @@
   "dependencies": {
     "ramda": "0.23.0",
     "@unction/mapwithindex": "1.0.0",
-    "@unction/nestedapply": "1.0.0"
+    "@unction/nestedapply": "1.0.1"
   }
 }

@@ -40,7 +40,7 @@
     "tap": "10.3.0"
   },
   "dependencies": {
-    "@unction/mergedeepright": "1.0.0",
+    "@unction/mergedeepright": "1.0.1",
     "@unction/nestedobjof": "1.0.0"
   }
 }

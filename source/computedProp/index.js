@@ -1,5 +1,5 @@
-import mergeDeepRight from "@unction/mergeDeepRight"
-import nestedObjOf from "@unction/nestedObjOf"
+import mergeDeepRight from "@unction/mergedeepright"
+import nestedObjOf from "@unction/nestedobjof"
 
 export default function computedProp (computer: IterableType => any): Function {
   return function computedPropComputer (propOrPath: KeyType | Array<KeyType>): Function {

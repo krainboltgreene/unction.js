@@ -4,7 +4,7 @@ import {map} from "ramda"
 import {toPairs} from "ramda"
 import {fromPairs} from "ramda"
 import {contains} from "ramda"
-import pairsKeys from "@unction/pairsKeys"
+import pairsKeys from "@unction/pairskeys"
 
 export default function mergeWith (unction: IterableType => IterableType => any): Function {
   return function mergeWithUnction (left: IterableType): Function {

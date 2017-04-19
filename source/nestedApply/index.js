@@ -1,6 +1,6 @@
 import {reduce} from "ramda"
 import {inc} from "ramda"
-import upTo from "@unction/upTo"
+import upTo from "@unction/upto"
 
 const thrush = (unction: any => any): Function => (value: any): any => unction(value)
 
