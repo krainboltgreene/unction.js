@@ -1,6 +1,6 @@
 import {toPairs} from "ramda"
 import {zipObj} from "ramda"
-import allP from "@unction/allP"
+import allP from "@unction/allp"
 import pairsKeys from "@unction/pairskeys"
 import pairsValues from "@unction/pairsvalues"
 
