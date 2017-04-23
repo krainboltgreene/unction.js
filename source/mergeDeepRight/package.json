@@ -1,6 +1,6 @@
 {
   "name": "@unction/mergedeepright",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Takes a left and right collection and recuresively combines them prefering right: merge for Object and concat for Array",
   "keywords": [
     "unction",
@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "ramda": "0.23.0",
-    "@unction/mergewith": "1.0.1"
+    "@unction/mergewith": "1.0.2"
   }
 }
