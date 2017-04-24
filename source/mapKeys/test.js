@@ -5,7 +5,9 @@ import {replace} from "ramda"
 import mapKeys from "./"
 
 same(
-  mapKeys(replace(/new/, ""))({
+  mapKeys(
+    replace(/new/)("")
+  )({
     newLabel: "1",
     newValue: "2",
   }),
