@@ -1,0 +1,42 @@
+{
+  "name": "@unction/iterateFunction",
+  "version": "1.0.0",
+  "description": "Figure out the raw iterator function of a thing",
+  "keywords": [
+    "unction",
+    "functional"
+  ],
+  "author": "Kurtis Rainbolt-Greene (@krainboltgreene) <kurtis@rainbolt-greene.online>",
+  "license": "ISC",
+  "homepage": "https://github.com/krainboltgreene/unction.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krainboltgreene/unction.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krainboltgreene/unction/issues"
+  },
+  "main": "transpiled/index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "test": "tap --no-coverage --no-coverage-report --no-color --jobs-auto --reporter dot './transpiled/test.js'",
+    "build": "babel './index.js' './test.js' -d './transpiled/'",
+    "lint": "eslint './index.js'"
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.0",
+    "babel-core": "6.24.0",
+    "babel-eslint": "7.2.1",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-preset-env": "1.2.2",
+    "babel-preset-flow": "6.23.0",
+    "babel-tap": "5.0.0",
+    "eslint": "3.18.0",
+    "eslint-plugin-babel": "4.1.1",
+    "eslint-plugin-flowtype": "2.30.4",
+    "eslint-plugin-immutable": "1.0.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-promise": "3.5.0",
+    "tap": "10.3.0"
+  }
+}
