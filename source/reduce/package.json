@@ -38,5 +38,8 @@
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-promise": "3.5.0",
     "tap": "10.3.0"
+  },
+  "dependencies": {
+    "@unction/iterateFunction": "1.0.0"
   }
 }

@@ -40,6 +40,7 @@
     "tap": "10.3.0"
   },
   "dependencies": {
+    "@unction/iterateFunction": "1.0.0",
     "ramda": "0.23.0"
   }
 }

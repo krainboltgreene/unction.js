@@ -1,11 +1,16 @@
+/* eslint-disable immutable/no-let */
 import {empty} from "ramda"
+import iteratorFunction from "@unction/iterateFunction"
 
 export default function mapKeys (unction: any => any): Function {
   return function mapKeysUnction (iterable: IterableType): IterableType {
-    const transformed = empty(iterable)
+    let transformed = empty(iterable)
 
-    iterable.forEach(function mapKeysUnctionIterable (value: any, key: any) {
-      transformed[unction(key)] = value
+    iteratorFunction(iterable)(function mapKeysUnctionIterable (value: any, key: any) {
+      transformed = {
+        ...transformed,
+        [unction(key)]: value
+      }
     })
 
     return transformed
