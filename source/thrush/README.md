@@ -5,12 +5,12 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any -> any) -> any -> any
+> any -> (any -> any) -> any
 
-One of the fantasy birds: it takes a function, a value, and then applies that value to as the first argument to that function.
+One of the fantasy birds: it takes a value, a function, and then applies that value to as the first argument to that function.
 
 ``` javascript
-thrush((value) => `${value}`)(0) // "0"
+thrush(0)((value) => `${value}`) // "0"
 ```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/krainboltgreene/unction.js.svg?maxAge=2592000&style=flat-square

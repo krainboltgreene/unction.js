@@ -5,7 +5,7 @@ import thrush from "./"
 
 test(({equal, end}) => {
   equal(
-    thrush((value) => `${value}`)(0),
+    thrush(0)((value) => `${value}`),
     "0"
   )
 
