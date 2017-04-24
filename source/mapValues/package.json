@@ -1,7 +1,7 @@
 {
-  "name": "@unction/map",
+  "name": "@unction/mapvalue",
   "version": "1.0.0",
-  "description": "A regular ol' map",
+  "description": "A regular ol' map over values (fantasy land)",
   "keywords": [
     "unction",
     "functional"
