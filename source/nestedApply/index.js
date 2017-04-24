@@ -1,18 +1,28 @@
-import {reduce} from "ramda"
-import {inc} from "ramda"
+import reduce from "@unction/reduce"
 import upTo from "@unction/upto"
 
-const thrush = (unction: any => any): Function => (value: any): any => unction(value)
+export default function nestedApply (iterator: Function => IterableType => IterableType): Function {
+  return function nestedApplyIterator (unction: any => any): IterableType => IterableType {
+    const initial = iterator(unction)
 
-export default function nestedApply (application: any => any): Function {
-  const applicated = thrush(application)
-  const reduceApplication = reduce(applicated)
+    return function nestedApplyIteratorUnction (depth: number): any {
+      const times = upTo(depth)
 
-  return function nestedApplyApplication (inner: (any => any => any)): IterableType => IterableType {
-    const reduceApplicationInner = reduceApplication(inner)
-
-    return function nestedApplyApplicationInitial (depth: number): any {
-      return reduceApplicationInner(upTo(inc(depth)))
+      return function nestedApplyIteratorUnctionDepth (iterable: IterableType): IterableType {
+        return reduce(
+          function nestedApplyIteratorUnctionDepthIterable (accumulatedUnction: Function): Function {
+            return function nestedApplyIteratorUnctionDepthIterableAccumulatedUnction (): IterableType => IterableType {
+              return iterator(accumulatedUnction)
+            }
+          }
+        )(
+          initial
+        )(
+          times
+        )(
+          iterable
+        )
+      }
     }
   }
 }

@@ -1,15 +1,13 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type, no-magic-numbers */
 import {test} from "tap"
-import {map} from "ramda"
-import {toUpper} from "ramda"
-import {unary} from "ramda"
+import map from "@unction/map"
 
 import nestedApply from "./"
 
 test(({similar, end}) => {
   similar(
-    nestedApply(unary(map))(toUpper)(2)([["a"]]),
-    [["A"]]
+    nestedApply(map)((value) => `${value}`)(2)([[1]]),
+    [["1"]]
   )
 
   end()
@@ -17,8 +15,8 @@ test(({similar, end}) => {
 
 test(({similar, end}) => {
   similar(
-    nestedApply(unary(map))(toUpper)(3)([[["a"]]]),
-    [[["A"]]]
+    nestedApply(map)((value) => `${value}`)(3)([[[1]]]),
+    [[["1"]]]
   )
 
   end()
