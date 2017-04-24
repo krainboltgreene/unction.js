@@ -1,5 +1,5 @@
 {
-  "name": "@unction/mapwithindex",
+  "name": "@unction/mapwithvaluekey",
   "version": "1.0.0",
   "description": "Ramda's map but with an index value as the second argument",
   "keywords": [

@@ -1,11 +1,11 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import mapWithIndex from "./"
+import mapWithValueKey from "./"
 
 test(({same, end}) => {
   same(
-    mapWithIndex((value, index) => `${value}:${index}`)(["a", "b", "c"]),
+    mapWithValueKey((value) => (index) => `${value}:${index}`)(["a", "b", "c"]),
     ["a:0", "b:1", "c:2"]
   )
   end()
