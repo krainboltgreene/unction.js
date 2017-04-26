@@ -1,16 +1,28 @@
-import {map} from "ramda"
-import {reduce} from "ramda"
-import mapWithIndex from "@unction/mapwithindex"
+import reduce from "@unction/reduce"
+import mapValues from "@unction/mapvalues"
+import mapWithValueKey from "@unction/mapwithvaluekey"
 import nestedApply from "@unction/nestedapply"
 
-export default function treeify (folders: Array<Function>): Function {
-  return function treeifyCollection (collection: Array<IterableType>): IterableType {
+export default function treeify (iterators: Array<Function>): Function {
+  return function treeifyIterators (collection: Array<IterableType>): IterableType {
     return reduce(
-      (tree: IterableType, migration: Function): IterableType => migration(tree)
+      function treeifyIteratorsCollectionReducer (iterable: IterableType): Function {
+        return function treeifyIteratorsCollectionReducerIterable (transformation: IterableType => IterableType): IterableType {
+          return transformation(iterable)
+        }
+      }
     )(
       collection
     )(
-      mapWithIndex((unction: Function, index: number): Function => nestedApply(map)(unction)(index))(folders)
+      mapWithValueKey(
+        function treeifyIteratorsCollectionMapper (unction: any => any): Function {
+          return function treeifyIteratorsCollectionMapperIterable (index: number): IteratorType {
+            return nestedApply(mapValues)(unction)(index)(iterators)
+          }
+        }
+      )(
+        iterators
+      )
     )
   }
 }
