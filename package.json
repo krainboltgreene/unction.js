@@ -49,7 +49,7 @@
     "flow-bin": "0.43.1",
     "flow-typed": "2.0.0",
     "greenkeeper": "4.2.1",
-    "lerna": "2.0.0-rc.1",
+    "lerna": "2.0.0-rc.4",
     "npm-run-all": "4.0.2",
     "sinon": "2.1.0"
   }
