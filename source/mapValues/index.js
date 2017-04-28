@@ -4,13 +4,10 @@ import iteratorFunction from "@unction/iterateFunction"
 
 export default function mapValues (unction: any => any): Function {
   return function mapValuesUnction (iterable: IterableType): IterableType {
-    let transformed = empty(iterable)
+    const transformed = empty(iterable)
 
     iteratorFunction(iterable)(function mapValuesUnctionIterable (value: any, key: any) {
-      transformed = {
-        ...transformed,
-        [key]: unction(value)
-      }
+      transformed[key] = unction(value)
     })
 
     return transformed
