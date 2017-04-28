@@ -1,11 +1,11 @@
-import reduce from "@unction/reduce"
+import reduceValues from "@unction/reducevalues"
 import mapValues from "@unction/mapvalues"
 import mapWithValueKey from "@unction/mapwithvaluekey"
 import nestedApply from "@unction/nestedapply"
 
 export default function treeify (iterators: Array<Function>): Function {
   return function treeifyIterators (collection: Array<IterableType>): IterableType {
-    return reduce(
+    return reduceValues(
       function treeifyIteratorsCollectionReducer (iterable: IterableType): Function {
         return function treeifyIteratorsCollectionReducerIterable (transformation: IterableType => IterableType): IterableType {
           return transformation(iterable)

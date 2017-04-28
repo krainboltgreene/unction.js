@@ -1,11 +1,11 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import reduce from "./"
+import reduceValues from "./"
 
 test(({equal, end}) => {
   equal(
-    reduce((accumulation) => (current) => `${accumulation}/${current}`)(".")(["a", "b", "c"]),
+    reduceValues((accumulation) => (current) => `${accumulation}/${current}`)(".")(["a", "b", "c"]),
     "./a/b/c"
   )
 

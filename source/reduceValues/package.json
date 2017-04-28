@@ -1,5 +1,5 @@
 {
-  "name": "@unction/reduce",
+  "name": "@unction/reducevalues",
   "version": "1.0.0",
   "description": "A curried reduce",
   "keywords": [

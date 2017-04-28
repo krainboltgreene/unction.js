@@ -40,7 +40,7 @@
     "tap": "10.3.0"
   },
   "dependencies": {
-    "@unction/reduce": "1.0.0",
+    "@unction/reducevalues": "1.0.0",
     "@unction/mapvalues": "1.0.0",
     "@unction/mapwithvaluekey": "1.0.0",
     "@unction/nestedapply": "1.0.3"

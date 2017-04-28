@@ -1,4 +1,4 @@
-import reduce from "@unction/reduce"
+import reduceValues from "@unction/reducevalues"
 import upTo from "@unction/upto"
 
 export default function nestedApply (iterator: Function => IterableType => IterableType): Function {
@@ -9,7 +9,7 @@ export default function nestedApply (iterator: Function => IterableType => Itera
       const times = upTo(depth)
 
       return function nestedApplyIteratorUnctionDepth (iterable: IterableType): IterableType {
-        return reduce(
+        return reduceValues(
           function nestedApplyIteratorUnctionDepthIterable (accumulatedUnction: Function): Function {
             return function nestedApplyIteratorUnctionDepthIterableAccumulatedUnction (): IterableType => IterableType {
               return iterator(accumulatedUnction)

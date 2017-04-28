@@ -41,7 +41,7 @@
     "tap": "10.3.0"
   },
   "dependencies": {
-    "@unction/reduce": "1.0.0",
+    "@unction/reducevalues": "1.0.0",
     "@unction/upto": "1.0.0"
   }
 }
