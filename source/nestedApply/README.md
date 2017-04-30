@@ -5,7 +5,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any -> any) -> (any -> any -> any) -> number -> IterableType -> IterableType
+> ((any -> any) -> IterableType -> IterableType) -> (any -> any) -> number -> IterableType -> IterableType
 
 Takes a function (the application) that takes function(s) (later referred to as
 the inner) and value(s) (`map()`, `forEach()`, `find()`), a function (the inner)
