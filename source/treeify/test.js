@@ -42,18 +42,66 @@ const collection = [
   }
 ]
 
-test(({similar, end}) => {
-  const functions = [
-    groupBy(prop("type")),
-    groupBy(path(["attributes", "namespace"])),
-    groupBy(path(["attributes", "version"])),
-    indexBy(prop("id")),
-  ]
-  const expected = {
-    resources: {
-      accounts: {
-        v1: {
-          a1: {
+test(({same, end}) => {
+  same(
+    treeify(
+      [
+        groupBy(prop("type"))
+      ]
+    )(collection),
+    {
+      resources: [
+        {
+          id: "a1",
+          type: "resources",
+          attributes: {
+            version: "v1",
+            namespace: "accounts",
+          }
+        },
+        {
+          id: "a2",
+          type: "resources",
+          attributes: {
+            version: "v1",
+            namespace: "accounts",
+          }
+        },
+        {
+          id: "b1",
+          type: "resources",
+          attributes: {
+            version: "v1",
+            namespace: "profiles",
+          }
+        },
+        {
+          id: "b1",
+          type: "resources",
+          attributes: {
+            version: "v2",
+            namespace: "profiles",
+          }
+        }
+      ]
+    }
+  )
+
+  end()
+})
+
+test(({same, end}) => {
+  same(
+    treeify(
+      [
+        groupBy(prop("type")),
+        groupBy(path(["attributes", "namespace"])),
+      ]
+    )(collection),
+    {
+      resources: {
+        accounts: [
+          {
             id: "a1",
             type: "resources",
             attributes: {
@@ -61,7 +109,7 @@ test(({similar, end}) => {
               namespace: "accounts",
             }
           },
-          a2: {
+          {
             id: "a2",
             type: "resources",
             attributes: {
@@ -69,21 +117,17 @@ test(({similar, end}) => {
               namespace: "accounts",
             }
           }
-        }
-      },
-      profiles: {
-        v1: {
-          b1: {
+        ],
+        profiles: [
+          {
             id: "b1",
             type: "resources",
             attributes: {
               version: "v1",
               namespace: "profiles",
             }
-          }
-        },
-        v2: {
-          b1: {
+          },
+          {
             id: "b1",
             type: "resources",
             attributes: {
@@ -91,12 +135,131 @@ test(({similar, end}) => {
               namespace: "profiles",
             }
           }
+        ],
+      }
+    }
+  )
+
+  end()
+})
+
+test(({same, end}) => {
+  same(
+    treeify(
+      [
+        groupBy(prop("type")),
+        groupBy(path(["attributes", "namespace"])),
+        groupBy(path(["attributes", "version"])),
+      ]
+    )(collection),
+    {
+      resources: {
+        accounts: {
+          v1: [
+            {
+              id: "a1",
+              type: "resources",
+              attributes: {
+                version: "v1",
+                namespace: "accounts",
+              }
+            },
+            {
+              id: "a2",
+              type: "resources",
+              attributes: {
+                version: "v1",
+                namespace: "accounts",
+              }
+            }
+          ]
+        },
+        profiles: {
+          v1: [
+            {
+              id: "b1",
+              type: "resources",
+              attributes: {
+                version: "v1",
+                namespace: "profiles",
+              }
+            }
+          ],
+          v2: [
+            {
+              id: "b1",
+              type: "resources",
+              attributes: {
+                version: "v2",
+                namespace: "profiles",
+              }
+            }
+          ]
+        },
+      }
+    }
+  )
+
+  end()
+})
+
+test(({same, end}) => {
+  same(
+    treeify(
+      [
+        groupBy(prop("type")),
+        groupBy(path(["attributes", "namespace"])),
+        groupBy(path(["attributes", "version"])),
+        indexBy(prop("id")),
+      ]
+    )(collection),
+    {
+      resources: {
+        accounts: {
+          v1: {
+            a1: {
+              id: "a1",
+              type: "resources",
+              attributes: {
+                version: "v1",
+                namespace: "accounts",
+              }
+            },
+            a2: {
+              id: "a2",
+              type: "resources",
+              attributes: {
+                version: "v1",
+                namespace: "accounts",
+              }
+            }
+          }
+        },
+        profiles: {
+          v1: {
+            b1: {
+              id: "b1",
+              type: "resources",
+              attributes: {
+                version: "v1",
+                namespace: "profiles",
+              }
+            }
+          },
+          v2: {
+            b1: {
+              id: "b1",
+              type: "resources",
+              attributes: {
+                version: "v2",
+                namespace: "profiles",
+              }
+            }
+          }
         }
       }
     }
-  }
-
-  similar(treeify(functions)(collection), expected)
+  )
 
   end()
 })
