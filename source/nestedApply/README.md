@@ -39,10 +39,10 @@ const records = [
 ]
 ```
 
-Normally we'd just do `map(map(indexBy(prop("id"))))`, however we can make this easier and dynamic:
+Normally we'd just do `mapValues(indexBy(prop("id")))`, however we can make this easier and dynamic:
 
 ``` javascript
-const nestedIndexById = nestedApply(map)(indexBy(prop("id")))(1)
+const nestedIndexById = nestedApply(mapValues)(indexBy(prop("id")))(1)
 
 nestedIndexById(records)
 ```

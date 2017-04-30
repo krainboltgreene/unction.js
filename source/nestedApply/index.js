@@ -1,5 +1,6 @@
 import reduceValues from "@unction/reducevalues"
 import upTo from "@unction/upto"
+import isPopulated from "@unction/ispopulated"
 
 export default function nestedApply (iterator: (any => any) => IterableType => IterableType): Function {
   return function nestedApplyIterator (unction: any => any): Function {
@@ -8,7 +9,7 @@ export default function nestedApply (iterator: (any => any) => IterableType => I
     return function nestedApplyIteratorUnction (depth: number): Function {
       const times = upTo(depth)
 
-      return function nestedApplyIteratorUnctionDepth (iterable: IterableType): IterableType {
+      if (isPopulated) {
         return reduceValues(
           function nestedApplyIteratorUnctionDepthIterable (accumulatedUnction: Function): Function {
             return function nestedApplyIteratorUnctionDepthIterableAccumulatedUnction (): IterableType => IterableType {
@@ -19,10 +20,10 @@ export default function nestedApply (iterator: (any => any) => IterableType => I
           initial
         )(
           times
-        )(
-          iterable
         )
       }
+
+      return unction
     }
   }
 }

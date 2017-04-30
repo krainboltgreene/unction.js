@@ -1,6 +1,6 @@
 {
   "name": "@unction/nestedapply",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Applies a function or functions to a nested iteratorable",
   "keywords": [
     "unction",
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@unction/mapvalues": "1.0.0",
+    "ramda": "0.23.0",
     "babel-cli": "6.24.0",
     "babel-core": "6.24.0",
     "babel-eslint": "7.2.1",
@@ -42,6 +43,7 @@
   },
   "dependencies": {
     "@unction/reducevalues": "1.0.0",
-    "@unction/upto": "1.0.0"
+    "@unction/ispopulated": "1.0.0",
+    "@unction/upto": "2.0.0"
   }
 }
