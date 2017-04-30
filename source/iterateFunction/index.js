@@ -10,6 +10,6 @@ export default function iterateFunction (iterable: IterableType): Function {
       })
     }
 
-    throw new Error("Tried to figure out the iterative function for this thing but couldn't")
+    throw new Error("Tried to figure out the iterative function for iterable but couldn't")
   }
 }
