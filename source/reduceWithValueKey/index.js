@@ -1,5 +1,5 @@
 /* eslint-disable immutable/no-let */
-import iteratorFunction from "@unction/iterateFunction"
+import iteratorFunction from "@unction/iteratefunction"
 
 export default function reduceWithValueKey (unction: any => any => any): Function {
   return function reduceWithValueKeyUnction (initial: any): Function {

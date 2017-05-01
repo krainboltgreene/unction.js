@@ -1,6 +1,6 @@
 /* eslint-disable immutable/no-let */
 import {empty} from "ramda"
-import iteratorFunction from "@unction/iterateFunction"
+import iteratorFunction from "@unction/iteratefunction"
 
 export default function mapValues (unction: any => any): Function {
   return function mapValuesUnction (iterable: IterableType): IterableType {
