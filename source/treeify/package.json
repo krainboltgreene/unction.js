@@ -1,6 +1,6 @@
 {
   "name": "@unction/treeify",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Takes a list of folders and an array of records and turns it into a tree",
   "keywords": [
     "unction",
@@ -42,9 +42,9 @@
   "dependencies": {
     "ramda": "0.23.0",
     "@unction/thrush": "1.0.0",
-    "@unction/reducevalues": "1.0.1",
-    "@unction/mapvalues": "1.0.1",
+    "@unction/reducevalues": "1.0.2",
+    "@unction/mapvalues": "1.0.2",
     "@unction/mapwithvaluekey": "1.0.1",
-    "@unction/nestedapply": "2.0.1"
+    "@unction/nestedapply": "2.0.2"
   }
 }
