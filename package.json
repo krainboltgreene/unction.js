@@ -51,6 +51,6 @@
     "greenkeeper": "4.2.1",
     "lerna": "2.0.0-rc.1",
     "npm-run-all": "4.0.2",
-    "sinon": "2.1.0"
+    "sinon": "2.2.0"
   }
 }
