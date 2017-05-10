@@ -1,64 +1,64 @@
-/* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type, no-magic-numbers */
+/* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type, no-magic-numbers, no-undefined */
 import {test} from "tap"
 
 import isType from "./"
 
-test("null", ({same, end}) => {
-  same(isType("null")(null), true)
+test(({ok, end}) => {
+  ok(isType("null")(null))
 
   end()
 })
 
-test("undefined", ({same, end}) => {
-  same(isType("undefined")(undefined), true)
+test(({ok, end}) => {
+  ok(isType("undefined")(undefined))
 
   end()
 })
 
-test("null wrong", ({same, end}) => {
-  same(isType("String")(null), false)
+test(({notOk, end}) => {
+  notOk(isType("String")(null))
 
   end()
 })
 
-test("undefined wrong", ({same, end}) => {
-  same(isType("String")(undefined), false)
+test(({notOk, end}) => {
+  notOk(isType("String")(undefined))
 
   end()
 })
 
-test(({same, end}) => {
-  same(isType("String")("b"), true)
+test(({ok, end}) => {
+  ok(isType("String")("b"))
 
   end()
 })
 
-test(({same, end}) => {
-  same(isType("String")("b"), true)
+test(({ok, end}) => {
+  ok(isType("String")(""))
 
   end()
 })
 
-test("object", ({same, end}) => {
-  same(isType("Object")({}), true)
+test(({ok, end}) => {
+  ok(isType("Object")({}))
 
   end()
 })
 
-test("array", ({same, end}) => {
-  same(isType("Array")([]), true)
+test(({ok, end}) => {
+  ok(isType("Array")([]))
 
   end()
 })
 
-test("number", ({same, end}) => {
-  same(isType("Number")(1), true)
+test(({ok, end}) => {
+  ok(isType("Number")(1))
 
   end()
 })
 
-test("buffer", ({same, end}) => {
-  same(isType("Buffer")(new Buffer("x")), true)
+test(({ok, end}) => {
+  ok(isType("Buffer")(new Buffer("x")))
 
   end()
 })
