@@ -1,8 +1,11 @@
 import {empty} from "ramda"
 import {merge} from "ramda"
-import {type} from "ramda"
+import {either} from "ramda"
 import {objOf} from "ramda"
 import reduceWithValueKey from "@unction/reducewithvaluekey"
+import isType from "@unction/istype"
+
+const isEitherObjectOrArray = either(isType("Object"))(isType("Array"))
 
 export default function withoutKeyRecursive (key: KeyType): Function {
   return function withoutKeyRecursiveKey (original: IterableType): IterableType {
@@ -11,16 +14,14 @@ export default function withoutKeyRecursive (key: KeyType): Function {
         const accumulatedMerge = merge(accumulated)
 
         return function withoutKeyRecursiveKeyIterableValue (current: any): Function {
-          const isObject = type(current) === "Object"
-          const isArray = type(current) === "Array"
-          const isObjectOrArray = isObject || isArray
+          const isIterable = isEitherObjectOrArray(current)
 
           return function withoutKeyRecursiveKeyIterableValueKey (index: KeyType): IterableType {
             if (key === index) {
               return accumulated
             }
 
-            if (isObjectOrArray) {
+            if (isIterable) {
               return accumulatedMerge(objOf(index)(withoutKeyRecursive(key)(current)))
             }
 
