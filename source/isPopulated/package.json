@@ -1,6 +1,6 @@
 {
   "name": "@unction/ispopulated",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Determines if a list has any non-nil values",
   "keywords": [
     "unction",
@@ -40,7 +40,6 @@
     "tap": "10.3.0"
   },
   "dependencies": {
-    "ramda": "0.23.0",
-    "@unction/compact": "1.0.0"
+    "@unction/ispresent": "1.0.0"
   }
 }
