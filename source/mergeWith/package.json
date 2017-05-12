@@ -1,6 +1,6 @@
 {
   "name": "@unction/mergewith",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Takes a function that determines how to merge two conflicting values in a merge",
   "keywords": [
     "unction",
@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "ramda": "0.23.0",
-    "@unction/pairskeys": "1.0.0"
+    "@unction/foreach": "1.0.0"
   }
 }

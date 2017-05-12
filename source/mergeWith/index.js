@@ -1,39 +1,24 @@
-import {concat} from "ramda"
-import {uniq} from "ramda"
-import {map} from "ramda"
-import {toPairs} from "ramda"
-import {fromPairs} from "ramda"
-import {contains} from "ramda"
-import pairsKeys from "@unction/pairskeys"
+import {empty} from "ramda"
+import forEach from "@unction/foreach"
 
-export default function mergeWith (unction: IterableType => IterableType => any): Function {
+export default function mergeWith (unction: any => any => any): Function {
   return function mergeWithUnction (left: IterableType): Function {
-    const leftPairs = toPairs(left)
-    const leftKeys = pairsKeys(leftPairs)
-    const concatLeft = concat(leftKeys)
+    const combine = empty(left)
+
+    forEach((value: any): Function => (key: KeyType) => {
+      combine[key] = value
+    })(left)
 
     return function mergeWithUnctionLeft (right: IterableType): IterableType {
-      const rightPairs = toPairs(right)
-      const rightKeys = pairsKeys(rightPairs)
-      const keys = uniq(concatLeft(rightKeys))
-      const merge = (key: KeyType): any => {
-        const inLeft = contains(key, leftKeys)
-        const inRight = contains(key, rightKeys)
-        const leftValue = left[key]
-        const rightValue = right[key]
-
-        if (inLeft && inRight) {
-          return [key, unction(leftValue)(rightValue)]
+      forEach((value: any): Function => (key: KeyType) => {
+        if (combine[key]) {
+          combine[key] = unction(left[key])(right[key])
+        } else {
+          combine[key] = value
         }
+      })(right)
 
-        if (inLeft) {
-          return [key, leftValue]
-        }
-
-        return [key, rightValue]
-      }
-
-      return fromPairs(map(merge, keys))
+      return combine
     }
   }
 }
