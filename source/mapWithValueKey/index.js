@@ -1,13 +1,13 @@
-import iteratorFunction from "@unction/iteratefunction"
+import forEach from "@unction/foreach"
 import {empty} from "ramda"
 
 export default function mapWithValueKey (unction: any => KeyType => any): Function {
   return function mapWithValueKeyUnction (iterable: IterableType): IterableType {
     const transformed = empty(iterable)
 
-    iteratorFunction(iterable)(function mapWithValueKeyUnctionIterable (value: any, key: any) {
+    forEach((value: any): Function => (key: KeyType) => {
       transformed[key] = unction(value)(key)
-    })
+    })(iterable)
 
     return transformed
   }
