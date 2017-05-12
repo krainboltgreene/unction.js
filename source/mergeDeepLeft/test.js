@@ -54,8 +54,8 @@ test(({same, end}) => {
   same(
     mergeDeepLeft(["a"])(["b"]),
     [
-      "b",
       "a",
+      "b",
     ]
   )
 
@@ -67,7 +67,7 @@ test(({same, end}) => {
     mergeDeepLeft(["a"])(["a"]),
     [
       "a",
-      "a",
+      "a"
     ]
   )
 

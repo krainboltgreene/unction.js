@@ -1,17 +1,17 @@
-import {type} from "ramda"
 import {concat} from "ramda"
 import mergeWith from "@unction/mergewith"
+import isType from "@unction/istype"
+
+const isArray = isType("Array")
+const isObject = isType("Object")
 
 export default function mergeDeepLeft (left: IterableType): Function {
   return function mergeDeepLeftLeft (right: IterableType): IterableType {
-    const leftType = type(left)
-    const rightType = type(right)
-
-    if (leftType === "Array" && rightType === "Array") {
-      return concat(right)(left)
+    if (isArray(left) && isArray(right)) {
+      return concat(left)(right)
     }
 
-    if (leftType === "Object" && rightType === "Object") {
+    if (isObject(left) && isObject(right)) {
       return mergeWith(mergeDeepLeft)(left)(right)
     }
 
