@@ -1,6 +1,6 @@
 {
   "name": "@unction/hammer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Hammers down a subset's values into the set",
   "keywords": [
     "unction",
@@ -40,6 +40,7 @@
     "tap": "10.3.0"
   },
   "dependencies": {
-    "ramda": "0.23.0"
+    "ramda": "0.23.0",
+    "@unction/isiterable": "1.0.0"
   }
 }
