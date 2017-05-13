@@ -40,7 +40,7 @@
     "tap": "10.3.0"
   },
   "dependencies": {
-    "ramda": "0.23.0",
-    "@unction/mergewith": "1.0.2"
+    "@unction/mergewith": "1.0.2",
+    "ramda": "0.23.0"
   }
 }

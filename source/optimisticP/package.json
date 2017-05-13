@@ -40,9 +40,9 @@
     "tap": "10.3.0"
   },
   "dependencies": {
-    "ramda": "0.23.0",
+    "@unction/allp": "1.0.0",
     "@unction/thencatchp": "1.0.0",
     "@unction/thenp": "1.0.0",
-    "@unction/allp": "1.0.0"
+    "ramda": "0.23.0"
   }
 }

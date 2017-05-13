@@ -40,11 +40,11 @@
     "tap": "10.3.0"
   },
   "dependencies": {
-    "ramda": "0.23.0",
-    "@unction/thrush": "1.0.0",
-    "@unction/reducevalues": "1.0.2",
     "@unction/mapvalues": "1.0.2",
     "@unction/mapwithvaluekey": "1.0.1",
-    "@unction/nestedapply": "2.0.2"
+    "@unction/nestedapply": "2.0.2",
+    "@unction/reducevalues": "1.0.2",
+    "@unction/thrush": "1.0.0",
+    "ramda": "0.23.0"
   }
 }

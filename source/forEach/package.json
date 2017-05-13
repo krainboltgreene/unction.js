@@ -39,5 +39,6 @@
     "eslint-plugin-promise": "3.5.0",
     "sinon": "2.2.0",
     "tap": "10.3.0"
-  }
+  },
+  "dependencies": {}
 }
