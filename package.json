@@ -25,6 +25,8 @@
     "build": "lerna run build",
     "lint": "lerna run lint",
     "bootstrap": "lerna bootstrap",
+    "diff": "lerna diff",
+    "updated": "lerna updated",
     "check": "flow check",
     "watch": "npm-run-all --parallel watch:test watch:lint watch:build",
     "watch:build": "chokidar './source/' --initial --command 'npm run build --silent'",
