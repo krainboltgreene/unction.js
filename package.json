@@ -1,5 +1,5 @@
 {
-  "name": "@unction/all",
+  "name": "unction.js",
   "version": "5.0.2",
   "description": "A set of type annotated FP functions that enforce currying and composability",
   "keywords": [
