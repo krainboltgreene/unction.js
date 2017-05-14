@@ -24,14 +24,7 @@
     "test": "lerna run test",
     "build": "lerna run build",
     "lint": "lerna run lint",
-    "bootstrap": "lerna bootstrap",
-    "diff": "lerna diff",
-    "updated": "lerna updated",
-    "check": "flow check",
-    "watch": "npm-run-all --parallel watch:test watch:lint watch:build",
-    "watch:build": "chokidar './source/' --initial --command 'npm run build --silent'",
-    "watch:test": "chokidar './source/' --initial --command 'npm run test --silent'",
-    "watch:lint": "chokidar './source/' --initial --command 'npm run lint --silent'"
+    "check": "flow check"
   },
   "devDependencies": {
     "babel-cli": "6.24.1",
@@ -40,7 +33,6 @@
     "babel-plugin-transform-object-rest-spread": "6.23.0",
     "babel-preset-env": "1.4.0",
     "babel-preset-flow": "6.23.0",
-    "chokidar-cli": "1.2.0",
     "eslint": "3.19.0",
     "eslint-plugin-babel": "4.1.1",
     "eslint-plugin-flowtype": "2.32.1",
