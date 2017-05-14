@@ -1,6 +1,6 @@
 {
   "version": "independent",
-  "lerna": "2.0.0-rc.1",
+  "lerna": "2.0.0-rc.4",
   "packages": [
     "source/*"
   ]

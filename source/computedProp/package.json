@@ -24,23 +24,23 @@
     "lint": "eslint './index.js'"
   },
   "devDependencies": {
-    "babel-cli": "6.24.0",
-    "babel-core": "6.24.0",
-    "babel-eslint": "7.2.1",
+    "babel-cli": "6.24.1",
+    "babel-core": "6.24.1",
+    "babel-eslint": "7.2.3",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
-    "babel-preset-env": "1.2.2",
+    "babel-preset-env": "1.4.0",
     "babel-preset-flow": "6.23.0",
     "babel-tap": "5.0.0",
-    "eslint": "3.18.0",
+    "eslint": "3.19.0",
     "eslint-plugin-babel": "4.1.1",
-    "eslint-plugin-flowtype": "2.30.4",
+    "eslint-plugin-flowtype": "2.32.1",
     "eslint-plugin-immutable": "1.0.0",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-promise": "3.5.0",
-    "tap": "10.3.0"
+    "tap": "10.3.2"
   },
   "dependencies": {
-    "@unction/mergedeepright": "1.0.3",
+    "@unction/mergedeepright": "^1.0.4",
     "@unction/nestedobjof": "1.0.0"
   }
 }
