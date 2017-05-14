@@ -1,5 +1,7 @@
 # @unction/all
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/krainboltgreene/unction.js.svg)](https://greenkeeper.io/)
+
 A set of type annotated FP functions that enforce currying and composability
 
 ![Version][BADGE_VERSION]
