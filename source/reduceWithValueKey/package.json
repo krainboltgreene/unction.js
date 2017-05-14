@@ -1,6 +1,6 @@
 {
   "name": "@unction/reducewithvaluekey",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A curried reduce where you get access to both the value and they key",
   "keywords": [
     "unction",
@@ -40,6 +40,6 @@
     "tap": "10.3.0"
   },
   "dependencies": {
-    "@unction/foreach": "1.0.0"
+    "@unction/foreach": "^1.0.1"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@unction/sample",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Returns a random member from a array or string",
   "keywords": [
     "unction",

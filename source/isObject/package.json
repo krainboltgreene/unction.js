@@ -1,7 +1,7 @@
 {
-  "name": "@unction/mapkeys",
-  "version": "1.0.3",
-  "description": "Like map but over the key instead of the value",
+  "name": "@unction/isobject",
+  "version": "1.0.0",
+  "description": "Takes a value and returns a boolean if value is iterable",
   "keywords": [
     "unction",
     "functional"
@@ -40,7 +40,6 @@
     "tap": "10.3.0"
   },
   "dependencies": {
-    "@unction/foreach": "^1.0.1",
-    "ramda": "0.23.0"
+    "@unction/istype": "^1.0.1"
   }
 }

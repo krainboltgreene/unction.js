@@ -1,6 +1,6 @@
 {
   "name": "@unction/thrush",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "One of the fantasy birds: it takes a value, a function, and then applies that value to as the first argument to that function.",
   "keywords": [
     "unction",
