@@ -1,0 +1,1 @@
+type RejectedPromisesType = Array<any>

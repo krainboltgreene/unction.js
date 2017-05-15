@@ -1,0 +1,50 @@
+{
+  "name": "@unction/everyp",
+  "version": "0.0.0",
+  "description": "Return resolved and rejected promises as two arrays",
+  "keywords": [
+    "unction",
+    "functional"
+  ],
+  "author": "Kurtis Rainbolt-Greene (@krainboltgreene) <kurtis@rainbolt-greene.online>",
+  "license": "ISC",
+  "homepage": "https://github.com/krainboltgreene/unction.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krainboltgreene/unction.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krainboltgreene/unction/issues"
+  },
+  "main": "transpiled/index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "test": "tap --no-coverage --no-coverage-report --no-color --jobs-auto --reporter dot './transpiled/test.js'",
+    "build": "babel './index.js' './test.js' -d './transpiled/'",
+    "lint": "eslint './index.js'"
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-core": "6.24.1",
+    "babel-eslint": "7.2.3",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-preset-env": "1.4.0",
+    "babel-preset-flow": "6.23.0",
+    "babel-tap": "5.0.0",
+    "eslint": "3.19.0",
+    "eslint-plugin-babel": "4.1.1",
+    "eslint-plugin-flowtype": "2.32.1",
+    "eslint-plugin-immutable": "1.0.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-promise": "3.5.0",
+    "tap": "10.3.2"
+  },
+  "dependencies": {
+    "@unction/thencatchp": "1.0.0",
+    "@unction/allp": "1.0.0",
+    "@unction/thenp": "1.0.0",
+    "@unction/reducevalues": "1.0.4",
+    "@unction/mapvalues": "1.0.4",
+    "@unction/couple": "1.0.1"
+  }
+}
