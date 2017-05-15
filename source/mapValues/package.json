@@ -1,6 +1,6 @@
 {
   "name": "@unction/mapvalues",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A regular ol' map over values (fantasy land)",
   "keywords": [
     "unction",
@@ -40,7 +40,7 @@
     "tap": "10.3.2"
   },
   "dependencies": {
-    "@unction/foreach": "^1.0.1",
+    "@unction/foreach": "^1.0.2",
     "ramda": "0.23.0"
   }
 }

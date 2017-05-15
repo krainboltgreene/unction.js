@@ -1,6 +1,6 @@
 {
   "name": "@unction/mapwithvaluekey",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Ramda's map but with an index value as the second argument",
   "keywords": [
     "unction",
@@ -40,7 +40,7 @@
     "tap": "10.3.2"
   },
   "dependencies": {
-    "@unction/foreach": "^1.0.1",
+    "@unction/foreach": "^1.0.2",
     "ramda": "0.23.0"
   }
 }

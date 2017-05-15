@@ -1,6 +1,6 @@
 {
   "name": "@unction/aside",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Like pipe but the return value is the argument",
   "keywords": [
     "unction",
@@ -37,8 +37,8 @@
     "eslint-plugin-immutable": "1.0.0",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-promise": "3.5.0",
-    "tap": "10.3.2",
-    "sinon": "2.2.0"
+    "sinon": "2.2.0",
+    "tap": "10.3.2"
   },
   "dependencies": {
     "ramda": "0.23.0"

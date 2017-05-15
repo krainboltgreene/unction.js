@@ -1,6 +1,6 @@
 {
   "name": "@unction/reducevalues",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A curried reduce",
   "keywords": [
     "unction",
@@ -40,6 +40,6 @@
     "tap": "10.3.2"
   },
   "dependencies": {
-    "@unction/foreach": "^1.0.1"
+    "@unction/foreach": "^1.0.2"
   }
 }
