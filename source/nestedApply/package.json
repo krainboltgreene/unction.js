@@ -24,7 +24,7 @@
     "lint": "eslint './index.js'"
   },
   "devDependencies": {
-    "@unction/mapvalues": "^1.0.5",
+    "@unction/mapvalues": "1.0.5",
     "babel-cli": "6.24.1",
     "babel-core": "6.24.1",
     "babel-eslint": "7.2.3",
@@ -42,8 +42,8 @@
     "tap": "10.3.2"
   },
   "dependencies": {
-    "@unction/ispopulated": "^2.0.1",
-    "@unction/reducevalues": "^1.0.5",
-    "@unction/upto": "^2.0.1"
+    "@unction/ispopulated": "2.0.1",
+    "@unction/reducevalues": "1.0.5",
+    "@unction/upto": "2.0.1"
   }
 }

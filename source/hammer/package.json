@@ -40,7 +40,7 @@
     "tap": "10.3.2"
   },
   "dependencies": {
-    "@unction/isiterable": "^1.0.2",
+    "@unction/isiterable": "1.0.2",
     "ramda": "0.23.0"
   }
 }

@@ -40,6 +40,6 @@
     "tap": "10.3.2"
   },
   "dependencies": {
-    "@unction/ispresent": "^1.0.1"
+    "@unction/ispresent": "1.0.1"
   }
 }
