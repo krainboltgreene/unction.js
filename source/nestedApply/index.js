@@ -12,9 +12,7 @@ export default function nestedApply (iterator: (any => any) => IterableType => I
       if (isPopulated) {
         return reduceValues(
           function nestedApplyIteratorUnctionDepthIterable (accumulatedUnction: Function): Function {
-            return function nestedApplyIteratorUnctionDepthIterableAccumulatedUnction (): IterableType => IterableType {
-              return iterator(accumulatedUnction)
-            }
+            return kestrel(iterator)
           }
         )(
           initial
