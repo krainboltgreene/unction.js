@@ -5,7 +5,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (IterableType -> IterableType -> any) -> IterableType -> IterableType -> IterableType
+> (ValueType -> ValueType -> any) -> IterableType -> IterableType -> IterableType
 
 Merges two iterables and uses a provided function to handle conflicts. The function is given the the left value and the right value.
 

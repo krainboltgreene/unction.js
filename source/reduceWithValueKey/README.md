@@ -5,7 +5,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (AccumulatorType -> CurrentType -> KeyType -> any) -> InitialType -> IterableType -> any
+> (AccumulatedType -> ValueType -> KeyType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
 
 A pretty standard `reduceWithValueKey()`, but where the `𝑓()` is unary curries.
 
