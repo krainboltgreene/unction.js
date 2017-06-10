@@ -40,6 +40,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
+    "@unction/mergeright": "*",
     "@unction/isiterable": "*",
     "ramda": "0.24.1"
   }

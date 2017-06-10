@@ -1,12 +1,12 @@
-import {merge} from "ramda"
-import {prop} from "ramda"
+import {path} from "ramda"
 import {omit} from "ramda"
 import {type} from "ramda"
 import isIterable from "@unction/isiterable"
+import mergeRight from "@unction/mergeright"
 
 export default function hammer (key: KeyType): Function {
-  const propKey = prop(key)
-  const omitKey = omit(key)
+  const propKey = path([key])
+  const omitKey = omit([key])
 
   return function hammerKey (iterable: IterableType): IterableType {
     if (!isIterable(iterable)) {
@@ -20,6 +20,6 @@ export default function hammer (key: KeyType): Function {
       throw new Error(`hammer only works on an Object or Array, but the subset was a ${type(iterable)}`)
     }
 
-    return merge(without, only)
+    return mergeRight(without)(only)
   }
 }
