@@ -39,7 +39,7 @@ module.exports = {
     "camelcase": "warn",
     "capitalized-comments": "off",
     "class-methods-use-this": "error",
-    "comma-dangle": ["error", "only-multiline"],
+    "comma-dangle": ["error", "always-multiline"],
     "comma-spacing": "error",
     "comma-style": "error",
     "complexity": "error",
