@@ -11,3 +11,16 @@ test(({equal, end}) => {
 
   end()
 })
+
+test(({equal, end}) => {
+  equal(
+    reduceWithValueKey((accumulation) => (current) => (key) => `${accumulation}/${current}:${key}`)(".")({
+      aaa: "a",
+      bbb: "b",
+      ccc: "c",
+    }),
+    "./a:aaa/b:bbb/c:ccc"
+  )
+
+  end()
+})
