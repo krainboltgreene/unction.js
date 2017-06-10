@@ -40,7 +40,10 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/foreach": "1.0.1",
-    "ramda": "0.23.0"
+    "@unction/append": "*",
+    "@unction/mergeright": "*",
+    "@unction/isarray": "*",
+    "@unction/isobject": "*",
+    "@unction/reducewithvaluekey": "*"
   }
 }

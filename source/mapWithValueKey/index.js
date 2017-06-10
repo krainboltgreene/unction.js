@@ -1,14 +1,31 @@
-import forEach from "@unction/foreach"
-import {empty} from "ramda"
+import append from "@unction/append"
+import isArray from "@unction/isarray"
+import isObject from "@unction/isobject"
+import mergeRight from "@unction/mergeright"
+import reduceWithValueKey from "@unction/reducewithvaluekey"
 
-export default function mapWithValueKey (unction: any => KeyType => any): Function {
-  return function mapWithValueKeyUnction (iterable: IterableType): IterableType {
-    const transformed = empty(iterable)
+export default function mapWithValueKey (unction: ValueType => ValueType): Function {
+  return function mapValuesUnction (iterable: IterableType): IterableType {
+    if (isArray(iterable)) {
+      return reduceWithValueKey(
+        (accumulated: AccumulatedType): Function => (value: ValueType): Function => (key: KeyType): Array<ValueType> => append(unction(value)(key))(accumulated)
+      )(
+        []
+      )(
+        iterable
+      )
+    }
 
-    forEach((value: any): Function => (key: KeyType) => {
-      transformed[key] = unction(value)(key)
-    })(iterable)
+    if (isObject(iterable)) {
+      return reduceWithValueKey(
+        (accumulated: AccumulatedType): Function => (value: ValueType): Function => (key: KeyType): {[KeyType]: ValueType} => mergeRight({[key]: unction(value)(key)})(accumulated)
+      )(
+        {}
+      )(
+        iterable
+      )
+    }
 
-    return transformed
+    throw new Error("Couldn't figure out how to map over this iterable")
   }
 }

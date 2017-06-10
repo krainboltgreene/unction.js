@@ -11,3 +11,18 @@ test(({same, end}) => {
 
   end()
 })
+
+test(({same, end}) => {
+  same(
+    mapValues((value) => value + 1)({
+      age: 29,
+      interval: 10,
+    }),
+    {
+      age: 30,
+      interval: 11,
+    }
+  )
+
+  end()
+})

@@ -11,3 +11,16 @@ test(({equal, end}) => {
 
   end()
 })
+
+test(({equal, end}) => {
+  equal(
+    reduceValues((accumulation) => (current) => `${accumulation}/${current}`)(".")({
+      aaa: "a",
+      bbb: "b",
+      ccc: "c",
+    }),
+    "./a/b/c"
+  )
+
+  end()
+})

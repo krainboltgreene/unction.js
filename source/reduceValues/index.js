@@ -1,16 +1,6 @@
 /* eslint-disable immutable/no-let */
-import forEach from "@unction/foreach"
+import reduceWithValueKey from "@unction/reducewithvaluekey"
 
-export default function reduceValues (unction: any => any => any): Function {
-  return function reduceValuesUnction (initial: any): Function {
-    return function reduceValuesUnctionInitial (iterable: IterableType): any {
-      let current = initial
-
-      forEach((item: any): Function => () => {
-        current = unction(current)(item)
-      })(iterable)
-
-      return current
-    }
-  }
+export default function reduceValues (unction: AccumulatedType => ValueType => AccumulatedType): Function {
+  return reduceWithValueKey((accumulated: AccumulatedType): Function => (value: ValueType): Function => (): AccumulatedType => unction(accumulated)(value))
 }

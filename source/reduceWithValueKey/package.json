@@ -40,6 +40,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/foreach": "1.0.1"
+    "@unction/isarray": "*",
+    "@unction/isobject": "*"
   }
 }
