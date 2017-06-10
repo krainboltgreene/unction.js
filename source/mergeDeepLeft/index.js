@@ -1,9 +1,7 @@
 import {concat} from "ramda"
 import mergeWith from "@unction/mergewith"
-import isType from "@unction/istype"
-
-const isArray = isType("Array")
-const isObject = isType("Object")
+import isObject from "@unction/isobject"
+import isArray from "@unction/isarray"
 
 export default function mergeDeepLeft (left: IterableType): Function {
   return function mergeDeepLeftLeft (right: IterableType): IterableType {

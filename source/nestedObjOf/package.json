@@ -40,6 +40,8 @@
     "tap": "10.3.3"
   },
   "dependencies": {
+    "@unction/isarray": "*",
+    "@unction/reducevalues": "*",
     "ramda": "0.24.1"
   }
 }

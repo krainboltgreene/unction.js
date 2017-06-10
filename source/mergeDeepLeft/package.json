@@ -40,7 +40,8 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/istype": "1.0.2",
+    "@unction/isobject": "*",
+    "@unction/isarray": "*",
     "@unction/mergewith": "*",
     "ramda": "0.24.1"
   }

@@ -1,24 +1,17 @@
-import {empty} from "ramda"
-import forEach from "@unction/foreach"
+import reduceWithValueKey from "@unction/reducewithvaluekey"
 
-export default function mergeWith (unction: any => any => any): Function {
-  return function mergeWithUnction (left: IterableType): Function {
-    const combine = empty(left)
-
-    forEach((value: any): Function => (key: KeyType) => {
-      combine[key] = value
-    })(left)
-
-    return function mergeWithUnctionLeft (right: IterableType): IterableType {
-      forEach((value: any): Function => (key: KeyType) => {
-        if (combine[key]) {
-          combine[key] = unction(left[key])(right[key])
-        } else {
-          combine[key] = value
-        }
-      })(right)
-
-      return combine
+export default function mergeWith (unction: Function): Function {
+  return reduceWithValueKey((accumulated: AccumulatedType): Function => (value: ValueType): Function => (key: KeyType): IterableType => {
+    if (accumulated[key]) {
+      return {
+        ...accumulated,
+        [key]: unction(key)(value)(accumulated[key]),
+      }
     }
-  }
+
+    return {
+      ...accumulated,
+      [key]: value,
+    }
+  })
 }
