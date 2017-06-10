@@ -1,13 +1,7 @@
-/* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
+/* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type, no-undefined, no-magic-numbers */
 import {test} from "tap"
 
 import isPresent from "./"
-
-test(({equal, end}) => {
-  equal(isPresent(true), true)
-
-  end()
-})
 
 test(({equal, end}) => {
   equal(isPresent([]), true)
@@ -34,13 +28,19 @@ test(({equal, end}) => {
 })
 
 test(({equal, end}) => {
-  equal(isPresent(null), false)
+  equal(isPresent(true), true)
 
   end()
 })
 
 test(({equal, end}) => {
   equal(isPresent(false), true)
+
+  end()
+})
+
+test(({equal, end}) => {
+  equal(isPresent(null), false)
 
   end()
 })
