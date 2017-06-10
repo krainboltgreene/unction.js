@@ -5,8 +5,9 @@ import escapeStringRegexp from "escape-string-regexp"
 export default function lacksText (subset: string | RegExp): Function {
   const escaped = escapeStringRegexp(subset)
   const pattern = test(new RegExp(escaped))
+  const patternMatched = complement(pattern)
 
   return function lacksTextSubset (set: string): boolean {
-    return complement(pattern)(set)
+    return patternMatched(set)
   }
 }
