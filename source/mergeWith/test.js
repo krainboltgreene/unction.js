@@ -14,10 +14,19 @@ test(({same, end}) => {
 
 test(({same, end}) => {
   same(
-    mergeWith((left) => (right) => right + left)({alpha: "a"})({beta: "b"}),
+    mergeWith((left) => (right) => left + right)({
+      alpha: "0",
+      beta: "1",
+      zeta: "3",
+    })({
+      alpha: "0",
+      beta: "2",
+      zeta: "3",
+    }),
     {
-      alpha: "a",
-      beta: "b"
+      alpha: "0",
+      beta: "12",
+      zeta: "3",
     }
   )
 

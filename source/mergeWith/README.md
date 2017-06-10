@@ -11,20 +11,26 @@ Merges two iterables and uses a provided function to handle conflicts. The funct
 
 ``` javascript
 const left = {
-  beta: "1"
+  alpha: "0",
+  beta: "1",
+  zeta: "3"
 }
 const right = {
-  beta: "2"
+  alpha: "0",
+  beta: "2",
+  zeta: "3"
 }
 
-mergeWith((l, r) => l+r)(left)(right)
+mergeWith((l) => (r) => l+r)(left)(right)
 ```
 
 Which returns:
 
 ``` javascript
 {
-  beta: "12"
+  alpha: "0",
+  beta: "12",
+  zeta: "3"
 }
 ```
 
