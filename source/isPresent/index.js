@@ -1,5 +1,5 @@
-import {isNil} from "ramda"
+/* eslint-disable no-undefined */
 
 export default function isPresent (value: any): boolean {
-  return !isNil(value)
+  return value === undefined || value === null
 }
