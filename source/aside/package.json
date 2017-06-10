@@ -28,19 +28,19 @@
     "babel-core": "6.24.1",
     "babel-eslint": "7.2.3",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
-    "babel-preset-env": "1.4.0",
+    "babel-preset-env": "1.5.1",
     "babel-preset-flow": "6.23.0",
     "babel-tap": "5.0.0",
     "eslint": "3.19.0",
     "eslint-plugin-babel": "4.1.1",
-    "eslint-plugin-flowtype": "2.33.0",
+    "eslint-plugin-flowtype": "2.34.0",
     "eslint-plugin-immutable": "1.0.0",
-    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-import": "2.3.0",
     "eslint-plugin-promise": "3.5.0",
-    "sinon": "2.2.0",
-    "tap": "10.3.2"
+    "sinon": "2.3.2",
+    "tap": "10.3.3"
   },
   "dependencies": {
-    "ramda": "0.23.0"
+    "ramda": "0.24.1"
   }
 }
