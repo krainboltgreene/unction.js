@@ -1,6 +1,6 @@
 {
   "name": "@unction/plucks",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Given a set of paths and a record, return a set of values",
   "keywords": [
     "unction",
@@ -41,7 +41,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/mapvalues": "*",
+    "@unction/mapvalues": "^2.0.0",
     "ramda": "0.24.1"
   }
 }

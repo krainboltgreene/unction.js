@@ -1,6 +1,6 @@
 {
   "name": "@unction/thrush",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "One of the fantasy birds: it takes a value, a function, and then applies that value to as the first argument to that function.",
   "keywords": [
     "unction",
@@ -39,6 +39,5 @@
     "eslint-plugin-import": "2.3.0",
     "eslint-plugin-promise": "3.5.0",
     "tap": "10.3.3"
-  },
-  "dependencies": {}
+  }
 }

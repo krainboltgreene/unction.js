@@ -1,6 +1,6 @@
 {
   "name": "@unction/mapkeyswithvaluekey",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Map over keys with the value and key context",
   "keywords": [
     "unction",
@@ -25,7 +25,6 @@
     "lint": "eslint './index.js'"
   },
   "devDependencies": {
-    "ramda": "0.24.1",
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
@@ -39,12 +38,13 @@
     "eslint-plugin-immutable": "1.0.0",
     "eslint-plugin-import": "2.3.0",
     "eslint-plugin-promise": "3.5.0",
+    "ramda": "0.24.1",
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/attach": "*",
-    "@unction/isarray": "*",
-    "@unction/isobject": "*",
-    "@unction/reducewithvaluekey": "*"
+    "@unction/attach": "^1.0.0",
+    "@unction/isarray": "^1.0.1",
+    "@unction/isobject": "^1.0.1",
+    "@unction/reducewithvaluekey": "^2.0.0"
   }
 }

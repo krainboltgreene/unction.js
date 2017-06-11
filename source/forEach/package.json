@@ -1,6 +1,6 @@
 {
   "name": "@unction/foreach",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Figure out the raw iterator function of a thing",
   "keywords": [
     "unction",
@@ -40,6 +40,5 @@
     "eslint-plugin-promise": "3.5.0",
     "sinon": "2.3.4",
     "tap": "10.3.3"
-  },
-  "dependencies": {}
+  }
 }

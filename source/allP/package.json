@@ -1,6 +1,6 @@
 {
   "name": "@unction/allp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A curryable version of Promise.all",
   "keywords": [
     "unction",
@@ -39,6 +39,5 @@
     "eslint-plugin-import": "2.3.0",
     "eslint-plugin-promise": "3.5.0",
     "tap": "10.3.3"
-  },
-  "dependencies": {}
+  }
 }

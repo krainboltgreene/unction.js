@@ -1,6 +1,6 @@
 {
   "name": "@unction/allobjectp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Takes a record where the values are promises and returns a promise of that record with resolved values",
   "keywords": [
     "unction",
@@ -41,9 +41,9 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/allp": "*",
-    "@unction/pairskeys": "*",
-    "@unction/pairsvalues": "*",
+    "@unction/allp": "^1.0.1",
+    "@unction/pairskeys": "^1.0.1",
+    "@unction/pairsvalues": "^1.0.1",
     "ramda": "0.24.1"
   }
 }

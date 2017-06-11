@@ -1,6 +1,6 @@
 {
   "name": "@unction/couple",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Takes a value and then another value and turns it into an array of those values",
   "keywords": [
     "unction",
@@ -39,6 +39,5 @@
     "eslint-plugin-import": "2.3.0",
     "eslint-plugin-promise": "3.5.0",
     "tap": "10.3.3"
-  },
-  "dependencies": {}
+  }
 }
