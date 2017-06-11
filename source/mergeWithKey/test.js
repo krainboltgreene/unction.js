@@ -5,7 +5,7 @@ import mergeWith from "./"
 
 test(({same, end}) => {
   same(
-    mergeWith((key) => (left) => (right) => key + right + left)({beta: "a"})({beta: "b"}),
+    mergeWith((left) => (right) => (key) => key + right + left)({beta: "a"})({beta: "b"}),
     {beta: "betaba"}
   )
 
@@ -14,10 +14,10 @@ test(({same, end}) => {
 
 test(({same, end}) => {
   same(
-    mergeWith((key) => (left) => (right) => key + right + left)({alpha: "a"})({beta: "b"}),
+    mergeWith((left) => (right) => (key) => key + right + left)({alpha: "a"})({beta: "b"}),
     {
       alpha: "a",
-      beta: "b"
+      beta: "b",
     }
   )
 

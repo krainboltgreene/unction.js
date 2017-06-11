@@ -41,7 +41,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/pairskeys": "*",
-    "ramda": "0.24.1"
+    "@unction/attach": "*",
+    "@unction/reducewithvaluekey": "*"
   }
 }
