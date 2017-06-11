@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@unction/mapvalues": "*",
-    "@unction/mapwithvaluekey": "*",
+    "@unction/mapvalueswithvaluekey": "*",
     "@unction/nestedapply": "*",
     "@unction/reducevalues": "*",
     "@unction/thrush": "*",

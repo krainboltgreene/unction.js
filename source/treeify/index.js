@@ -1,7 +1,7 @@
 import thrush from "@unction/thrush"
 import reduceValues from "@unction/reducevalues"
 import mapValues from "@unction/mapvalues"
-import mapWithValueKey from "@unction/mapwithvaluekey"
+import mapValuesWithValueKey from "@unction/mapvalueswithvaluekey"
 import nestedApply from "@unction/nestedapply"
 
 export default function treeify (folders: Array<(any => IterableType => IterableType)>): Function {
@@ -13,7 +13,7 @@ export default function treeify (folders: Array<(any => IterableType => Iterable
     )(
       initial(records)
     )(
-      mapWithValueKey(
+      mapValuesWithValueKey(
         nestedApply(mapValues)
       )(
         remaining

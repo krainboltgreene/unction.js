@@ -1,7 +1,7 @@
 {
-  "name": "@unction/mapvalues",
-  "version": "1.0.5",
-  "description": "A regular ol' map over values (fantasy land)",
+  "name": "@unction/mapkeyswithvaluekey",
+  "version": "0.0.0",
+  "description": "Map over keys with the value and key context",
   "keywords": [
     "unction",
     "functional"
@@ -41,6 +41,9 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/mapvalueswithvaluekey": "*"
+    "@unction/attach": "*",
+    "@unction/isarray": "*",
+    "@unction/isobject": "*",
+    "@unction/reducewithvaluekey": "*"
   }
 }

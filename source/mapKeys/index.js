@@ -1,5 +1,5 @@
-import mapWithValueKey from "@unction/mapwithvaluekey"
+import mapKeysWithValueKey from "@unction/mapkeyswithvaluekey"
 
-export default function mapValues (unction: ValueType => ValueType): Function {
-  return mapWithValueKey((): Function => (key: KeyType): ValueType => unction(key))
+export default function mapKeys (unction: ValueType => ValueType): Function {
+  return mapKeysWithValueKey((): Function => (key: KeyType): KeyType => unction(key))
 }

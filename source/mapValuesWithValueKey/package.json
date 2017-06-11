@@ -1,7 +1,7 @@
 {
-  "name": "@unction/mapwithvaluekey",
-  "version": "1.0.4",
-  "description": "Ramda's map but with an index value as the second argument",
+  "name": "@unction/mapvalueswithvaluekey",
+  "version": "0.0.0",
+  "description": "Map over keys with the value and key context",
   "keywords": [
     "unction",
     "functional"
@@ -41,8 +41,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/append": "*",
-    "@unction/mergeright": "*",
+    "@unction/attach": "*",
     "@unction/isarray": "*",
     "@unction/isobject": "*",
     "@unction/reducewithvaluekey": "*"
