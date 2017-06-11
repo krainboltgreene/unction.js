@@ -1,6 +1,8 @@
 import isObject from "@unction/isobject"
 import isArray from "@unction/isarray"
 
+const BEGINNING = 0
+
 export default function attach (key: KeyType): Function {
   return function attachKey (value: VaueType): Function {
     return function attachKeyValue (iterable: IterableType): IterableType {
@@ -12,7 +14,11 @@ export default function attach (key: KeyType): Function {
       }
 
       if (isArray(iterable)) {
-        return iterable.slice(key, 0, value)
+        return [
+          ...iterable.slice(BEGINNING, key),
+          value,
+          ...iterable.slice(key),
+        ]
       }
 
       throw new Error("Couldn't figure out how to attach a value to this iterable")

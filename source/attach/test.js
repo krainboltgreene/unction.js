@@ -11,3 +11,51 @@ test(({same, end}) => {
 
   end()
 })
+
+test(({same, end}) => {
+  same(
+    attach("hello")("world")({test: "case"}),
+    {
+      hello: "world",
+      test: "case",
+    }
+  )
+
+  end()
+})
+
+test(({same, end}) => {
+  same(
+    attach(0)("a")([]),
+    ["a"]
+  )
+
+  end()
+})
+
+test(({same, end}) => {
+  same(
+    attach(1)("a")([]),
+    ["a"]
+  )
+
+  end()
+})
+
+test(({same, end}) => {
+  same(
+    attach(1)("a")(["b"]),
+    ["b", "a"]
+  )
+
+  end()
+})
+
+test(({same, end}) => {
+  same(
+    attach(1)("a")(["b", "c"]),
+    ["b", "a", "c"]
+  )
+
+  end()
+})
