@@ -1,6 +1,6 @@
 {
   "name": "@unction/withoutkeyrecursive",
-  "version": "1.1.2",
+  "version": "1.1.1",
   "description": "Creates a copy of an iterable without a given key, recursively searched",
   "keywords": [
     "unction",

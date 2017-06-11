@@ -1,6 +1,6 @@
 {
   "name": "@unction/nestedobjof",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Like objOf, but takes a path for a nested object",
   "keywords": [
     "unction",
