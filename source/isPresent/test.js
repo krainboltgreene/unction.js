@@ -3,50 +3,50 @@ import {test} from "tap"
 
 import isPresent from "./"
 
-test(({equal, end}) => {
+test("array", ({equal, end}) => {
   equal(isPresent([]), true)
 
   end()
 })
 
-test(({equal, end}) => {
+test("object", ({equal, end}) => {
   equal(isPresent({}), true)
 
   end()
 })
 
-test(({equal, end}) => {
+test("string", ({equal, end}) => {
   equal(isPresent(""), true)
 
   end()
 })
 
-test(({equal, end}) => {
+test("zero", ({equal, end}) => {
   equal(isPresent(0), true)
 
   end()
 })
 
-test(({equal, end}) => {
+test("true", ({equal, end}) => {
   equal(isPresent(true), true)
 
   end()
 })
 
-test(({equal, end}) => {
+test("false", ({equal, end}) => {
   equal(isPresent(false), true)
 
   end()
 })
 
-test(({equal, end}) => {
+test("null", ({equal, end}) => {
   equal(isPresent(null), false)
 
   end()
 })
 
 
-test(({equal, end}) => {
+test("undefined", ({equal, end}) => {
   equal(isPresent(undefined), false)
 
   end()
