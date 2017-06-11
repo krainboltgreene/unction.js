@@ -5,9 +5,27 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any => KeyType => any) -> IterableType -> IterableType
+> (ValueType => KeyType => KeyType) -> IterableType -> IterableType
 
-Just like map, but gives back the index argument (as an integer, not a string if array)
+Map over keys with the context of the value and key.
+
+``` javascript
+const attributes = {
+  name: "Kurtis Rainbolt-Greene",
+  createdAt: new Date()
+}
+
+mapKeys((value) => (key) => )(attributes)
+```
+
+Would return:
+
+``` javascript
+{
+  name: "Kurtis Rainbolt-Greene",
+  "created-at": new Date()
+}
+```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/krainboltgreene/unction.js.svg?maxAge=2592000&style=flat-square
 [BADGE_VERSION]: https://img.shields.io/npm/v/mapkeyswithvaluekey.svg?maxAge=2592000&style=flat-square

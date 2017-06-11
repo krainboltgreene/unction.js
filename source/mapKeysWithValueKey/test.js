@@ -1,12 +1,18 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
-import {test} from "tap"
+import {same} from "tap"
+import {replace} from "ramda"
 
 import mapKeysWithValueKey from "./"
 
-test(({same, end}) => {
-  same(
-    mapKeysWithValueKey((value) => (index) => `${value}:${index}`)(["a", "b", "c"]),
-    ["a:0", "b:1", "c:2"]
-  )
-  end()
-})
+same(
+  mapKeysWithValueKey(
+    (value) => (key) => replace(/new/)("")(key + value)
+  )({
+    newLabel: "1",
+    newValue: "2",
+  }),
+  {
+    Label1: "1",
+    Value2: "2",
+  }
+)
