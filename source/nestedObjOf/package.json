@@ -1,6 +1,6 @@
 {
   "name": "@unction/nestedobjof",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Like objOf, but takes a path for a nested object",
   "keywords": [
     "unction",
@@ -41,8 +41,8 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/isarray": "^1.0.1",
-    "@unction/reducevalues": "^1.0.5",
+    "@unction/isarray": "^1.0.2",
+    "@unction/reducevalues": "^1.0.6",
     "ramda": "0.24.1"
   }
 }

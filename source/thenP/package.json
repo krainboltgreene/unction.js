@@ -1,6 +1,6 @@
 {
   "name": "@unction/thenp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A currable version of the Promise.prototype.then() function",
   "keywords": [
     "unction",

@@ -1,6 +1,6 @@
 {
   "name": "@unction/mapkeys",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Like map but over the key instead of the value",
   "keywords": [
     "unction",
@@ -42,6 +42,6 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/mapkeyswithvaluekey": "^1.0.0"
+    "@unction/mapkeyswithvaluekey": "^1.0.1"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@unction/applicators",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Takes a list of functions and a list of values and applies the values to the functions",
   "keywords": [
     "unction",
@@ -25,6 +25,7 @@
     "lint": "eslint './index.js'"
   },
   "devDependencies": {
+    "@unction/nestedobjof": "^1.1.1",
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
@@ -38,16 +39,15 @@
     "eslint-plugin-immutable": "1.0.0",
     "eslint-plugin-import": "2.3.0",
     "eslint-plugin-promise": "3.5.0",
-    "tap": "10.3.3",
-    "@unction/nestedobjof": "*"
+    "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/mapvalues": "*",
-    "@unction/zip": "*",
-    "@unction/applicator": "*",
-    "@unction/isarray": "*",
-    "@unction/isobject": "*",
-    "@unction/splat": "*",
+    "@unction/applicator": "^1.0.0",
+    "@unction/isarray": "^1.0.2",
+    "@unction/isobject": "^1.0.2",
+    "@unction/mapvalues": "^2.0.1",
+    "@unction/splat": "^1.0.0",
+    "@unction/zip": "^1.0.0",
     "ramda": "0.24.1"
   }
 }

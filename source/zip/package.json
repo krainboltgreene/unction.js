@@ -1,6 +1,6 @@
 {
   "name": "@unction/zip",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Takes two iterables and merges them together, combining their values into an array",
   "keywords": [
     "unction",
@@ -41,9 +41,9 @@
     "tap": "10.4.0"
   },
   "dependencies": {
-    "ramda": "0.24.1",
-    "@unction/type": "*",
-    "@unction/attach": "*",
-    "@unction/reducevalues": "*"
+    "@unction/attach": "^1.0.1",
+    "@unction/reducevalues": "^1.0.6",
+    "@unction/type": "^1.0.0",
+    "ramda": "0.24.1"
   }
 }

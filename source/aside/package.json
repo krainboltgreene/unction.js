@@ -1,6 +1,6 @@
 {
   "name": "@unction/aside",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Like pipe but the return value is the argument",
   "keywords": [
     "unction",

@@ -1,6 +1,6 @@
 {
   "name": "@unction/splat",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Takes a function and a list of values and recursively applies the value to the functions",
   "keywords": [
     "unction",
@@ -41,7 +41,7 @@
     "tap": "10.4.0"
   },
   "dependencies": {
-    "@unction/reducevalues": "*",
-    "@unction/applicator": "*"
+    "@unction/applicator": "^1.0.0",
+    "@unction/reducevalues": "^1.0.6"
   }
 }

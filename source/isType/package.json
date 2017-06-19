@@ -1,6 +1,6 @@
 {
   "name": "@unction/istype",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Takes a type name and a value and returns a boolean if value is type",
   "keywords": [
     "unction",
