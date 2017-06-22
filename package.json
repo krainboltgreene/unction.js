@@ -37,7 +37,7 @@
     "eslint-plugin-babel": "4.1.1",
     "eslint-plugin-flowtype": "2.34.0",
     "eslint-plugin-immutable": "1.0.0",
-    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-import": "2.5.0",
     "eslint-plugin-promise": "3.5.0",
     "flow": "0.2.3",
     "flow-bin": "0.47.0",
