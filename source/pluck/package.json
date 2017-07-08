@@ -18,7 +18,7 @@
   },
   "main": "transpiled/index.js",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "pretest": "npm run build",
     "test": "tap --no-coverage --no-coverage-report --no-color --jobs-auto --reporter dot './transpiled/test.js'",
     "build": "babel './index.js' './test.js' -d './transpiled/'",
