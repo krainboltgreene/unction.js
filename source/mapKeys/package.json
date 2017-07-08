@@ -27,7 +27,6 @@
   "devDependencies": {
     "ramda": "0.24.1",
     "tap": "10.3.3"
-
   },
   "dependencies": {
     "@unction/mapkeyswithvaluekey": "^1.0.1"
