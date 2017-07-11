@@ -1,6 +1,6 @@
 {
   "name": "@unction/attach",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A polymorphic way to attach a value to an iterable",
   "keywords": [
     "unction",
@@ -28,7 +28,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/isarray": "^1.0.2",
-    "@unction/isobject": "^1.0.2"
+    "@unction/isarray": "^1.0.3",
+    "@unction/isobject": "^1.0.3"
   }
 }

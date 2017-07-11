@@ -1,6 +1,6 @@
 {
   "name": "@unction/type",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Returns the type name of the value provided.",
   "keywords": [
     "unction",
@@ -26,7 +26,6 @@
   },
   "devDependencies": {
     "tap": "10.3.3"
-
   },
   "false": {}
 }

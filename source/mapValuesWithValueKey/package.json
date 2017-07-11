@@ -1,6 +1,6 @@
 {
   "name": "@unction/mapvalueswithvaluekey",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Map over keys with the value and key context",
   "keywords": [
     "unction",
@@ -28,9 +28,9 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/attach": "^1.0.1",
-    "@unction/isarray": "^1.0.2",
-    "@unction/isobject": "^1.0.2",
-    "@unction/reducewithvaluekey": "^2.0.1"
+    "@unction/attach": "^1.0.2",
+    "@unction/isarray": "^1.0.3",
+    "@unction/isobject": "^1.0.3",
+    "@unction/reducewithvaluekey": "^2.0.2"
   }
 }

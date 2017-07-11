@@ -1,6 +1,6 @@
 {
   "name": "@unction/ispresent",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Determines if the object is non-nil",
   "keywords": [
     "unction",

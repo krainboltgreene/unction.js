@@ -1,6 +1,6 @@
 {
   "name": "@unction/domeventsmany",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Takes many events or * and returns an observable of those events",
   "keywords": [
     "unction",
@@ -28,10 +28,10 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "xstream": "10.8.0",
-    "@unction/domevents": "*",
-    "@unction/reducevalues": "*",
-    "@unction/mapvalues": "*",
-    "@unction/mergeright": "*"
+    "@unction/domevents": "^1.0.0",
+    "@unction/mapvalues": "^2.0.2",
+    "@unction/mergeright": "^1.0.2",
+    "@unction/reducevalues": "^1.0.7",
+    "xstream": "10.8.0"
   }
 }

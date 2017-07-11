@@ -1,6 +1,6 @@
 {
   "name": "@unction/catchp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A currable version of Promise.prototype.catch",
   "keywords": [
     "unction",

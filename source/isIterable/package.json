@@ -1,6 +1,6 @@
 {
   "name": "@unction/isiterable",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Takes a value and returns a boolean if value is iterable",
   "keywords": [
     "unction",
@@ -28,6 +28,6 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/istype": "^1.0.3"
+    "@unction/istype": "^1.0.4"
   }
 }

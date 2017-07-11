@@ -1,6 +1,6 @@
 {
   "name": "@unction/everyp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Return resolved and rejected promises as two arrays",
   "keywords": [
     "unction",
@@ -28,11 +28,11 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/allp": "^1.0.2",
-    "@unction/couple": "^1.0.3",
-    "@unction/mapvalues": "^2.0.1",
-    "@unction/reducevalues": "^1.0.6",
-    "@unction/thencatchp": "^1.0.2",
-    "@unction/thenp": "^1.0.2"
+    "@unction/allp": "^1.0.3",
+    "@unction/couple": "^1.0.4",
+    "@unction/mapvalues": "^2.0.2",
+    "@unction/reducevalues": "^1.0.7",
+    "@unction/thencatchp": "^1.0.3",
+    "@unction/thenp": "^1.0.3"
   }
 }

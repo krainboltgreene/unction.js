@@ -1,6 +1,6 @@
 {
   "name": "@unction/arrayify",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Takes a value and turns it into an array of that value, unless the value is already an array",
   "keywords": [
     "unction",
@@ -28,6 +28,6 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/isarray": "*"
+    "@unction/isarray": "^1.0.3"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@unction/pluck",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Given a path and records, return the values at the path for each record",
   "keywords": [
     "unction",
@@ -28,7 +28,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/mapvalues": "^2.0.1",
+    "@unction/mapvalues": "^2.0.2",
     "ramda": "0.24.1"
   }
 }
