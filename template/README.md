@@ -1,4 +1,4 @@
-# @unction/template
+# @unction/tempLate
 
 ![Version][BADGE_VERSION]
 ![Tests][BADGE_TRAVIS]
@@ -7,16 +7,16 @@
 
 > any -> any
 
-A template function
+An example function.
 
 ``` javascript
-template()
+tempLate()
 ```
 
 returns
 
 ``` javascript
-
+x
 ```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/krainboltgreene/unction.js.svg?maxAge=2592000&style=flat-square

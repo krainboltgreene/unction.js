@@ -1,3 +1,3 @@
-export default function template (): Function {
-  return null
+export default function tempLate (alpha: any): any {
+  return alpha
 }
