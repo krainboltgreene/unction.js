@@ -23,6 +23,7 @@
     "prepublish": "npm run build",
     "test": "lerna run test",
     "build": "lerna run build",
+    "test": "tap --jobs-auto --reporter=min './source/*/transpiled/test.js'",
     "lint": "lerna run lint",
     "check": "flow check"
   },
@@ -44,6 +45,7 @@
     "flow-typed": "2.1.2",
     "globby": "6.1.0",
     "lerna": "2.0.0-rc.5",
-    "npm-run-all": "4.0.2"
+    "npm-run-all": "4.0.2",
+    "tap": "10.7.0"
   }
 }
