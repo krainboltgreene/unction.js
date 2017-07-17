@@ -41,7 +41,7 @@
     "eslint-plugin-promise": "3.5.0",
     "flow": "0.2.3",
     "flow-bin": "0.47.0",
-    "flow-typed": "2.1.2",
+    "flow-typed": "2.1.4",
     "globby": "6.1.0",
     "lerna": "2.0.0-rc.5",
     "npm-run-all": "4.0.2"
