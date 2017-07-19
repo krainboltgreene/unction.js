@@ -20,10 +20,10 @@
   "main": "transpiled/source/index.js",
   "scripts": {
     "postinstall": "lerna bootstrap",
-    "prepublish": "npm run build",
-    "test": "lerna run test",
-    "build": "lerna run build",
+    "prepare": "npm run build",
+    "pretest": "npm run build",
     "test": "tap --jobs-auto --reporter=min './source/*/transpiled/test.js'",
+    "build": "lerna run --concurrency=25 build",
     "lint": "lerna run lint",
     "check": "flow check"
   },
