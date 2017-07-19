@@ -137,7 +137,7 @@ module.exports = {
     "no-alert": "error",
     "no-array-constructor": "error",
     "no-await-in-loop": "error",
-    "no-bitwise": "warn",
+    "no-bitwise": "off", // Doesn't work with pipes
     "no-caller": "error",
     "no-case-declarations": "error",
     "no-catch-shadow": "error",
@@ -274,7 +274,7 @@ module.exports = {
     "one-var-declaration-per-line": "error",
     "one-var": ["error", "never"],
     "operator-assignment": "error",
-    "operator-linebreak": "error",
+    "operator-linebreak": "off", // Doesn't work with pipes
     "padded-blocks": ["error", "never"],
     "prefer-arrow-callback": "off", // This really isn't an appropriate rule
     "prefer-const": "error",
