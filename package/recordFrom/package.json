@@ -1,7 +1,7 @@
 {
-  "name": "@unction/nestedobjof",
+  "name": "@unction/recordfrom",
   "version": "1.1.2",
-  "description": "Like objOf, but takes a path for a nested object",
+  "description": "Given a keychain and a value it creates an object that has keys based on the keychain",
   "keywords": [
     "unction",
     "functional"
@@ -28,8 +28,8 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/isarray": "^1.0.3",
-    "@unction/reducevalues": "^1.0.7",
+    "@unction/attach": "*",
+    "@unction/reducevalues": "*",
     "ramda": "0.24.1"
   }
 }

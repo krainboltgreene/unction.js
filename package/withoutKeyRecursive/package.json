@@ -30,6 +30,7 @@
   "dependencies": {
     "@unction/istype": "*",
     "@unction/reducewithvaluekey": "*",
+    "@unction/recordfrom": "*",
     "ramda": "0.24.1"
   }
 }

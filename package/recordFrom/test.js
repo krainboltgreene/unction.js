@@ -1,11 +1,11 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import nestedObjOf from "./"
+import recordFrom from "./"
 
 test(({same, end}) => {
   same(
-    nestedObjOf(["key", "subkey"])("value"),
+    recordFrom(["key", "subkey"])("value"),
     {key: {subkey: "value"}}
   )
 

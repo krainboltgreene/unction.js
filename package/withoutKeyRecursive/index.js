@@ -1,7 +1,7 @@
 import {empty} from "ramda"
 import {merge} from "ramda"
 import {either} from "ramda"
-import {objOf} from "ramda"
+import recordFrom from "@unction/recordfrom"
 import reduceWithValueKey from "@unction/reducewithvaluekey"
 import isType from "@unction/istype"
 
@@ -22,10 +22,10 @@ export default function withoutKeyRecursive (key: KeyType): Function {
             }
 
             if (isIterable) {
-              return accumulatedMerge(objOf(index)(withoutKeyRecursive(key)(current)))
+              return accumulatedMerge(recordFrom([index])(withoutKeyRecursive(key)(current)))
             }
 
-            return accumulatedMerge(objOf(index)(current))
+            return accumulatedMerge(recordFrom([index])(current))
           }
         }
       }

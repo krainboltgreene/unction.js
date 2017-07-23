@@ -11,9 +11,9 @@ Takes a list of functions and a list of values and applies the values to the fun
 
 ``` javascript
 applicators([
-  nestedObjOf(["point", "x"]),
-  nestedObjOf(["point", "y"]),
-  nestedObjOf(["point", "z"]),
+  recordfrom(["point", "x"]),
+  recordfrom(["point", "y"]),
+  recordfrom(["point", "z"]),
 ])([
   40.453,
   2.2,

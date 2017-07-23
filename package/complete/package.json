@@ -67,7 +67,7 @@
     "@unction/mergewith": "*",
     "@unction/mergewithkey": "*",
     "@unction/nestedapply": "*",
-    "@unction/nestedobjof": "*",
+    "@unction/recordfrom": "*",
     "@unction/optimisticp": "*",
     "@unction/pairskeys": "*",
     "@unction/pairsvalues": "*",

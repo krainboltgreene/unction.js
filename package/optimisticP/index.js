@@ -1,5 +1,5 @@
 import {map} from "ramda"
-import {objOf} from "ramda"
+import recordfrom from "@unction/recordfrom"
 import {pipe} from "ramda"
 import {prop} from "ramda"
 import {has} from "ramda"
@@ -8,8 +8,8 @@ import thenCatchP from "@unction/thencatchp"
 import thenP from "@unction/thenp"
 import allP from "@unction/allp"
 
-const asResolved = objOf("resolved")
-const asRejected = objOf("rejected")
+const asResolved = recordfrom(["resolved"])
+const asRejected = recordfrom(["rejected"])
 const onlyResolved = reject(has("rejected"))
 const resolvedValues = map(prop("resolved"))
 const onlyResolvedValues = pipe(onlyResolved, resolvedValues)
