@@ -3,11 +3,11 @@ import {test} from "tap"
 
 import domEventsMany from "./"
 
-test(({same, end}) => {
-  same(
-    domEventsMany(),
-    null
-  )
-
-  end()
-})
+// test(({same, end}) => {
+//   same(
+//     domEventsMany({})(["click", "input"])(DOM),
+//     null
+//   )
+//
+//   end()
+// })
