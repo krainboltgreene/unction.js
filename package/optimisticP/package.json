@@ -32,6 +32,7 @@
     "@unction/thencatchp": "*",
     "@unction/thenp": "*",
     "@unction/recordfrom": "*",
+    "@unction/mapvalues": "*",
     "@unction/key": "*",
     "ramda": "0.24.1"
   }

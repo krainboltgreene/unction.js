@@ -1,4 +1,4 @@
-import {map} from "ramda"
+import mapValues from "@unction/mapvalues"
 import recordfrom from "@unction/recordfrom"
 import {pipe} from "ramda"
 import key from "@unction/key"
@@ -15,15 +15,8 @@ const resolvedValues = mapValues(key("resolved"))
 const onlyResolvedValues = pipe(onlyResolved, resolvedValues)
 
 export default function optimisticP (promises: Array<any | Promise<any>>): Promise<Array<any>> {
-  return thenP(
-    onlyResolvedValues
-  )(
-    allP(
-      map(
-        thenCatchP(asResolved)(asRejected)
-      )(
-        promises
-      )
-    )
-  )
+  return promises
+    | mapValues(thenCatchP(asResolved)(asRejected))
+    | allP
+    | thenP(onlyResolvedValues)
 }

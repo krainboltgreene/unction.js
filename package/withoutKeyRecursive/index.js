@@ -1,5 +1,5 @@
 import {empty} from "ramda"
-import {merge} from "ramda"
+import mergeRight from "@unction/mergeright"
 import {either} from "ramda"
 import recordFrom from "@unction/recordfrom"
 import reduceWithValueKey from "@unction/reducewithvaluekey"
@@ -11,7 +11,7 @@ export default function withoutKeyRecursive (key: KeyType): Function {
   return function withoutKeyRecursiveKey (original: IterableType): IterableType {
     return reduceWithValueKey(
       function withoutKeyRecursiveKeyIterable (accumulated: IterableType): Function {
-        const accumulatedMerge = merge(accumulated)
+        const accumulatedMerge = mergeRight(accumulated)
 
         return function withoutKeyRecursiveKeyIterableValue (current: any): Function {
           const isIterable = isEitherObjectOrArray(current)
