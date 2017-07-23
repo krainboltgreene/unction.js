@@ -22,7 +22,7 @@
     "postinstall": "lerna bootstrap",
     "prepare": "npm run build",
     "pretest": "npm run build",
-    "test": "tap --jobs-auto --reporter=min './source/*/transpiled/test.js'",
+    "test": "lerna run --concurrency=25 test",
     "build": "lerna run --concurrency=25 build",
     "lint": "lerna run lint",
     "check": "flow check"
