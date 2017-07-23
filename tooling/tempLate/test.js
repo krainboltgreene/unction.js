@@ -1,11 +1,11 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import template from "./"
+import tempLate from "./"
 
 test(({same, end}) => {
   same(
-    template(),
+    tempLate(),
     null
   )
 
