@@ -10,6 +10,12 @@ A set of very useful function. These functions are bound by these principles:
   6. Functions that deal with types will take their string name form.
   7. Functions that mutate the original value, though rare, will have a suffix of `M`.
   8. Functions that take or return promises will have a suffix of `P`.
+  9. Functions that can work on one type of Iterable can work on another type, covering:
+    1. Array
+    2. Set
+    3. Map
+    4. Object (record)
+    5. String
 
 ![Version][BADGE_VERSION]
 ![Tests][BADGE_TRAVIS]
