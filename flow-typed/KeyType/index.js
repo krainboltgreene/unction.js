@@ -1,1 +1,0 @@
-type KeyType = string | number
