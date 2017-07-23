@@ -1,0 +1,1 @@
+type KeyChainType = Array<KeyType>
