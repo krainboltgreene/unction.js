@@ -28,7 +28,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/shuffle": "^1.0.3",
+    "@unction/shuffle": "*",
     "ramda": "0.24.1"
   }
 }

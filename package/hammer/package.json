@@ -28,8 +28,8 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/isiterable": "^1.0.4",
-    "@unction/mergeright": "^1.0.2",
+    "@unction/isiterable": "*",
+    "@unction/mergeright": "*",
     "ramda": "0.24.1"
   }
 }

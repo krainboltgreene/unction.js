@@ -28,7 +28,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/applicator": "^1.0.1",
-    "@unction/reducevalues": "^1.0.7"
+    "@unction/applicator": "*",
+    "@unction/reducevalues": "*"
   }
 }

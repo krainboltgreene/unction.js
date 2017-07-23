@@ -29,9 +29,9 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/attach": "^1.0.2",
-    "@unction/isarray": "^1.0.3",
-    "@unction/isobject": "^1.0.3",
-    "@unction/reducewithvaluekey": "^2.0.2"
+    "@unction/attach": "*",
+    "@unction/isarray": "*",
+    "@unction/isobject": "*",
+    "@unction/reducewithvaluekey": "*"
   }
 }

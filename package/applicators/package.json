@@ -29,12 +29,12 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/applicator": "^1.0.1",
-    "@unction/isarray": "^1.0.3",
-    "@unction/isobject": "^1.0.3",
-    "@unction/mapvalues": "^2.0.2",
-    "@unction/splat": "^1.0.1",
-    "@unction/zip": "^1.0.1",
+    "@unction/applicator": "*",
+    "@unction/isarray": "*",
+    "@unction/isobject": "*",
+    "@unction/mapvalues": "*",
+    "@unction/splat": "*",
+    "@unction/zip": "*",
     "ramda": "0.24.1"
   }
 }

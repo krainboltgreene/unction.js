@@ -28,6 +28,6 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/mapvalueswithvaluekey": "^1.0.2"
+    "@unction/mapvalueswithvaluekey": "*"
   }
 }

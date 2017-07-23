@@ -28,9 +28,9 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/allp": "^1.0.3",
-    "@unction/pairskeys": "^1.0.3",
-    "@unction/pairsvalues": "^1.0.3",
+    "@unction/allp": "*",
+    "@unction/pairskeys": "*",
+    "@unction/pairsvalues": "*",
     "ramda": "0.24.1"
   }
 }

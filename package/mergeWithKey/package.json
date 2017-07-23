@@ -28,7 +28,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/attach": "^1.0.2",
-    "@unction/reducewithvaluekey": "^2.0.2"
+    "@unction/attach": "*",
+    "@unction/reducewithvaluekey": "*"
   }
 }

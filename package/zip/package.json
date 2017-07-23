@@ -28,9 +28,9 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/attach": "^1.0.2",
-    "@unction/reducevalues": "^1.0.7",
-    "@unction/type": "^1.0.1",
+    "@unction/attach": "*",
+    "@unction/reducevalues": "*",
+    "@unction/type": "*",
     "ramda": "0.24.1"
   }
 }

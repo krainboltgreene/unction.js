@@ -28,9 +28,9 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/allp": "^1.0.3",
-    "@unction/thencatchp": "^1.0.3",
-    "@unction/thenp": "^1.0.3",
+    "@unction/allp": "*",
+    "@unction/thencatchp": "*",
+    "@unction/thenp": "*",
     "ramda": "0.24.1"
   }
 }

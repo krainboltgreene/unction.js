@@ -28,13 +28,13 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/append": "^1.0.2",
-    "@unction/istype": "^1.0.4",
-    "@unction/mapvalues": "^2.0.2",
-    "@unction/mergeright": "^1.0.2",
-    "@unction/prepend": "^1.0.2",
-    "@unction/reducevalues": "^1.0.7",
-    "@unction/reducewithvaluekey": "^2.0.2",
+    "@unction/append": "*",
+    "@unction/istype": "*",
+    "@unction/mapvalues": "*",
+    "@unction/mergeright": "*",
+    "@unction/prepend": "*",
+    "@unction/reducevalues": "*",
+    "@unction/reducewithvaluekey": "*",
     "ramda": "0.24.1"
   }
 }

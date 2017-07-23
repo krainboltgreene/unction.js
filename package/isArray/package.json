@@ -28,6 +28,6 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/istype": "^1.0.4"
+    "@unction/istype": "*"
   }
 }
