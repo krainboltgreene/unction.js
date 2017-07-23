@@ -32,6 +32,8 @@
   "dependencies": {
     "@unction/ispopulated": "*",
     "@unction/reducevalues": "*",
+    "@unction/keychain": "*",
+    "@unction/key": "*",
     "@unction/upto": "*"
   }
 }

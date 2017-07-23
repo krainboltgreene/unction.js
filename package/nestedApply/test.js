@@ -2,8 +2,8 @@
 import {test} from "tap"
 import {indexBy} from "ramda"
 import {groupBy} from "ramda"
-import {path} from "ramda"
-import {prop} from "ramda"
+import keyChain from "@unction/keychain"
+import key from "@unction/key"
 import mapValues from "@unction/mapvalues"
 
 import nestedApply from "./"
@@ -38,7 +38,7 @@ test(({similar, end}) => {
 
 test(({similar, end}) => {
   similar(
-    nestedApply(mapValues)(indexBy(prop("id")))(0)(
+    nestedApply(mapValues)(indexBy(key("id")))(0)(
       [
         [
           {
@@ -48,7 +48,7 @@ test(({similar, end}) => {
           {
             id: "a2",
             type: "commercial",
-          }
+          },
         ],
         [
           {
@@ -58,8 +58,8 @@ test(({similar, end}) => {
           {
             id: "b2",
             type: "residential",
-          }
-        ]
+          },
+        ],
       ]
     ),
     [
@@ -90,7 +90,7 @@ test(({similar, end}) => {
 })
 test(({similar, end}) => {
   similar(
-    nestedApply(mapValues)(groupBy(path(["attributes", "version"])))(1)(
+    nestedApply(mapValues)(groupBy(keyChain(["attributes", "version"])))(1)(
       {
         resources: {
           accounts: [{
@@ -98,32 +98,32 @@ test(({similar, end}) => {
             type: "resources",
             attributes: {
               version: "v1",
-              namespace: "accounts"
-            }
+              namespace: "accounts",
+            },
           }, {
             id: "a2",
             type: "resources",
             attributes: {
               version: "v1",
-              namespace: "accounts"
-            }
+              namespace: "accounts",
+            },
           }],
           profiles: [{
             id: "b1",
             type: "resources",
             attributes: {
               version: "v1",
-              namespace: "profiles"
-            }
+              namespace: "profiles",
+            },
           }, {
             id: "b1",
             type: "resources",
             attributes: {
               version: "v2",
-              namespace: "profiles"
-            }
-          }]
-        }
+              namespace: "profiles",
+            },
+          }],
+        },
       }
     ),
     {
@@ -135,18 +135,18 @@ test(({similar, end}) => {
               type: "resources",
               attributes: {
                 version: "v1",
-                namespace: "accounts"
-              }
+                namespace: "accounts",
+              },
             },
             {
               id: "a2",
               type: "resources",
               attributes: {
                 version: "v1",
-                namespace: "accounts"
-              }
-            }
-          ]
+                namespace: "accounts",
+              },
+            },
+          ],
         },
         profiles: {
           v1: [
@@ -155,9 +155,9 @@ test(({similar, end}) => {
               type: "resources",
               attributes: {
                 version: "v1",
-                namespace: "profiles"
-              }
-            }
+                namespace: "profiles",
+              },
+            },
           ],
           v2: [
             {
@@ -165,12 +165,12 @@ test(({similar, end}) => {
               type: "resources",
               attributes: {
                 version: "v2",
-                namespace: "profiles"
-              }
-            }
+                namespace: "profiles",
+              },
+            },
           ],
-        }
-      }
+        },
+      },
     }
   )
 

@@ -7,7 +7,7 @@
 
 > KeyType -> IterableType -> IterableType
 
-Returns a copy of an iterable without a path.
+Returns a copy of an iterable without a key, no matter how deep the tree.
 
 ``` javascript
 withoutKeyRecursive("__abstraction__")(

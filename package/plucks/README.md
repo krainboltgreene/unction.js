@@ -5,9 +5,9 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<PathType> -> IterableType -> Array<any>
+> Array<KeyChainType> -> IterableType -> Array<any>
 
-Given paths and records, return the values at the paths for each record.
+Given keychain and records, return the values at the keychain for each record.
 
 ``` javascript
 plucks(

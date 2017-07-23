@@ -1,8 +1,8 @@
-import {path} from "ramda"
+import keyChain from "@unction/keychain"
 import mapValues from "@unction/mapvalues"
 
-export default function pluck (pathing: PathType): Function {
-  return function pluckPathing (iterable: IterableType): IterableType {
-    return mapValues(path(pathing))(iterable)
+export default function pluck (keychain: KeyChainType): Function {
+  return function pluckKeychain (iterable: IterableType): IterableType {
+    return mapValues(keyChain(keychain))(iterable)
   }
 }

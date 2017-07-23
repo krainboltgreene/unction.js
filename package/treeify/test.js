@@ -1,7 +1,7 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
-import {path} from "ramda"
-import {prop} from "ramda"
+import keyChain from "@unction/keychain"
+import key from "@unction/key"
 import {indexBy} from "ramda"
 import {groupBy} from "ramda"
 
@@ -94,8 +94,8 @@ test(({same, end}) => {
   same(
     treeify(
       [
-        groupBy(prop("type")),
-        groupBy(path(["attributes", "namespace"])),
+        groupBy(key("type")),
+        groupBy(keyChain(["attributes", "namespace"])),
       ]
     )(collection),
     {
@@ -147,9 +147,9 @@ test(({same, end}) => {
   same(
     treeify(
       [
-        groupBy(prop("type")),
-        groupBy(path(["attributes", "namespace"])),
-        groupBy(path(["attributes", "version"])),
+        groupBy(key("type")),
+        groupBy(keyChain(["attributes", "namespace"])),
+        groupBy(keyChain(["attributes", "version"])),
       ]
     )(collection),
     {
@@ -207,10 +207,10 @@ test(({same, end}) => {
   same(
     treeify(
       [
-        groupBy(prop("type")),
-        groupBy(path(["attributes", "namespace"])),
-        groupBy(path(["attributes", "version"])),
-        indexBy(prop("id")),
+        groupBy(key("type")),
+        groupBy(keyChain(["attributes", "namespace"])),
+        groupBy(keyChain(["attributes", "version"])),
+        indexBy(key("id")),
       ]
     )(collection),
     {

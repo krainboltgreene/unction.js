@@ -1,11 +1,11 @@
-import {path} from "ramda"
+import keyChain from "@unction/keychain"
 import {omit} from "ramda"
 import {type} from "ramda"
 import isIterable from "@unction/isiterable"
 import mergeRight from "@unction/mergeright"
 
 export default function hammer (key: KeyType): Function {
-  const propKey = path([key])
+  const keychain = keyChain([key])
   const omitKey = omit([key])
 
   return function hammerKey (iterable: IterableType): IterableType {
@@ -13,7 +13,7 @@ export default function hammer (key: KeyType): Function {
       throw new Error(`hammer only works on an Object or Array, but the set was a ${type(iterable)}`)
     }
 
-    const only = propKey(iterable)
+    const only = keychain(iterable)
     const without = omitKey(iterable)
 
     if (!isIterable(only)) {

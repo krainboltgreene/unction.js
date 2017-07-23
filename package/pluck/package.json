@@ -1,7 +1,7 @@
 {
   "name": "@unction/pluck",
   "version": "1.0.2",
-  "description": "Given a path and records, return the values at the path for each record",
+  "description": "Given a keychain and records return the values at the keychain for each record",
   "keywords": [
     "unction",
     "functional"
@@ -28,6 +28,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
+    "@unction/keychain": "*",
     "@unction/mapvalues": "*",
     "ramda": "0.24.1"
   }

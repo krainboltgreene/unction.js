@@ -30,6 +30,7 @@
   "dependencies": {
     "@unction/isiterable": "*",
     "@unction/mergeright": "*",
+    "@unction/keychain": "*",
     "ramda": "0.24.1"
   }
 }

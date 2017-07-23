@@ -1,7 +1,7 @@
 {
   "name": "@unction/plucks",
   "version": "1.0.2",
-  "description": "Given a set of paths and a record, return a set of values",
+  "description": "Given a set of keychains and a record it return a set of values",
   "keywords": [
     "unction",
     "functional"
@@ -28,6 +28,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
+    "@unction/keychain": "*",
     "@unction/mapvalues": "*",
     "ramda": "0.24.1"
   }

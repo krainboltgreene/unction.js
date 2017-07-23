@@ -50,15 +50,15 @@ const collection = [
 ````
 
 The order goes from outer layer to deeper layer, so in this case the outer
-level properties will be based on `prop("type")`, and the deepest layer
-properties will be based on `prop("id")`.
+level properties will be based on `key("type")`, and the deepest layer
+properties will be based on `key("id")`.
 
 ``` javascript
 const functions = [
-  groupBy(prop("type")),
-  groupBy(path(["attributes", "namespace"])),
-  groupBy(path(["attributes", "version"])),
-  indexBy(prop("id")),
+  groupBy(key("type")),
+  groupBy(keyChain(["attributes", "namespace"])),
+  groupBy(keyChain(["attributes", "version"])),
+  indexBy(key("id")),
 ]
 
 treeify(functions)(collection)
