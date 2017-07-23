@@ -48,7 +48,6 @@
     "flow-typed": "2.1.2",
     "fs-extra": "4.0.0",
     "glob-promise": "3.1.0",
-    "globby": "6.1.0",
     "lerna": "2.0.0",
     "npm-run-all": "4.0.2",
     "ramda": "0.24.1",
