@@ -1,5 +1,5 @@
 {
-  "name": "@unction/completePackage",
+  "name": "@unction/complete",
   "version": "0.0.0",
   "description": "All @unction functions in a single package",
   "keywords": [
@@ -39,7 +39,6 @@
     "@unction/attach": "*",
     "@unction/catchp": "*",
     "@unction/compact": "*",
-    "@unction/complete": "*",
     "@unction/computedprop": "*",
     "@unction/couple": "*",
     "@unction/domevents": "*",
