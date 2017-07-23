@@ -1,6 +1,6 @@
 {
   "name": "@unction/flattentree",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Takes a tree and creates a single object where the root keys are conjoined nested keys",
   "keywords": [
     "unction",
@@ -28,13 +28,13 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/append": "*",
-    "@unction/istype": "*",
-    "@unction/mapvalues": "*",
-    "@unction/mergeright": "*",
-    "@unction/prepend": "*",
-    "@unction/reducevalues": "*",
-    "@unction/reducewithvaluekey": "*",
+    "@unction/append": "^1.0.3",
+    "@unction/istype": "^1.0.5",
+    "@unction/mapvalues": "^2.0.3",
+    "@unction/mergeright": "^1.0.3",
+    "@unction/prepend": "^1.0.3",
+    "@unction/reducevalues": "^1.0.8",
+    "@unction/reducewithvaluekey": "^2.0.3",
     "ramda": "0.24.1"
   }
 }

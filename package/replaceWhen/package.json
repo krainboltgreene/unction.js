@@ -1,6 +1,6 @@
 {
   "name": "@unction/replacewhen",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Replaces values in an iterable with another value based on a predicate",
   "keywords": [
     "unction",
@@ -28,9 +28,9 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/mapvalues": "*",
-    "@unction/always": "*",
-    "@unction/itself": "*",
-    "@unction/ifthenelse": "*"
+    "@unction/always": "^1.0.0",
+    "@unction/ifthenelse": "^1.0.0",
+    "@unction/itself": "^1.0.0",
+    "@unction/mapvalues": "^2.0.3"
   }
 }

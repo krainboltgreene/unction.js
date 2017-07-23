@@ -1,6 +1,6 @@
 {
   "name": "@unction/mergeright",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Merges two iterables, preferring right",
   "keywords": [
     "unction",
@@ -28,10 +28,10 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/couple": "*",
-    "@unction/isarray": "*",
-    "@unction/isobject": "*",
-    "@unction/ispresent": "*",
+    "@unction/couple": "^1.0.5",
+    "@unction/isarray": "^1.0.4",
+    "@unction/isobject": "^1.0.4",
+    "@unction/ispresent": "^1.1.3",
     "ramda": "0.24.1"
   }
 }

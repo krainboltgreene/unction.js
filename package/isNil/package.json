@@ -1,6 +1,6 @@
 {
   "name": "@unction/isnil",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Determines if a value is not a value",
   "keywords": [
     "unction",
@@ -28,6 +28,6 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/istype": "*"
+    "@unction/istype": "^1.0.5"
   }
 }

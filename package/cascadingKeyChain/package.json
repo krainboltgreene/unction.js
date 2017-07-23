@@ -1,6 +1,6 @@
 {
   "name": "@unction/cascadingkeychain",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Cascades through multiple keychains in order to arrive at a value",
   "keywords": [
     "unction",
@@ -28,9 +28,9 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/reducevalues": "*",
-    "@unction/isnil": "*",
-    "@unction/keychain": "*",
-    "@unction/replacewhen": "*"
+    "@unction/isnil": "^1.0.0",
+    "@unction/keychain": "^1.0.0",
+    "@unction/reducevalues": "^1.0.8",
+    "@unction/replacewhen": "^1.0.0"
   }
 }

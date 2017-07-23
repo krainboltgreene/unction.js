@@ -1,6 +1,6 @@
 {
   "name": "@unction/key",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Returns the value of a specific key on an iterable",
   "keywords": [
     "unction",
@@ -28,6 +28,6 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/isiterable": "*"
+    "@unction/isiterable": "^1.0.5"
   }
 }

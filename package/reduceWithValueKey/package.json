@@ -1,6 +1,6 @@
 {
   "name": "@unction/reducewithvaluekey",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A curried reduce where you get access to both the value and they key",
   "keywords": [
     "unction",
@@ -28,7 +28,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/isarray": "*",
-    "@unction/isobject": "*"
+    "@unction/isarray": "^1.0.4",
+    "@unction/isobject": "^1.0.4"
   }
 }

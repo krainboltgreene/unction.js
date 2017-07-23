@@ -1,6 +1,6 @@
 {
   "name": "@unction/samplesize",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Returns a random number of members from a array or string",
   "keywords": [
     "unction",
@@ -28,7 +28,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/shuffle": "*",
+    "@unction/shuffle": "^1.0.4",
     "ramda": "0.24.1"
   }
 }

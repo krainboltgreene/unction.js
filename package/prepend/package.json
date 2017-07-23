@@ -1,6 +1,6 @@
 {
   "name": "@unction/prepend",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Takes a value and puts it at the beginning of the given list",
   "keywords": [
     "unction",

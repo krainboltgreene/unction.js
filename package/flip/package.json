@@ -1,6 +1,6 @@
 {
   "name": "@unction/flip",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Flips a function's first and second arguments.",
   "keywords": [
     "unction",

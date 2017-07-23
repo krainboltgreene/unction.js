@@ -1,6 +1,6 @@
 {
   "name": "@unction/withoutkeyrecursive",
-  "version": "1.1.4",
+  "version": "2.0.0",
   "description": "Returns a copy of an iterable without a key, no matter how deep the tree",
   "keywords": [
     "unction",
@@ -28,11 +28,11 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/reducewithvaluekey": "*",
-    "@unction/mergeright": "*",
-    "@unction/recordfrom": "*",
-    "@unction/isobject": "*",
-    "@unction/isarray": "*",
+    "@unction/isarray": "^1.0.4",
+    "@unction/isobject": "^1.0.4",
+    "@unction/mergeright": "^1.0.3",
+    "@unction/recordfrom": "^1.0.0",
+    "@unction/reducewithvaluekey": "^2.0.3",
     "ramda": "0.24.1"
   }
 }

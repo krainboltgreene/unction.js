@@ -1,6 +1,6 @@
 {
   "name": "@unction/mergewith",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Takes a function that determines how to merge two conflicting values in a merge",
   "keywords": [
     "unction",
@@ -28,7 +28,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/attach": "*",
-    "@unction/reducewithvaluekey": "*"
+    "@unction/attach": "^1.0.3",
+    "@unction/reducewithvaluekey": "^2.0.3"
   }
 }

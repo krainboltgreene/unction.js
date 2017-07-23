@@ -1,6 +1,6 @@
 {
   "name": "@unction/nestedapply",
-  "version": "2.1.4",
+  "version": "3.0.0",
   "description": "Applies a function or functions to a nested iteratorable",
   "keywords": [
     "unction",
@@ -25,15 +25,15 @@
     "lint": "eslint './index.js'"
   },
   "devDependencies": {
-    "@unction/mapvalues": "*",
+    "@unction/mapvalues": "^2.0.3",
     "ramda": "0.24.1",
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/ispopulated": "*",
-    "@unction/reducevalues": "*",
-    "@unction/keychain": "*",
-    "@unction/key": "*",
-    "@unction/upto": "*"
+    "@unction/ispopulated": "^2.0.4",
+    "@unction/key": "^1.0.0",
+    "@unction/keychain": "^1.0.0",
+    "@unction/reducevalues": "^1.0.8",
+    "@unction/upto": "^2.0.4"
   }
 }

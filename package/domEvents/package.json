@@ -1,6 +1,6 @@
 {
   "name": "@unction/domevents",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Takes a configuration, an event name, and a DOM source and returns an observable of that event type",
   "keywords": [
     "unction",
