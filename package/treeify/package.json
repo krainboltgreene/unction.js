@@ -25,12 +25,12 @@
     "lint": "eslint './index.js'"
   },
   "devDependencies": {
-    "tap": "10.3.3"
+    "tap": "10.3.3",
+    "ramda": "0.24.1",
     "@unction/key": "*",
     "@unction/keychain": "*"
   },
   "dependencies": {
-    "ramda": "0.24.1"
     "@unction/mapvalues": "*",
     "@unction/mapvalueswithvaluekey": "*",
     "@unction/nestedapply": "*",

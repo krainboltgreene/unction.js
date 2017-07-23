@@ -14,7 +14,7 @@ const collection = [
     attributes: {
       version: "v1",
       namespace: "accounts",
-    }
+    },
   },
   {
     id: "a2",
@@ -22,7 +22,7 @@ const collection = [
     attributes: {
       version: "v1",
       namespace: "accounts",
-    }
+    },
   },
   {
     id: "b1",
@@ -30,7 +30,7 @@ const collection = [
     attributes: {
       version: "v1",
       namespace: "profiles",
-    }
+    },
   },
   {
     id: "b1",
@@ -38,15 +38,15 @@ const collection = [
     attributes: {
       version: "v2",
       namespace: "profiles",
-    }
-  }
+    },
+  },
 ]
 
 test(({same, end}) => {
   same(
     treeify(
       [
-        groupBy(prop("type"))
+        groupBy(key("type")),
       ]
     )(collection),
     {
@@ -57,7 +57,7 @@ test(({same, end}) => {
           attributes: {
             version: "v1",
             namespace: "accounts",
-          }
+          },
         },
         {
           id: "a2",
@@ -65,7 +65,7 @@ test(({same, end}) => {
           attributes: {
             version: "v1",
             namespace: "accounts",
-          }
+          },
         },
         {
           id: "b1",
@@ -73,7 +73,7 @@ test(({same, end}) => {
           attributes: {
             version: "v1",
             namespace: "profiles",
-          }
+          },
         },
         {
           id: "b1",
@@ -81,9 +81,9 @@ test(({same, end}) => {
           attributes: {
             version: "v2",
             namespace: "profiles",
-          }
-        }
-      ]
+          },
+        },
+      ],
     }
   )
 
@@ -107,7 +107,7 @@ test(({same, end}) => {
             attributes: {
               version: "v1",
               namespace: "accounts",
-            }
+            },
           },
           {
             id: "a2",
@@ -115,8 +115,8 @@ test(({same, end}) => {
             attributes: {
               version: "v1",
               namespace: "accounts",
-            }
-          }
+            },
+          },
         ],
         profiles: [
           {
@@ -125,7 +125,7 @@ test(({same, end}) => {
             attributes: {
               version: "v1",
               namespace: "profiles",
-            }
+            },
           },
           {
             id: "b1",
@@ -133,10 +133,10 @@ test(({same, end}) => {
             attributes: {
               version: "v2",
               namespace: "profiles",
-            }
-          }
+            },
+          },
         ],
-      }
+      },
     }
   )
 
@@ -162,7 +162,7 @@ test(({same, end}) => {
               attributes: {
                 version: "v1",
                 namespace: "accounts",
-              }
+              },
             },
             {
               id: "a2",
@@ -170,9 +170,9 @@ test(({same, end}) => {
               attributes: {
                 version: "v1",
                 namespace: "accounts",
-              }
-            }
-          ]
+              },
+            },
+          ],
         },
         profiles: {
           v1: [
@@ -182,8 +182,8 @@ test(({same, end}) => {
               attributes: {
                 version: "v1",
                 namespace: "profiles",
-              }
-            }
+              },
+            },
           ],
           v2: [
             {
@@ -192,11 +192,11 @@ test(({same, end}) => {
               attributes: {
                 version: "v2",
                 namespace: "profiles",
-              }
-            }
-          ]
+              },
+            },
+          ],
         },
-      }
+      },
     }
   )
 
@@ -223,7 +223,7 @@ test(({same, end}) => {
               attributes: {
                 version: "v1",
                 namespace: "accounts",
-              }
+              },
             },
             a2: {
               id: "a2",
@@ -231,9 +231,9 @@ test(({same, end}) => {
               attributes: {
                 version: "v1",
                 namespace: "accounts",
-              }
-            }
-          }
+              },
+            },
+          },
         },
         profiles: {
           v1: {
@@ -243,8 +243,8 @@ test(({same, end}) => {
               attributes: {
                 version: "v1",
                 namespace: "profiles",
-              }
-            }
+              },
+            },
           },
           v2: {
             b1: {
@@ -253,11 +253,11 @@ test(({same, end}) => {
               attributes: {
                 version: "v2",
                 namespace: "profiles",
-              }
-            }
-          }
-        }
-      }
+              },
+            },
+          },
+        },
+      },
     }
   )
 

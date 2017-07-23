@@ -1,4 +1,4 @@
-/* eslint-disable immutable/no-let, no-magic-numbers */
+/* eslint-disable immutable/no-let, no-magic-numbers, immutable/no-mutation */
 import {length} from "ramda"
 
 // While this raises eslint issues, they should be ignored. This is the best possible shuffle implementation I could find.
