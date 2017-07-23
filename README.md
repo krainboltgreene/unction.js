@@ -6,7 +6,7 @@ A set of very useful function. These functions are bound by these principles:
   2. All functions will only take a single argument.
   3. All functions are curried.
   4. All inner functions will be named based on the outer function and it's argument name.
-  5. Functions that deal with key values will take Paths (a list of keys).
+  5. Functions that deal with key values will take KeyChains (a list of keys).
   6. Functions that deal with types will take their string name form.
   7. Functions that mutate the original value, though rare, will have a suffix of `M`.
   8. Functions that take or return promises will have a suffix of `P`.
