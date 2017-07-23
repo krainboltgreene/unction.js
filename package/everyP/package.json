@@ -1,0 +1,38 @@
+{
+  "name": "@unction/everyp",
+  "version": "1.0.3",
+  "description": "Return resolved and rejected promises as two arrays",
+  "keywords": [
+    "unction",
+    "functional"
+  ],
+  "author": "Kurtis Rainbolt-Greene (@krainboltgreene) <kurtis@rainbolt-greene.online>",
+  "license": "ISC",
+  "homepage": "https://github.com/krainboltgreene/unction.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krainboltgreene/unction.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krainboltgreene/unction/issues"
+  },
+  "main": "transpiled/index.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "pretest": "npm run build",
+    "test": "tap --reporter min './transpiled/test.js'",
+    "build": "babel './index.js' './test.js' -d './transpiled/'",
+    "lint": "eslint './index.js'"
+  },
+  "devDependencies": {
+    "tap": "10.3.3"
+  },
+  "dependencies": {
+    "@unction/allp": "^1.0.4",
+    "@unction/couple": "^1.0.5",
+    "@unction/mapvalues": "^2.0.3",
+    "@unction/reducevalues": "^1.0.8",
+    "@unction/thencatchp": "^1.0.4",
+    "@unction/thenp": "^1.0.4"
+  }
+}

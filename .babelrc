@@ -4,6 +4,7 @@
     "flow"
   ],
   "plugins": [
+    "pipe-operator-curry",
     "transform-object-rest-spread"
   ]
 }

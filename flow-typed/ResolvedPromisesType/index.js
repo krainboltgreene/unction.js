@@ -1,1 +1,0 @@
-type ResolvedPromisesType = Array<any>
