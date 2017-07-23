@@ -7,7 +7,7 @@ test(({same, end}) => {
     computedProp(
       ({id, attributes: {username}}) => `${username}#${id}`
     )(
-      "tag"
+      ["tag"]
     )(
       {
         id: "1",

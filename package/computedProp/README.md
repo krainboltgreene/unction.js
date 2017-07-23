@@ -5,7 +5,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (IterableType -> any) -> (KeyType | Array<KeyType>) -> IterableType -> IterableType
+> (IterableType -> any) -> Keychain -> IterableType -> IterableType
 
 Given an object this function will return that object but with a new property, where the value is computed. The computation is given the object you'll be copying.
 
