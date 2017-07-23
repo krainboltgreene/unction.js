@@ -28,10 +28,11 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/istype": "*",
     "@unction/reducewithvaluekey": "*",
     "@unction/mergeright": "*",
     "@unction/recordfrom": "*",
+    "@unction/isobject": "*",
+    "@unction/isarray": "*",
     "ramda": "0.24.1"
   }
 }

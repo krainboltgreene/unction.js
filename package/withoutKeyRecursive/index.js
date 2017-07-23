@@ -3,9 +3,10 @@ import mergeRight from "@unction/mergeright"
 import {either} from "ramda"
 import recordFrom from "@unction/recordfrom"
 import reduceWithValueKey from "@unction/reducewithvaluekey"
-import isType from "@unction/istype"
+import isObject from "@unction/isobject"
+import isArray from "@unction/isarray"
 
-const isEitherObjectOrArray = either(isType("Object"))(isType("Array"))
+const isEitherObjectOrArray = either(isObject)(isArray)
 
 export default function withoutKeyRecursive (key: KeyType): Function {
   return function withoutKeyRecursiveKey (original: IterableType): IterableType {
