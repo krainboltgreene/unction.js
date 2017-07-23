@@ -1,4 +1,4 @@
-# @unction/all
+# @unction/complete
 
 A set of very useful function. These functions are bound by these principles:
 
