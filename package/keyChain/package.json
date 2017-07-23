@@ -1,0 +1,35 @@
+{
+  "name": "@unction/keychain",
+  "version": "0.0.0",
+  "description": "Takes a chain of keys and a tree, traversing down and reaching the last value",
+  "keywords": [
+    "unction",
+    "functional"
+  ],
+  "author": "Kurtis Rainbolt-Greene (@krainboltgreene) <kurtis@rainbolt-greene.online>",
+  "license": "ISC",
+  "homepage": "https://github.com/krainboltgreene/unction.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krainboltgreene/unction.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krainboltgreene/unction/issues"
+  },
+  "main": "transpiled/index.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "pretest": "npm run build",
+    "test": "tap --reporter min './transpiled/test.js'",
+    "build": "babel './index.js' './test.js' -d './transpiled/'",
+    "lint": "eslint './index.js'"
+  },
+  "devDependencies": {
+    "tap": "10.3.3"
+  },
+  "dependencies": {
+    "@unction/key": "*",
+    "@unction/flip": "*",
+    "@unction/reducevalues": "*"
+  }
+}
