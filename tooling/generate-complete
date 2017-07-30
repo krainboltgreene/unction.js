@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+import commander from "commander"
+
+import generateComplete from "./generateComplete"
+
+commander
+  .version("1.0.0")
+  .usage("generate complete")
+  .parse(process.argv)
+
+generateComplete()
