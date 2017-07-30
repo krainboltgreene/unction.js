@@ -2,7 +2,6 @@
 import mapValues from "@unction/mapvalues"
 import reduceValues from "@unction/reducevalues"
 import mergeRight from "@unction/mergeright"
-import recordFrom from "@unction/recordfrom"
 
 import toFullName from "../../../shared/toFullName"
 
