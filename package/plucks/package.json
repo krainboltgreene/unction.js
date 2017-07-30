@@ -1,6 +1,6 @@
 {
   "name": "@unction/plucks",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Given a set of keychains and a record it return a set of values",
   "keywords": [
     "unction",
@@ -28,8 +28,8 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/keychain": "^1.0.0",
-    "@unction/mapvalues": "^2.0.3",
+    "@unction/keychain": "^1.0.1",
+    "@unction/mapvalues": "^2.0.4",
     "ramda": "0.24.1"
   }
 }

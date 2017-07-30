@@ -1,6 +1,6 @@
 {
   "name": "@unction/recordfrom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Given a keychain and a value it creates an object that has keys based on the keychain",
   "keywords": [
     "unction",
@@ -28,8 +28,8 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/attach": "^1.0.3",
-    "@unction/reducevalues": "^1.0.8",
+    "@unction/attach": "^1.0.4",
+    "@unction/reducevalues": "^1.0.9",
     "ramda": "0.24.1"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@unction/computedprop",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Creates a record from a record where a (nested or root) prop is computed from a function",
   "keywords": [
     "unction",
@@ -28,7 +28,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/mergedeepright": "^1.1.3",
-    "@unction/recordfrom": "^1.0.0"
+    "@unction/mergedeepright": "^1.1.4",
+    "@unction/recordfrom": "^1.0.1"
   }
 }

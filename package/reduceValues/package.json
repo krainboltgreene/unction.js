@@ -1,6 +1,6 @@
 {
   "name": "@unction/reducevalues",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A curried reduce",
   "keywords": [
     "unction",
@@ -28,6 +28,6 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/reducewithvaluekey": "^2.0.3"
+    "@unction/reducewithvaluekey": "^2.0.4"
   }
 }

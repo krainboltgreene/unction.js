@@ -1,6 +1,6 @@
 {
   "name": "@unction/appendm",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Takes an item and an array, appends (MUTATION) the original array with the item",
   "keywords": [
     "unction",

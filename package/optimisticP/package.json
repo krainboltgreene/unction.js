@@ -1,6 +1,6 @@
 {
   "name": "@unction/optimisticp",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Given a set of promises only return the resolved promises",
   "keywords": [
     "unction",
@@ -28,12 +28,12 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/allp": "^1.0.4",
-    "@unction/key": "^1.0.0",
-    "@unction/mapvalues": "^2.0.3",
-    "@unction/recordfrom": "^1.0.0",
-    "@unction/thencatchp": "^1.0.4",
-    "@unction/thenp": "^1.0.4",
+    "@unction/allp": "^1.0.5",
+    "@unction/key": "^1.0.1",
+    "@unction/mapvalues": "^2.0.4",
+    "@unction/recordfrom": "^1.0.1",
+    "@unction/thencatchp": "^1.0.5",
+    "@unction/thenp": "^1.0.5",
     "ramda": "0.24.1"
   }
 }

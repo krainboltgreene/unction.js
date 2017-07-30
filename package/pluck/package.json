@@ -1,6 +1,6 @@
 {
   "name": "@unction/pluck",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Given a keychain and records return the values at the keychain for each record",
   "keywords": [
     "unction",
@@ -28,8 +28,8 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/keychain": "^1.0.0",
-    "@unction/mapvalues": "^2.0.3",
+    "@unction/keychain": "^1.0.1",
+    "@unction/mapvalues": "^2.0.4",
     "ramda": "0.24.1"
   }
 }

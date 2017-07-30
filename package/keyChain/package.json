@@ -1,6 +1,6 @@
 {
   "name": "@unction/keychain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Takes a chain of keys and a tree, traversing down and reaching the last value",
   "keywords": [
     "unction",
@@ -28,8 +28,8 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/flip": "^1.0.0",
-    "@unction/key": "^1.0.0",
-    "@unction/reducevalues": "^1.0.8"
+    "@unction/flip": "^1.0.1",
+    "@unction/key": "^1.0.1",
+    "@unction/reducevalues": "^1.0.9"
   }
 }
