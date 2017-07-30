@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+import commander from "commander"
+
+import generateProject from "./generateProject"
+
+commander
+  .version("1.0.0")
+  .usage("generate project")
+  .parse(process.argv)
+
+generateProject()

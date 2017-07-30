@@ -28,7 +28,12 @@
     "check": "flow check"
   },
   "devDependencies": {
+    "@unction/allp": "1.0.4",
     "@unction/mapvalues": "2.0.3",
+    "@unction/mergeright": "1.0.3",
+    "@unction/recordfrom": "1.0.0",
+    "@unction/reducevalues": "1.0.8",
+    "@unction/thenp": "1.0.4",
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
@@ -37,6 +42,8 @@
     "babel-preset-env": "1.6.0",
     "babel-preset-flow": "6.23.0",
     "bunyan": "1.8.10",
+    "commander": "2.11.0",
+    "cvx": "1.0.0",
     "eslint": "3.19.0",
     "eslint-plugin-babel": "4.1.1",
     "eslint-plugin-flowtype": "2.35.0",
@@ -50,7 +57,9 @@
     "glob-promise": "3.1.0",
     "lerna": "2.0.0",
     "npm-run-all": "4.0.2",
+    "proon": "1.5.1",
     "ramda": "0.24.1",
-    "tap": "10.7.0"
+    "tap": "10.7.0",
+    "vorpal": "1.12.0"
   }
 }

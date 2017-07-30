@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+import commander from "commander"
+
+commander
+  .version("1.0.0")
+  .usage("generate [subcommand]")
+  .command("project", "create the root project files")
+  .command("individual [name]", "search with optional query")
+  .command("complete", "create the @unction/complete package")
+  .parse(process.argv)
