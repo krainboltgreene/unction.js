@@ -28,7 +28,7 @@
     "check": "flow check"
   },
   "devDependencies": {
-    "@unction/allp": "1.0.4",
+    "@unction/allp": "1.0.5",
     "@unction/mapvalues": "2.0.3",
     "@unction/mergeright": "1.0.3",
     "@unction/recordfrom": "1.0.0",
