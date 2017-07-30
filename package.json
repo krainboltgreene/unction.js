@@ -33,7 +33,7 @@
     "@unction/mergeright": "1.0.3",
     "@unction/recordfrom": "1.0.0",
     "@unction/reducevalues": "1.0.8",
-    "@unction/thenp": "1.0.4",
+    "@unction/thenp": "1.0.5",
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
