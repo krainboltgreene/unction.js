@@ -9,6 +9,5 @@ import toFullName from "../../../shared/toFullName"
 export default function dependencies (names) {
   return names
     | mapValues((name: string): object => ({[toFullName(name)]: "*"}))
-    | reduceValues(mergeRight)
-    | recordFrom(["dependencies"])
+    | reduceValues(mergeRight)({})
 }

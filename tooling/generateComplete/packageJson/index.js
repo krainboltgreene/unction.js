@@ -24,6 +24,6 @@ export default function packageJson (names) {
       build: "babel './index.js' './test.js' -d './transpiled/'",
       lint: "eslint './index.js'",
     },
-    ...dependencies(names),
+    dependencies: dependencies(names),
   }, null, "  ")
 }
