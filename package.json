@@ -19,6 +19,7 @@
   },
   "main": "transpiled/source/index.js",
   "scripts": {
+    "start": "babel-node tooling/generate-complete && babel-node tooling/generate-project && lerna bootstrap",
     "postinstall": "lerna bootstrap",
     "prepare": "npm run build",
     "pretest": "npm run build",
