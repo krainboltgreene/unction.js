@@ -5,8 +5,53 @@ import fresh from "./"
 
 test(({same, end}) => {
   same(
-    fresh(),
-    null
+    fresh({aaa: "aaa"}),
+    {}
+  )
+
+  end()
+})
+
+test(({same, end}) => {
+  same(
+    fresh(["a"]),
+    []
+  )
+
+  end()
+})
+
+test(({same, end}) => {
+  same(
+    fresh("a"),
+    "a"
+  )
+
+  end()
+})
+
+test(({same, end}) => {
+  same(
+    fresh({}),
+    {}
+  )
+
+  end()
+})
+
+test(({same, end}) => {
+  same(
+    fresh([]),
+    []
+  )
+
+  end()
+})
+
+test(({same, end}) => {
+  same(
+    fresh(""),
+    ""
   )
 
   end()

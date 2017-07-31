@@ -1,7 +1,7 @@
 import type from "@unction/type"
 
-export default function fresh (value: mixed): mixed | null {
-  switch (type(value)) {
+export default function fresh (iterable: IterableType): IterableType | null {
+  switch (type(iterable)) {
     case "String": {
       return ""
     }

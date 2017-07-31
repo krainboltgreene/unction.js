@@ -4,18 +4,15 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> any -> any
+> IterableType -> IterableType
 
-An example function.
-
-``` javascript
-fresh()
-```
-
-returns
+Takes a iterable and returns an empty fresh version of that iterable.
 
 ``` javascript
-x
+fresh({aaa: "aaa"}) // {}
+fresh(["aaa"]) // []
+fresh({}) // {}
+fresh([]) // []
 ```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/krainboltgreene/unction.js.svg?maxAge=2592000&style=flat-square
