@@ -15,8 +15,8 @@ test(({notOk, end}) => {
   end()
 })
 
-test(({notOk, end}) => {
-  notOk(isIterable("b"))
+test(({ok, end}) => {
+  ok(isIterable("b"))
 
   end()
 })
@@ -39,8 +39,8 @@ test(({notOk, end}) => {
   end()
 })
 
-test(({notOk, end}) => {
-  notOk(isIterable(new Buffer("x")))
+test(({ok, end}) => {
+  ok(isIterable(new Buffer("x")))
 
   end()
 })

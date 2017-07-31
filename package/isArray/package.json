@@ -1,7 +1,7 @@
 {
   "name": "@unction/isarray",
   "version": "1.0.4",
-  "description": "Takes a value and returns a boolean if value is iterable",
+  "description": "Takes a value and returns a boolean if value is an array",
   "keywords": [
     "unction",
     "functional"

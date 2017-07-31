@@ -5,14 +5,15 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> string -> any -> boolean
+> mixed -> boolean
 
 Takes any value and then any value and returns an array containing those values.
 
 ``` javascript
 isIterable({}) // => true
 isIterable([]) // => true
-isIterable("") // => false
+isIterable("") // => true
+isIterable(1) // => false
 ```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/krainboltgreene/unction.js.svg?maxAge=2592000&style=flat-square
