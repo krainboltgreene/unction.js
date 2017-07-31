@@ -1,4 +1,4 @@
-# @unction/complete
+# @unction/*
 
 A set of very useful function. These functions are bound by these principles:
 
@@ -11,11 +11,10 @@ A set of very useful function. These functions are bound by these principles:
   7. Functions that mutate the original value, though rare, will have a suffix of `M`.
   8. Functions that take or return promises will have a suffix of `P`.
   9. Functions that can work on one type of Iterable can work on another type, covering:
-    1. Array
-    2. Set
-    3. Map
-    4. Object (record)
-    5. String
+    - List (Array, Set, WeakSet)
+    - Record (object, Map, WeakMap)
+    - String
+    - Stream (xstream)
 
 
 ![Tests][BADGE_TRAVIS]
@@ -39,7 +38,6 @@ import hammer from "@unction/hammer"
 
 
 ## @unction/allObjectP
-
 
 > ({[key: KeyType]: any | Promise<any>}) => Promise<{[key: KeyType]: any}>
 
@@ -77,9 +75,7 @@ function signUp (attributes, slug) {
 If we use `allP` or `Promise.all` we're getting an array back, but that's annoying to destructure. The `allObjectP` function gives us the concurrency we want with a named interface for the returned resolutions.
 
 
-
 ## @unction/allP
-
 
 > Array<any | Promise<any>> -> Promise<Array<any>>
 
@@ -88,9 +84,7 @@ A port of the `Promise.all()` function.
 Credit: @keithamus
 
 
-
 ## @unction/always
-
 
 > any -> any -> any
 
@@ -102,9 +96,7 @@ always(1)(0) // 1
 ```
 
 
-
 ## @unction/append
-
 
 > any -> Array<any> -> Array<any>
 
@@ -115,9 +107,7 @@ append(4)([5]) // => [5, 4]
 ```
 
 
-
 ## @unction/appendM
-
 
 > any -> Array<any> -> Array<any>
 
@@ -138,9 +128,7 @@ Would return:
 ```
 
 
-
 ## @unction/applicator
-
 
 > (ValueType -> any) -> any
 
@@ -151,9 +139,7 @@ applicator(inc)(1) // 1
 ```
 
 
-
 ## @unction/applicators
-
 
 > Iterable<ValueType -> ValueType> -> Iterable<ValueType> -> Array<ValueType>
 
@@ -201,9 +187,7 @@ returns
 ```
 
 
-
 ## @unction/arrayify
-
 
 > any -> [any] | Array<any>
 
@@ -230,9 +214,7 @@ returns
 ```
 
 
-
 ## @unction/aside
-
 
 > Array<(any => any)> -> any -> any
 
@@ -248,9 +230,7 @@ export default function generateGraph () {
 ```
 
 
-
 ## @unction/attach
-
 
 > KeyType -> ValueType -> IterableType -> IterableType
 
@@ -261,9 +241,7 @@ attach("hello")("world")({}) // => {hello: "world"}
 ```
 
 
-
 ## @unction/cascadingKeyChain
-
 
 > Array<UnfinishedKeyChainType> -> IterableType -> ValueType
 
@@ -304,9 +282,7 @@ returns
 ```
 
 
-
 ## @unction/catchP
-
 
 > (any -> any) -> Promise<any> -> Promise<any>
 
@@ -315,9 +291,7 @@ A port of the `Promise.prototype.catch()` function.
 Credit: @keithamus
 
 
-
 ## @unction/compact
-
 
 > Array<any> -> Array<mixed>
 
@@ -333,9 +307,7 @@ compact(head(users)) // {"name": "Kurtis Rainbolt-Greene"}
 ```
 
 
-
 ## @unction/computedProp
-
 
 > (IterableType -> any) -> Keychain -> IterableType -> IterableType
 
@@ -385,9 +357,7 @@ Would return:
 ```
 
 
-
 ## @unction/couple
-
 
 > any -> any -> [any, any]
 
@@ -398,9 +368,7 @@ couple(4)(5) // => [4, 5]
 ```
 
 
-
 ## @unction/domEvents
-
 
 > DOMEventsConfigurationType -> EventNameType -> DOMObservableType -> ObservableType<EventType>
 
@@ -417,9 +385,7 @@ returns
 ```
 
 
-
 ## @unction/domEventsMany
-
 
 > domEventsManyConfigurationType -> (string | Array<EventNameType>) -> ObservableType<EventType>
 
@@ -446,9 +412,7 @@ returns
 ```
 
 
-
 ## @unction/endsWith
-
 
 > string -> string -> boolean
 
@@ -461,18 +425,14 @@ endsWith("!")(data) // true
 ```
 
 
-
 ## @unction/everyP
-
 
 > (Array<any | Promise<any>>) -> Promise<[ResolvedPromisesType, RejectedPromisesType]>
 
 Returns both resolved and rejected promises as distinct lists.
 
 
-
 ## @unction/flattenTree
-
 
 > ((any -> any) -> IterableType -> IterableType) -> (any -> any) -> number -> IterableType -> IterableType
 
@@ -505,9 +465,7 @@ Would return:
 ```
 
 
-
 ## @unction/flip
-
 
 > (any -> any) -> any -> any -> any
 
@@ -518,9 +476,7 @@ flip(key)({aaa: "1"})("aaa") // "1"
 ```
 
 
-
 ## @unction/forEach
-
 
 > (any -> KeyType -> any) -> IterableType -> IterableType
 
@@ -533,9 +489,22 @@ forEach((x) => y)({})
 ```
 
 
+## @unction/fresh
+> any -> any
+
+An example function.
+
+``` javascript
+fresh()
+```
+
+returns
+
+``` javascript
+x
+```
 
 ## @unction/hammer
-
 
 > KeyType -> IterableType -> IterableType
 
@@ -564,9 +533,7 @@ Which returns:
 ```
 
 
-
 ## @unction/ifThenElse
-
 
 > PredicateType -> (any -> any) -> (any -> any) -> any
 
@@ -578,9 +545,7 @@ ifThenElse(isEven)(toString)(toFloat)(2) // "2"
 ```
 
 
-
 ## @unction/isArray
-
 
 > string -> any -> boolean
 
@@ -593,9 +558,7 @@ isArray("") // => false
 ```
 
 
-
 ## @unction/isIterable
-
 
 > string -> any -> boolean
 
@@ -608,9 +571,7 @@ isIterable("") // => false
 ```
 
 
-
 ## @unction/isNil
-
 
 > ValueType -> boolean
 
@@ -626,9 +587,7 @@ isNil({}) // false
 ```
 
 
-
 ## @unction/isObject
-
 
 > string -> any -> boolean
 
@@ -641,9 +600,7 @@ isObject("") // => false
 ```
 
 
-
 ## @unction/isPopulated
-
 
 > IterableType -> boolean
 
@@ -657,9 +614,7 @@ isPopulated([]) // false
 ```
 
 
-
 ## @unction/isPresent
-
 
 > any -> boolean
 
@@ -673,9 +628,7 @@ isPresent(undefined) // false
 ```
 
 
-
 ## @unction/isType
-
 
 > string -> any -> boolean
 
@@ -688,9 +641,7 @@ isType("String")("") // => true
 ```
 
 
-
 ## @unction/itself
-
 
 > any -> any
 
@@ -702,9 +653,7 @@ itself(1) // 1
 ```
 
 
-
 ## @unction/key
-
 
 > KeyType -> any -> ValueType
 
@@ -718,9 +667,7 @@ key(0)(["aaa"]) // "aaa"
 ```
 
 
-
 ## @unction/keyChain
-
 
 > KeyChainType -> TreeType -> ValueType
 
@@ -732,9 +679,7 @@ keyChain(["aaa", "ddd", "ccc"])({aaa: {bbb: {ccc: "1"}}}) // undefined
 ```
 
 
-
 ## @unction/lacksText
-
 
 > (string | RegExp) -> string -> boolean
 
@@ -755,9 +700,7 @@ lacksPuncation(data) // false
 ```
 
 
-
 ## @unction/mapKeys
-
 
 > (KeyType -> KeyType) -> IterableType -> IterableType
 
@@ -782,9 +725,7 @@ Would return:
 ```
 
 
-
 ## @unction/mapKeysWithValueKey
-
 
 > (ValueType => KeyType => KeyType) -> IterableType -> IterableType
 
@@ -808,11 +749,7 @@ Would return:
 }
 ```
 
-[BADGE_VERSION]: https://img.shields.io/npm/v/mapkeyswithvaluekey.svg?maxAge=2592000&style=flat-square
-
-
 ## @unction/mapValues
-
 
 > (any -> any) -> IterableType -> IterableType
 
@@ -833,19 +770,33 @@ Which will return:
 ```
 
 
-
 ## @unction/mapValuesWithValueKey
-
 
 > (any => KeyType => any) -> IterableType -> IterableType
 
 Just like map, but gives back the index argument (as an integer, not a string if array)
 
-[BADGE_VERSION]: https://img.shields.io/npm/v/mapvalueswithvaluekey.svg?maxAge=2592000&style=flat-square
+## @unction/mergeAllLeft
+> Array<IterableType> -> IterableType
 
+Merges a list of iterables (of the same type) into a single iterable.
+
+``` javascript
+mergeAllLeft([["0"], ["1"], ["2"]]) // ["0", "1", "2"]
+mergeAllLeft([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "bbb", ccc: "ccc",}
+```
+
+## @unction/mergeAllRight
+> Array<IterableType> -> IterableType
+
+Merges a list of iterables (of the same type) into a single iterable.
+
+``` javascript
+mergeAllRight([["0"], ["1"], ["2"]]) // ["0", "1", "2"]
+mergeAllRight([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "bbb", ccc: "ccc",}
+```
 
 ## @unction/mergeDeepLeft
-
 
 > IterableType -> IterableType -> IterableType
 
@@ -911,9 +862,7 @@ mergeDeepLeft(left)(right)
 ```
 
 
-
 ## @unction/mergeDeepRight
-
 
 > IterableType -> IterableType -> IterableType
 
@@ -979,9 +928,7 @@ mergeDeepRight(left)(right)
 ```
 
 
-
 ## @unction/mergeLeft
-
 
 > IterableType -> IterableType -> IterableType
 
@@ -1011,9 +958,7 @@ Which returns:
 ```
 
 
-
 ## @unction/mergeRight
-
 
 > IterableType -> IterableType -> IterableType
 
@@ -1043,9 +988,7 @@ Which returns:
 ```
 
 
-
 ## @unction/mergeWith
-
 
 > (ValueType -> ValueType -> any) -> IterableType -> IterableType -> IterableType
 
@@ -1077,9 +1020,7 @@ Which returns:
 ```
 
 
-
 ## @unction/mergeWithKey
-
 
 > (IterableType -> IterableType -> KeyType -> any) -> IterableType -> IterableType -> IterableType
 
@@ -1105,9 +1046,7 @@ Which returns:
 ```
 
 
-
 ## @unction/nestedApply
-
 
 > ((any -> any) -> IterableType -> IterableType) -> (any -> any) -> number -> IterableType -> IterableType
 
@@ -1179,18 +1118,14 @@ And the result:
 ```
 
 
-
 ## @unction/optimisticP
-
 
 > Array<any | Promise<any>> -> Promise<Array<any>>
 
 Will take an array of promises and returns a promise of only the resolved promises.
 
 
-
 ## @unction/pairsKeys
-
 
 > Array<[string, any]> -> Array<string>
 
@@ -1239,9 +1174,7 @@ You would get the following:
 ```
 
 
-
 ## @unction/pairsValues
-
 
 > Array<[KeyType, any]> -> Array<any>
 
@@ -1290,9 +1223,7 @@ You would get the following:
 ```
 
 
-
 ## @unction/pluck
-
 
 > KeyChainType -> IterableType -> Array<any>
 
@@ -1333,9 +1264,7 @@ Which will return:
 ```
 
 
-
 ## @unction/plucks
-
 
 > Array<KeyChainType> -> IterableType -> Array<any>
 
@@ -1381,9 +1310,7 @@ Which will return:
 ```
 
 
-
 ## @unction/prepend
-
 
 > any -> Array<any> -> Array<any>
 
@@ -1394,9 +1321,7 @@ prepend(4)([5]) // => [4, 5]
 ```
 
 
-
 ## @unction/recordFrom
-
 
 > KeyChain -> any -> IterableType
 
@@ -1417,9 +1342,7 @@ Which returns:
 ```
 
 
-
 ## @unction/reduceValues
-
 
 > (AccumulatedType -> ValueType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
 
@@ -1442,9 +1365,7 @@ Which will return:
 ```
 
 
-
 ## @unction/reduceWithValueKey
-
 
 > (AccumulatedType -> ValueType -> KeyType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
 
@@ -1467,9 +1388,7 @@ Which will return:
 ```
 
 
-
 ## @unction/rejectP
-
 
 > any -> Promise<any>
 
@@ -1479,9 +1398,7 @@ Credit: @keithamus
 
 
 
-
 ## @unction/replacewhen
-
 
 > PredicateType -> ValueType -> IterableType
 
@@ -1492,9 +1409,7 @@ replaceWhen(isEven)(null)([1, 2, 3]) // [1, null, 3]
 ```
 
 
-
 ## @unction/resolveP
-
 
 > any -> Promise<any>
 
@@ -1503,9 +1418,7 @@ A port of the `Promise.resolve()` function.
 Credit: @keithamus
 
 
-
 ## @unction/sample
-
 
 > (string | Array<any>) -> (string | any)
 
@@ -1522,9 +1435,7 @@ sample(users()) // => {"id": 1, "name": "Kurtis Rainbolt-Greene"}
 ```
 
 
-
 ## @unction/sampleSize
-
 
 > number -> (string | Array<any>) -> (string | any)
 
@@ -1539,9 +1450,7 @@ sample(2)(users()) // => [{"id": 2, "name": "Angela Englund"}, {"id": 1, "name":
 ```
 
 
-
 ## @unction/shuffle
-
 
 > (string | Array<any>) -> (string | Array<any>)
 
@@ -1588,9 +1497,7 @@ Would return:
 ```
 
 
-
 ## @unction/splat
-
 
 > (ValueType -> any) -> Array<ValueType> -> any
 
@@ -1601,9 +1508,7 @@ splat((a) => (b) => a + b)([1, 2]) // 3
 ```
 
 
-
 ## @unction/startsWith
-
 
 > string -> string -> boolean
 
@@ -1620,9 +1525,7 @@ true
 ```
 
 
-
 ## @unction/thenCatchP
-
 
 > (any -> any) -> (any -> any) -> Promise<any> ->  Promise<any>
 
@@ -1631,9 +1534,7 @@ A port of the `Promise.prototype.then()` function, but with the extra catch argu
 Credit: @keithamus
 
 
-
 ## @unction/thenP
-
 
 > (any -> any) -> Promise<any> -> Promise<any>
 
@@ -1642,9 +1543,7 @@ A port of the `Promise.prototype.then()` function.
 Credit: @keithamus
 
 
-
 ## @unction/thrush
-
 
 > any -> (any -> any) -> any
 
@@ -1655,9 +1554,7 @@ thrush(0)((value) => `${value}`) // "0"
 ```
 
 
-
 ## @unction/treeify
-
 
 > Array<(any -> IterableType -> IterableType)> -> Array<IterableType> -> IterableType
 
@@ -1770,9 +1667,7 @@ The resulting object looks like this:
 ```
 
 
-
 ## @unction/type
-
 
 > any -> string
 
@@ -1789,18 +1684,14 @@ type(undefined) // "undefined"
 ```
 
 
-
 ## @unction/upTo
-
 
 > number -> Array<number>
 
 Just takes a maximum and produces an array of 1 to that number.
 
 
-
 ## @unction/withoutKeyRecursive
-
 
 > KeyType -> IterableType -> IterableType
 
@@ -1835,9 +1726,7 @@ Which will return:
 ```
 
 
-
 ## @unction/zip
-
 
 > IterableType -> IterableType -> IterableType
 
@@ -1862,6 +1751,7 @@ returns
 ``` javascript
 {x: [1, 0], y: [2, 0], z: [0, 0]}
 ```
+
 
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/krainboltgreene/unction.js.svg?maxAge=2592000&style=flat-square
