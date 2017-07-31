@@ -4,6 +4,6 @@ import fresh from "@unction/fresh"
 
 const FIRST = 0
 
-export default function mergeAllLeft (iterables: Array<IterableType>): IterableType {
+export default function mergeAllLeft (iterables: Array<IterableType<T>>): IterableType {
   return reduceValues(mergeLeft)(fresh(iterables[FIRST]))(iterables)
 }
