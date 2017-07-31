@@ -6,7 +6,7 @@ import tempLate from "./"
 test(({same, end}) => {
   same(
     tempLate(),
-    null
+    true
   )
 
   end()
