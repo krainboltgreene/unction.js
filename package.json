@@ -30,7 +30,7 @@
   "devDependencies": {
     "@unction/allp": "1.0.4",
     "@unction/mapvalues": "2.0.4",
-    "@unction/mergeright": "1.0.3",
+    "@unction/mergeright": "1.0.4",
     "@unction/recordfrom": "1.0.1",
     "@unction/reducevalues": "1.0.9",
     "@unction/thenp": "1.0.4",
