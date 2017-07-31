@@ -1,4 +1,4 @@
-import {empty} from "ramda"
+import fresh from "@unction/fresh"
 import mergeRight from "@unction/mergeright"
 import {either} from "ramda"
 import recordFrom from "@unction/recordfrom"
@@ -31,7 +31,7 @@ export default function withoutKeyRecursive (key: KeyType): Function {
         }
       }
     )(
-      empty(original)
+      fresh(original)
     )(
       original
     )

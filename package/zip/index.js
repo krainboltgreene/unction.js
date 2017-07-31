@@ -1,4 +1,4 @@
-import {empty} from "ramda"
+import fresh from "@unction/fresh"
 import {keys} from "ramda"
 import {uniq} from "ramda"
 import type from "@unction/type"
@@ -16,7 +16,7 @@ export default function zip (left: IterableType): Function {
     return reduceValues((accumulated: IterableType): Function => (point: KeyType): IterableType => {
       return attach(point)([left[point], right[point]])(accumulated)
     })(
-      empty(right)
+      fresh(right)
     )(
       uniqueKeys
     )

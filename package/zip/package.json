@@ -31,6 +31,7 @@
     "@unction/attach": "^1.0.3",
     "@unction/reducevalues": "^1.0.8",
     "@unction/type": "^1.0.2",
+    "@unction/fresh": "*",
     "ramda": "0.24.1"
   }
 }

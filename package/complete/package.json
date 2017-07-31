@@ -45,6 +45,7 @@
     "@unction/flattentree": "*",
     "@unction/flip": "*",
     "@unction/foreach": "*",
+    "@unction/fresh": "*",
     "@unction/hammer": "*",
     "@unction/ifthenelse": "*",
     "@unction/isarray": "*",

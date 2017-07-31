@@ -33,6 +33,7 @@
     "@unction/mergeright": "^1.0.3",
     "@unction/recordfrom": "^1.0.0",
     "@unction/reducewithvaluekey": "^2.0.3",
-    "ramda": "0.24.1"
+    "ramda": "0.24.1",
+    "@unction/fresh": "*"
   }
 }
