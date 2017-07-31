@@ -1,4 +1,5 @@
 import type from "@unction/type"
+import xstream from "xstream"
 
 export default function fresh (iterable: IterableType): IterableType | null {
   switch (type(iterable)) {
@@ -22,6 +23,9 @@ export default function fresh (iterable: IterableType): IterableType | null {
     }
     case "WeakSet": {
       return new WeakSet()
+    }
+    case "Stream": {
+      return xstream.none()
     }
     default: {
       return null

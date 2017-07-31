@@ -28,6 +28,7 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "@unction/type": "*"
+    "@unction/type": "*",
+    "xstream": "10.9.0"
   }
 }
