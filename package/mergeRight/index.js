@@ -44,7 +44,7 @@ export default function mergeRight (left: IterableType): Function {
         return new WeakSet()
       }
       case "Stream": {
-        return new xstream.merge(left, right)
+        return xstream.merge(left, right)
       }
 
       default: {
