@@ -63,6 +63,8 @@
     "@unction/mapkeyswithvaluekey": "*",
     "@unction/mapvalues": "*",
     "@unction/mapvalueswithvaluekey": "*",
+    "@unction/mergeallleft": "*",
+    "@unction/mergeallright": "*",
     "@unction/mergedeepleft": "*",
     "@unction/mergedeepright": "*",
     "@unction/mergeleft": "*",
