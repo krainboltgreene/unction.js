@@ -5,7 +5,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> any -> boolean
+> mixed -> boolean
 
 This lets you know if it's a non-null, non-undefined value.
 

@@ -1,7 +1,7 @@
 /* eslint-disable no-undefined */
 
 export default function isType (signature: string): Function {
-  return function isTypeSignature (value: any): boolean {
+  return function isTypeSignature (value: mixed): boolean {
     if (signature === "null") {
       return value === null
     }

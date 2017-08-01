@@ -1,11 +1,10 @@
 # @unction/isType
 
-
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> string -> any -> boolean
+> string -> mixed -> boolean
 
 Takes any value and then any value and returns an array containing those values.
 

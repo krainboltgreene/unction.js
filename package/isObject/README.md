@@ -5,13 +5,13 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> string -> any -> boolean
+> mixed -> boolean
 
-Takes any value and then any value and returns an array containing those values.
+Takes a value and determines if it's an object.
 
 ``` javascript
 isObject({}) // => true
-isObject([]) // => true
+isObject([]) // => false
 isObject("") // => false
 ```
 

@@ -5,7 +5,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> ValueType -> boolean
+> mixed -> boolean
 
 Determines if a value is not a value.
 

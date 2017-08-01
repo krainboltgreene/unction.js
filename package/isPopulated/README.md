@@ -5,15 +5,17 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> boolean
+> mixed -> boolean
 
-Allows you to check if a container has any items.
+Allows you to check if a iterable has any items.
 
 ``` javascript
 isPopulated([1]) // true
 isPopulated({a: 'b'}) // true
 isPopulated({}) // false
 isPopulated([]) // false
+isPopulated("") // false
+isPopulated("a") // true
 ```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/krainboltgreene/unction.js.svg?maxAge=2592000&style=flat-square

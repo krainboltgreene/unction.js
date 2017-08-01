@@ -10,8 +10,8 @@
 Takes any value and then any value and returns an array containing those values.
 
 ``` javascript
-isArray({}) // => true
 isArray([]) // => true
+isArray({}) // => false
 isArray("") // => false
 ```
 

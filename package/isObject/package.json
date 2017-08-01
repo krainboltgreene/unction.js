@@ -1,7 +1,7 @@
 {
   "name": "@unction/isobject",
   "version": "1.0.4",
-  "description": "Takes a value and returns a boolean if value is iterable",
+  "description": "Takes a value and determines if it's an object",
   "keywords": [
     "unction",
     "functional"
