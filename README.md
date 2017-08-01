@@ -413,17 +413,13 @@ returns
 
 
 ## @unction/endsWith
-
 > string -> string -> boolean
 
 Determines if a given subset of text is at the end of another set of text.
 
-const data = "Hello, world!"
-
 ``` javascript
-endsWith("!")(data) // true
+endsWith("!")("Hello, world!") // true
 ```
-
 
 ## @unction/everyP
 
@@ -490,18 +486,15 @@ forEach((x) => y)({})
 
 
 ## @unction/fresh
-> any -> any
+> IterableType -> IterableType
 
-An example function.
-
-``` javascript
-fresh()
-```
-
-returns
+Takes a iterable and returns an empty fresh version of that iterable.
 
 ``` javascript
-x
+fresh({aaa: "aaa"}) // {}
+fresh(["aaa"]) // []
+fresh({}) // {}
+fresh([]) // []
 ```
 
 ## @unction/hammer
@@ -547,33 +540,34 @@ ifThenElse(isEven)(toString)(toFloat)(2) // "2"
 
 ## @unction/isArray
 
-> string -> any -> boolean
+> mixed -> boolean
 
 Takes any value and then any value and returns an array containing those values.
 
 ``` javascript
-isArray({}) // => true
 isArray([]) // => true
+isArray({}) // => false
 isArray("") // => false
 ```
 
 
 ## @unction/isIterable
 
-> string -> any -> boolean
+> mixed -> boolean
 
 Takes any value and then any value and returns an array containing those values.
 
 ``` javascript
 isIterable({}) // => true
 isIterable([]) // => true
-isIterable("") // => false
+isIterable("") // => true
+isIterable(1) // => false
 ```
 
 
 ## @unction/isNil
 
-> ValueType -> boolean
+> mixed -> boolean
 
 Determines if a value is not a value.
 
@@ -589,34 +583,36 @@ isNil({}) // false
 
 ## @unction/isObject
 
-> string -> any -> boolean
+> mixed -> boolean
 
-Takes any value and then any value and returns an array containing those values.
+Takes a value and determines if it's an object.
 
 ``` javascript
 isObject({}) // => true
-isObject([]) // => true
+isObject([]) // => false
 isObject("") // => false
 ```
 
 
 ## @unction/isPopulated
 
-> IterableType -> boolean
+> mixed -> boolean
 
-Allows you to check if a container has any items.
+Allows you to check if a iterable has any items.
 
 ``` javascript
 isPopulated([1]) // true
 isPopulated({a: 'b'}) // true
 isPopulated({}) // false
 isPopulated([]) // false
+isPopulated("") // false
+isPopulated("a") // true
 ```
 
 
 ## @unction/isPresent
 
-> any -> boolean
+> mixed -> boolean
 
 This lets you know if it's a non-null, non-undefined value.
 
@@ -629,8 +625,7 @@ isPresent(undefined) // false
 
 
 ## @unction/isType
-
-> string -> any -> boolean
+> string -> mixed -> boolean
 
 Takes any value and then any value and returns an array containing those values.
 
@@ -787,7 +782,7 @@ mergeAllLeft([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "b
 ```
 
 ## @unction/mergeAllRight
-> Array<IterableType> -> IterableType
+> Array<IterableType<T>> -> IterableType
 
 Merges a list of iterables (of the same type) into a single iterable.
 
@@ -1509,21 +1504,13 @@ splat((a) => (b) => a + b)([1, 2]) // 3
 
 
 ## @unction/startsWith
-
 > string -> string -> boolean
 
 Determines if a given subset of text is at the start of another set of text.
 
 ``` javascript
-startsWith("Hello")(data)
+startsWith("Hello")("Hello, world!") // true
 ```
-
-Would return:
-
-``` javascript
-true
-```
-
 
 ## @unction/thenCatchP
 
