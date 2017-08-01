@@ -5,7 +5,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> DOMEventsConfigurationType -> EventNameType -> DOMObservableType -> ObservableType<EventType>
+> DOMEventsConfigurationType -> DOMEventNameType -> DOMStreamType -> DOMEventStreamType
 
 Takes a configuration, an event name, and a DOM source and returns an observable of that event type
 

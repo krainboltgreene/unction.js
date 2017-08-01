@@ -5,7 +5,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> domEventsManyConfigurationType -> (string | Array<EventNameType>) -> ObservableType<EventType>
+> domEventsManyConfigurationType -> (string | Array<DOMEventNameType>) -> DOMEventStreamType
 
 Takes many events or * and returns an observable of those events
 

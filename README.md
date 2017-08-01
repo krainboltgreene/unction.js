@@ -370,7 +370,7 @@ couple(4)(5) // => [4, 5]
 
 ## @unction/domEvents
 
-> DOMEventsConfigurationType -> EventNameType -> DOMObservableType -> ObservableType<EventType>
+> DOMEventsConfigurationType -> DOMEventNameType -> DOMStreamType -> DOMEventStreamType
 
 Takes a configuration, an event name, and a DOM source and returns an observable of that event type
 
@@ -387,7 +387,7 @@ returns
 
 ## @unction/domEventsMany
 
-> domEventsManyConfigurationType -> (string | Array<EventNameType>) -> ObservableType<EventType>
+> domEventsManyConfigurationType -> (string | Array<DOMEventNameType>) -> DOMEventStreamType
 
 Takes many events or * and returns an observable of those events
 

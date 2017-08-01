@@ -10,16 +10,16 @@ const EVENT_TYPES = [
 
 
 export default function domEventsMany (options: DOMEventsConfigurationType): Function {
-  return function domEventsManyOptions (names: "*" | Array<EventNameType>): Function {
+  return function domEventsManyOptions (names: "*" | Array<DOMEventNameType>): Function {
     const eventNames = names === "*" ? EVENT_TYPES : names
 
-    return function domEventsManyOptionsNames (dom: DOMObservableType): ObservableType<EventType> {
+    return function domEventsManyOptionsNames (dom: DOMStreamType): DOMEventStreamType {
       return reduceValues(
         mergeRight
       )(
         xstream.never()
       )(
-        mapValues((name: EventNameType): ObservableType<EventType> => domEvents(options)(name)(dom))(eventNames)
+        mapValues((name: DOMEventNameType): DOMEventStreamType => domEvents(options)(name)(dom))(eventNames)
       )
     }
   }

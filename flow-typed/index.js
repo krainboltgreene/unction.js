@@ -13,3 +13,7 @@ type NestedIterableType = ListTreeType | RecordTreeType
 type PredicateType = mixed => boolean
 type ResolvedPromisesType = ListType
 type RejectedPromisesType = ListType
+type DOMEventNameType = string
+type DOMStreamType = Stream<any>
+type DOMEventType = any
+type DOMEventStreamType = Stream<DOMEventType>
