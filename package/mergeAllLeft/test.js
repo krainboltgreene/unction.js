@@ -6,7 +6,7 @@ import mergeAllLeft from "./"
 test(({same, end}) => {
   same(
     mergeAllLeft([["0"], ["1"], ["2"]]),
-    ["0", "1", "2"]
+    ["2", "1", "0"]
   )
 
   end()
@@ -18,6 +18,18 @@ test(({same, end}) => {
     {
       aaa: "aaa",
       bbb: "bbb",
+      ccc: "ccc",
+    }
+  )
+
+  end()
+})
+
+test(({same, end}) => {
+  same(
+    mergeAllLeft([{aaa: "aaa"}, {aaa: "bbb"}, {ccc: "ccc"}]),
+    {
+      aaa: "aaa",
       ccc: "ccc",
     }
   )

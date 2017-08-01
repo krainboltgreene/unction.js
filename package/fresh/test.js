@@ -24,7 +24,7 @@ test(({same, end}) => {
 test(({same, end}) => {
   same(
     fresh("a"),
-    "a"
+    ""
   )
 
   end()

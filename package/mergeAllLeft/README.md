@@ -9,7 +9,7 @@
 Merges a list of iterables (of the same type) into a single iterable.
 
 ``` javascript
-mergeAllLeft([["0"], ["1"], ["2"]]) // ["0", "1", "2"]
+mergeAllLeft([["0"], ["1"], ["2"]]) // ["2", "1", "0"]
 mergeAllLeft([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "bbb", ccc: "ccc",}
 ```
 
