@@ -1,63 +1,66 @@
 {
-  "name": "ramda-extra",
-  "version": "1.7.0",
-  "description": "A set of functions built on top of ramda that ramda doesn't want",
-  "main": "transpiled/source/index.js",
-  "scripts": {
-    "prepublish": "npm run build",
-    "build": "rm -rf './transpiled/' && mkdir './transpiled/' && babel './source/**/index.js' -d './transpiled/'",
-    "test": "mocha --compilers js:babel-register './source/**/test.js'",
-    "start": "npm-run-all --parallel watch:build watch:test",
-    "lint": "eslint './source/'",
-    "watch": "npm-run-all --parallel watch:test watch:lint watch:build",
-    "watch:build": "chokidar './source/' --initial --command 'npm run build --silent'",
-    "watch:test": "chokidar './source/' --initial --command 'npm run test --silent'",
-    "watch:lint": "chokidar './source/' --initial --command 'npm run lint --silent'"
-  },
+  "name": "unction.js",
+  "version": "5.0.2",
+  "description": "A set of type annotated FP functions that enforce currying and composability",
+  "keywords": [
+    "unction",
+    "functional",
+    "collection"
+  ],
+  "author": "Kurtis Rainbolt-Greene (@krainboltgreene) <kurtis@rainbolt-greene.online>",
+  "license": "ISC",
+  "homepage": "https://github.com/krainboltgreene/unction.js#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krainboltgreene/ramda-extra.js.git"
+    "url": "git+https://github.com/krainboltgreene/unction.js.git"
   },
-  "keywords": [
-    "ramda",
-    "extras",
-    "plus",
-    "extension"
-  ],
-  "author": "Kurtis Rainbolt-Greene (@krainboltgreene) <me@kurtisrainboltgreene.name>",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/krainboltgreene/ramda-extra.js/issues"
+    "url": "https://github.com/krainboltgreene/unction/issues"
   },
-  "engines": {
-    "node": "^6",
-    "npm": "^3"
+  "main": "transpiled/source/index.js",
+  "scripts": {
+    "start": "babel-node tooling/generate-complete && babel-node tooling/generate-project && lerna bootstrap",
+    "postinstall": "lerna bootstrap",
+    "prepare": "npm run build",
+    "pretest": "npm run build",
+    "test": "lerna run --concurrency=25 test",
+    "build": "lerna run --concurrency=25 build",
+    "lint": "lerna run lint",
+    "check": "flow check"
   },
-  "homepage": "https://github.com/krainboltgreene/ramda-extra.js#readme",
   "devDependencies": {
-    "babel": "^6",
-    "babel-cli": "^6",
-    "babel-core": "^6",
-    "babel-eslint": "^6",
-    "babel-plugin-closure-elimination": "^1",
-    "babel-plugin-relative-import": "^1",
-    "babel-plugin-transform-object-rest-spread": "^6",
-    "babel-preset-latest": "^6",
-    "chai": "^3",
-    "chokidar-cli": "^1",
-    "eslint": "^3",
-    "eslint-plugin-babel": "^3",
-    "eslint-plugin-immutable": "^1",
-    "eslint-plugin-import": "^1",
-    "eslint-plugin-mocha": "^4",
-    "eslint-plugin-node": "^2",
-    "greenkeeper": "^4",
-    "mocha": "^3",
-    "npm-run-all": "^3",
-    "sinon": "1.17.6",
-    "sinon-chai": "2.8.0"
-  },
-  "dependencies": {
-    "ramda": "0.22.1"
+    "@unction/allp": "1.0.5",
+    "@unction/mapvalues": "2.0.4",
+    "@unction/mergeright": "1.0.4",
+    "@unction/recordfrom": "1.0.1",
+    "@unction/reducevalues": "1.0.9",
+    "@unction/thenp": "1.0.5",
+    "babel-cli": "6.24.1",
+    "babel-core": "6.25.0",
+    "babel-eslint": "7.2.3",
+    "babel-plugin-pipe-operator-curry": "1.0.2",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-flow": "6.23.0",
+    "bunyan": "1.8.10",
+    "commander": "2.11.0",
+    "cvx": "1.0.0",
+    "eslint": "3.19.0",
+    "eslint-plugin-babel": "4.1.2",
+    "eslint-plugin-flowtype": "2.35.0",
+    "eslint-plugin-immutable": "1.0.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-promise": "3.5.0",
+    "flow": "0.2.3",
+    "flow-bin": "0.51.1",
+    "flow-typed": "2.1.3",
+    "fs-extra": "4.0.0",
+    "glob-promise": "3.1.0",
+    "lerna": "2.0.0",
+    "npm-run-all": "4.0.2",
+    "proon": "1.5.1",
+    "ramda": "0.24.1",
+    "tap": "10.7.0",
+    "vorpal": "1.12.0"
   }
 }

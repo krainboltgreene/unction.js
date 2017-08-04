@@ -1,0 +1,36 @@
+{
+  "name": "@unction/mergeright",
+  "version": "1.0.3",
+  "description": "Merges two iterables, preferring right",
+  "keywords": [
+    "unction",
+    "functional"
+  ],
+  "author": "Kurtis Rainbolt-Greene (@krainboltgreene) <kurtis@rainbolt-greene.online>",
+  "license": "ISC",
+  "homepage": "https://github.com/krainboltgreene/unction.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krainboltgreene/unction.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krainboltgreene/unction/issues"
+  },
+  "main": "transpiled/index.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "pretest": "npm run build",
+    "test": "tap --reporter min './transpiled/test.js'",
+    "build": "babel './index.js' './test.js' -d './transpiled/'",
+    "lint": "eslint './index.js'"
+  },
+  "devDependencies": {
+    "tap": "10.3.3"
+  },
+  "dependencies": {
+    "@unction/isiterable": "*",
+    "@unction/type": "*",
+    "xstream": "10.9.0",
+    "ramda": "0.24.1"
+  }
+}

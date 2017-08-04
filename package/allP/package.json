@@ -1,0 +1,30 @@
+{
+  "name": "@unction/allp",
+  "version": "1.0.4",
+  "description": "A curryable version of Promise.all",
+  "keywords": [
+    "unction",
+    "functional"
+  ],
+  "author": "Kurtis Rainbolt-Greene (@krainboltgreene) <kurtis@rainbolt-greene.online>",
+  "license": "ISC",
+  "homepage": "https://github.com/krainboltgreene/unction.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krainboltgreene/unction.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krainboltgreene/unction/issues"
+  },
+  "main": "transpiled/index.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "pretest": "npm run build",
+    "test": "tap --reporter min './transpiled/test.js'",
+    "build": "babel './index.js' './test.js' -d './transpiled/'",
+    "lint": "eslint './index.js'"
+  },
+  "devDependencies": {
+    "tap": "10.3.3"
+  }
+}
