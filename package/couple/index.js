@@ -1,5 +1,5 @@
-export default function couple (left: any): Function {
-  return function coupleLeft (right: any): [any, any] {
+export default function couple (left: mixed): Function {
+  return function coupleLeft (right: mixed): [mixed, mixed] {
     return [left, right]
   }
 }
