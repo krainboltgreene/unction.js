@@ -5,7 +5,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> any -> any -> [any, any]
+> mixed -> mixed -> [mixed, mixed]
 
 Takes any value and then any value and returns an array containing those values.
 
