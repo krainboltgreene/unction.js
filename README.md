@@ -1,3 +1,5 @@
+DEPRECATED: This library is too large to keep in one repository. I have moved to a multi-repository solution: github.com/unctionjs
+
 # @unction/*
 
 A set of very useful function. These functions are bound by these principles:
